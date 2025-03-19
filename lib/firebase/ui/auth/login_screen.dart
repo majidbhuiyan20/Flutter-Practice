@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:practice/firebase/ui/auth/signup_screen.dart';
 import 'package:practice/firebase/widgets/round_button.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -118,6 +119,15 @@ class _LoginScreenState extends State<LoginScreen> {
 
               }
             },),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Don't have an account?"),
+                TextButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> SignUpScreen()));
+                }, child: Text("Sign Up"))
+              ],
+            ),
           ],
         ),
       ),

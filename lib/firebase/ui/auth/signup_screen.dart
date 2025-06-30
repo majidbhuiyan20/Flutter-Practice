@@ -1,5 +1,9 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:practice/firebase/ui/auth/login_screen.dart';
 import 'package:practice/firebase/widgets/round_button.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -16,12 +20,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final passwordController = TextEditingController();
   bool _obscureText = true;
 
+   FirebaseAuth _auth = FirebaseAuth.instance;
+
   @override
   void dispose() {
     // TODO: implement dispose
+    super.dispose();
     emailController.dispose();
     passwordController.dispose();
-    super.dispose();
+
   }
 
 
@@ -30,7 +37,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
     print("This is majid");
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
+        leading: IconButton(
+          color: Colors.white,
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context); // Goes back to the previous screen
+          },
+        ),
+        //automaticallyImplyLeading: false,
         backgroundColor: Colors.deepPurple,
         title: Text(
           "SignUp",
@@ -49,7 +63,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 children: [
                   TextFormField(
                     controller: emailController,
-                    keyboardType: TextInputType.emailAddress,
+                    keyboardType: TextInputType.text,
                     decoration: InputDecoration(
                       labelText: "Email",
                       hintText: "Enter your email",
@@ -113,16 +127,30 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
             ),
             SizedBox(height: 20,),
-            RoundButton(title: "Login", onTap: (){
-              if(_formKey.currentState!.validate()){
+            RoundButton(
+              title: "SignUp",
+              onTap: () async {
+                if (_formKey.currentState!.validate()) {
+                  try {
+                    await _auth.createUserWithEmailAndPassword(
+                      email: emailController.text.trim(),
+                      password: passwordController.text.trim(),
+                    );
+                    print("User registered successfully");
+                  } catch (e) {
+                    print("Error Majid: $e");
+                  }
+                }
+              },
+            ),
 
-              }
-            },),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Don't have an account?"),
-                TextButton(onPressed: (){}, child: Text("Sign Up"))
+                Text("Already have an account?"),
+                TextButton(onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginScreen()));
+                }, child: Text("Login"))
               ],
             ),
           ],

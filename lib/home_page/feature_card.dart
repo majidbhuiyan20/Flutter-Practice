@@ -1,0 +1,51 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+
+class Feature {
+  final String title;
+  final IconData icon;
+  final String route;  // add route path
+
+  Feature({
+    required this.title,
+    required this.icon,
+    required this.route,
+  });
+}
+
+class FeatureCard extends StatelessWidget {
+  final String title;
+  final IconData icon;
+  final String route;
+
+  const FeatureCard({
+    super.key,
+    required this.title,
+    required this.icon,
+    required this.route,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 4,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+      child: ListTile(
+        leading: Icon(icon, color: Colors.blue),
+        title: Text(title),
+        trailing: const Icon(Icons.arrow_forward_ios, size: 16),
+        onTap: () {
+          context.push(route);  // Navigate on tap
+        },
+      ),
+    );
+  }
+}
+
+//Create a Riverpod Provider for the Feature List
+final featureListProvider = StateProvider<List<Feature>>((ref) => [
+  Feature(title: 'Notification', icon: Icons.notifications, route: '/notification'),
+  Feature(title: 'API Call', icon: Icons.cloud_download, route: '/complexApi'),
+  // Add more with routes here
+]);

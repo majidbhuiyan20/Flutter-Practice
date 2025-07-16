@@ -32,7 +32,8 @@ class _ComplexApiState extends State<ComplexApi> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.red,
+        iconTheme: const IconThemeData(color: Colors.white),
+        backgroundColor: Colors.blue,
         title: const Text(
           "COMPLEX API",
           style: TextStyle(
@@ -53,9 +54,9 @@ class _ComplexApiState extends State<ComplexApi> {
                     return  Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Card(
-                        elevation: 5,
-                        color: Colors.blue[100],
-                        shadowColor: Colors.grey,
+                        elevation: 8,
+                        color: Colors.white,
+                        shadowColor: Colors.black54,
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
 
                       child: ListTile(

@@ -1,10 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:practice/cart_provider/product_list.dart';
-import 'package:practice/firebase/ui/splash_screen.dart';
-import 'package:practice/home_page/home_page_screen.dart';
-import 'package:practice/local_notification/local_notification.dart';
 import 'package:practice/router/app_routes.dart';
 import 'firebase_options.dart';
 
@@ -32,5 +28,5 @@ class MyApp extends StatelessWidget {
      routerConfig: router,
 
     );
-  } //m
+  }
 }

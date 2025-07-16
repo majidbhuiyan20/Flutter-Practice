@@ -4,6 +4,8 @@ plugins {
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
     id("com.google.gms.google-services")
+//    id("com.android.application") version "8.2.2" apply false
+//    id("org.jetbrains.kotlin.android") version "1.9.23" apply false
 }
 
 android {
@@ -14,6 +16,7 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+        isCoreLibraryDesugaringEnabled = true
     }
 
     kotlinOptions {
@@ -42,4 +45,18 @@ android {
 
 flutter {
     source = "../.."
+}
+
+
+dependencies {
+    // ✅ Required for Java 8+ desugaring
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.5")
+
+    // ✅ Your other dependencies
+    implementation("androidx.core:core-ktx:1.16.0")
+    implementation("com.google.firebase:firebase-analytics-ktx")
+    implementation("androidx.appcompat:appcompat:1.7.1")
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.5")
+
+    // Others like flutter, firebase, riverpod etc.
 }

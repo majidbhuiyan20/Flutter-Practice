@@ -24,6 +24,9 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/firebase_auth_web-5.14.1" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/shared_preferences_linux-2.4.1" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/sqflite_darwin-2.4.2" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_local_notifications-19.3.0" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_local_notifications_linux-6.0.0" />
+      <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/flutter_local_notifications_windows-1.0.1" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

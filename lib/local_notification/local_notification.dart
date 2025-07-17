@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:timezone/data/latest.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 
@@ -120,8 +119,8 @@ FlutterLocalNotificationsPlugin();
 Future<void> initNotifications() async {
   // Initialize timezone
   tz.initializeTimeZones();
-  final String timeZoneName = await FlutterTimezone.getLocalTimezone();
-  tz.setLocalLocation(tz.getLocation(timeZoneName));
+  //final String timeZoneName = await FlutterTimezone.getLocalTimezone();
+  //tz.setLocalLocation(tz.getLocation(timeZoneName));
 
   // Initialize notification plugin
   const AndroidInitializationSettings androidSettings =

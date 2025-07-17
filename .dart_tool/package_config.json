@@ -200,12 +200,6 @@
       "languageVersion": "3.7"
     },
     {
-      "name": "flutter_timezone",
-      "rootUri": "file:///Users/daymon/.pub-cache/hosted/pub.dev/flutter_timezone-1.0.8",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "flutter_web_plugins",
       "rootUri": "file:///Users/daymon/development/flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
@@ -234,12 +228,6 @@
       "rootUri": "file:///Users/daymon/.pub-cache/hosted/pub.dev/http_parser-4.1.2",
       "packageUri": "lib/",
       "languageVersion": "3.4"
-    },
-    {
-      "name": "js",
-      "rootUri": "file:///Users/daymon/.pub-cache/hosted/pub.dev/js-0.7.2",
-      "packageUri": "lib/",
-      "languageVersion": "3.7"
     },
     {
       "name": "leak_tracker",

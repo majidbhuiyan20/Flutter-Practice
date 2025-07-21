@@ -59,21 +59,23 @@ class _ComplexApiState extends State<ComplexApi> {
                         shadowColor: Colors.black54,
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
 
-                      child: ListTile(
-                        leading: CircleAvatar(child: Text(snapshot.data![index].id.toString()),),
-                          title: Text(snapshot.data![index].name.toString()),
-                        subtitle: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(snapshot.data![index].email.toString()),
-                            Text(snapshot.data![index].phone.toString()),
-                            Text(snapshot.data![index].address!.city.toString()),
-                          ],
-                        ),
+                      child: ListTileTheme(
+                        textColor: Colors.black,
+                        child: ListTile(
+                          leading: CircleAvatar(child: Text(snapshot.data![index].id.toString()),),
+                            title: Text(snapshot.data![index].name.toString()),
+                          subtitle: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(snapshot.data![index].email.toString()),
+                              Text(snapshot.data![index].phone.toString()),
+                              Text(snapshot.data![index].address!.city.toString()),
+                            ],
+                          ),
 
-                      ),
-                    ));
+                        ),
+                      )));
 
 
                   });

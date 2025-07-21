@@ -1,7 +1,11 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:practice/firebase/ui/auth/signup_screen.dart';
 import 'package:practice/firebase/widgets/round_button.dart';
+import 'package:practice/home_page/home_page_screen.dart';
+
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -16,6 +20,8 @@ class _LoginScreenState extends State<LoginScreen> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   bool _obscureText = true;
+  FirebaseAuth _auth = FirebaseAuth.instance;
+  bool loading = false;
 
   @override
   void dispose() {
@@ -25,6 +31,28 @@ class _LoginScreenState extends State<LoginScreen> {
     super.dispose();
   }
 
+  void logIn() async{
+    setState(() {
+      loading = true;
+    });
+    try{
+      final user = await _auth.signInWithEmailAndPassword(
+          email: emailController.text.toString(),
+          password: passwordController.text.toString());
+      if(user != null){
+        Utils.toastMessage("LogIn Successful");
+        SharedPreferences prefs = await SharedPreferences.getInstance();
+        prefs.setBool("isLoggedIn", true);
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> HomePageScreen()));
+        setState(() {
+          loading = false;
+        });
+      }
+    }catch(e){
+      Utils.toastMessage(e.toString());
+      setState(() {loading = true;});
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -115,10 +143,11 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
             SizedBox(height: 20,),
             RoundButton(title: "Login", onTap: (){
-              if(_formKey.currentState!.validate()){
 
+              if(_formKey.currentState!.validate()){
+                logIn();
               }
-            },),
+            }, loading: loading,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -134,3 +163,5 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
+
+

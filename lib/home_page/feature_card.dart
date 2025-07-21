@@ -46,6 +46,6 @@ class FeatureCard extends StatelessWidget {
 //Create a Riverpod Provider for the Feature List
 final featureListProvider = StateProvider<List<Feature>>((ref) => [
   Feature(title: 'Notification', icon: Icons.notifications, route: '/notification'),
-  Feature(title: 'API Call', icon: Icons.cloud_download, route: '/complexApi'),
+  Feature(title: 'API Call', icon: Icons.cloud_download, route: '/apiUI'),
   // Add more with routes here
 ]);

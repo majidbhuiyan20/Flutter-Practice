@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'firestore_fetch_data.dart';
@@ -20,11 +21,13 @@ class _FirestoreSendDataState extends State<FirestoreSendData> {
   Future<void> _submitData() async {
     if (_formKey.currentState!.validate()) {
       try {
+        final user = FirebaseAuth.instance.currentUser;
         await FirebaseFirestore.instance.collection('students').add({
           'name': _nameController.text.trim(),
           'university': _universityController.text.trim(),
           'department': _deptController.text.trim(),
           'timestamp': FieldValue.serverTimestamp(),
+          'userId': user!.uid,  // Add this line to store user ID
         });
 
         ScaffoldMessenger.of(context).showSnackBar(

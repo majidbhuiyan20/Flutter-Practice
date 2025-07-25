@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,7 @@ class FirestoreFetchData extends StatefulWidget {
 class _FirestoreFetchDataState extends State<FirestoreFetchData> {
   @override
   Widget build(BuildContext context) {
+    final user = FirebaseAuth.instance.currentUser;
     return Scaffold(
       appBar: AppBar(
         title: const Text('Fetch Data from Firestore'),
@@ -27,7 +29,10 @@ class _FirestoreFetchDataState extends State<FirestoreFetchData> {
           ),
         ),
         child: StreamBuilder<QuerySnapshot>(
-          stream: _fireStore.collection('students').snapshots(),
+        stream: _fireStore
+        .collection('students')
+            .where('userId', isEqualTo: user!.uid)  // Add this filter
+            .snapshots(),
           builder: (context, snapshot) {
             if (snapshot.hasError) {
               return Center(
@@ -47,35 +52,17 @@ class _FirestoreFetchDataState extends State<FirestoreFetchData> {
                 final name = document['name'] as String?;
                 final department = document['department'] as String?;
                 final university = document['university'] as String?;
-                return Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-                  decoration: BoxDecoration(
-                    color: Colors.pink[50]?.withOpacity(0.9), // Soft pink color
-                    borderRadius: BorderRadius.circular(15.0),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.3),
-                        spreadRadius: 2,
-                        blurRadius: 5,
-                        offset: const Offset(0, 3), // changes position of shadow
-                      ),
-                    ],
-                  ),
-                  child: Card(
-                    elevation: 0, // Remove card's default shadow as we are using Container's shadow
-                    color: Colors.transparent, // Make card transparent to show Container's color
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                    ),
-                    child: ListTile(
-                      title: Text(name ?? 'No Name', style: const TextStyle(fontWeight: FontWeight.bold)),
-                      subtitle: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(department ?? 'No Department'),
-                          Text(university ?? 'No University'),
-                        ],
-                      ),
+                return Card(
+                  color: Colors.white.withOpacity(0.8), // Make card semi-transparent
+                  margin: const EdgeInsets.all(8.0),
+                  child: ListTile(
+                    title: Text(name ?? 'No Name'),
+                    subtitle: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(department ?? 'No Department'),
+                        Text(university ?? 'No University'),
+                      ],
                     ),
                   ),
                 );

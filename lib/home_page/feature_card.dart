@@ -47,5 +47,6 @@ class FeatureCard extends StatelessWidget {
 final featureListProvider = StateProvider<List<Feature>>((ref) => [
   Feature(title: 'Notification', icon: Icons.notifications, route: '/notification'),
   Feature(title: 'API Call', icon: Icons.cloud_download, route: '/apiUI'),
+  Feature(title: 'Firestore', icon: Icons.storage, route: '/firestore'),
   // Add more with routes here
 ]);

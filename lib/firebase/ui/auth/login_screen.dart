@@ -60,7 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        backgroundColor: Colors.deepPurple,
+        backgroundColor: Colors.blue,
         title: Text(
           "LogIn",
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700),
@@ -82,13 +82,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 decoration: InputDecoration(
                   labelText: "Email",
                   hintText: "Enter your email",
-                  prefixIcon: Icon(Icons.email, color: Colors.deepPurple),
+                  prefixIcon: Icon(Icons.email, color: Colors.blue),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(12), // Rounded borders
                   ),
                   focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                    borderSide: BorderSide(color: Colors.deepPurple, width: 2),
+                    borderRadius: BorderRadius.circular(20), // Rounded focused border
+                    borderSide: BorderSide(color: Colors.blue, width: 2), // Blue border when focused
                   ),
                   filled: true,
                   fillColor: Colors.grey[100], // Light background
@@ -110,7 +110,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   decoration: InputDecoration(
                     labelText: "Password",
                     hintText: "Enter your Password",
-                    prefixIcon: Icon(Icons.password, color: Colors.deepPurple),
+                    prefixIcon: Icon(Icons.password, color: Colors.blue),
                     suffixIcon: GestureDetector(
                       onTap: () {
                         setState(() {
@@ -124,7 +124,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
-                      borderSide: BorderSide(color: Colors.deepPurple, width: 2),
+                      borderSide: BorderSide(color: Colors.blue, width: 2),
                     ),
                     filled: true,
                     fillColor: Colors.grey[100], // Light background
@@ -142,7 +142,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
             SizedBox(height: 20,),
-            RoundButton(title: "Login", onTap: (){
+            RoundButton(title: "Login",color: Colors.blue, onTap: (){
 
               if(_formKey.currentState!.validate()){
                 logIn();

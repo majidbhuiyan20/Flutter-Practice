@@ -1,4 +1,7 @@
 import 'package:practice/firebase/wrapper_screen.dart';
+import 'package:practice/firestore/firestore_fetch_data.dart';
+import 'package:practice/firestore/firestore_send_data.dart';
+import 'package:practice/firestore/firestore_view.dart';
 import 'package:practice/home_page/home_page_screen.dart';
 import 'package:go_router/go_router.dart';
 import 'package:practice/local_notification/local_notification.dart';
@@ -13,6 +16,10 @@ final GoRouter router = GoRouter(
     GoRoute(path: '/complexApi', builder: (context, state) => const ComplexApi()),
     GoRoute(path: '/apiUI', builder: (context, state) => const ApiHomePageUi()),
     GoRoute(path: '/crudApi', builder: (context, state) => const CrudApi()),
+    GoRoute(path: '/firestore', builder: (context, state) => const FirestoreView()),
+    GoRoute(path: '/firestoreSend', builder: (context, state) => const FirestoreSendData()),
+    GoRoute(path: '/firestoreFetch', builder: (context, state) => const FirestoreFetchData()),
+
 
   ],
 );

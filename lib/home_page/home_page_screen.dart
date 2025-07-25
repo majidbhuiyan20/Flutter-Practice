@@ -16,12 +16,13 @@ class HomePageScreen extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
+        iconTheme: const IconThemeData(color: Colors.white), // Set back button color to white
         title: const Text('Practice Section', style: TextStyle(color: Colors.white),),
         actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
-          IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert)),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.search, color: Colors.white,)),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert, color: Colors.white,)),
           IconButton(
-            icon: const Icon(Icons.logout),
+            icon: const Icon(Icons.logout, color: Colors.white,),
             onPressed: () async {
               try {
                 await _auth.signOut();

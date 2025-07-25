@@ -90,8 +90,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
     print("This is majid");
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: Colors.deepPurple,
+        automaticallyImplyLeading: true,
+        backgroundColor: Colors.blue,
         title: Text(
           "SignUp",
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.w700),
@@ -114,17 +114,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     controller: nameController,
                     keyboardType: TextInputType.text,
                     decoration: InputDecoration(
-                      labelText: "Name",
-                      hintText: "Enter your name",
-                      prefixIcon: Icon(Icons.person, color: Colors.deepPurple),
+                      labelText: "Name", // Text "Name" color is not directly settable here
+                      hintText: "Enter your name", // Hint text color is not directly settable here
+                      prefixIcon: Icon(Icons.person, color: Colors.blue),
                       border: OutlineInputBorder( // Rounded borders
                         borderRadius: BorderRadius.circular(12),
                       ),
                       focusedBorder: OutlineInputBorder(
-
-
                         borderRadius: BorderRadius.circular(20),
-                        borderSide: BorderSide(color: Colors.deepPurple, width: 2),
+                        borderSide: BorderSide(color: Colors.blue, width: 2),
                       ),
                       filled: true,
                       fillColor: Colors.grey[100], // Light background
@@ -141,17 +139,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     controller: emailController,
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
-                      labelText: "Email",
-                      hintText: "Enter your email",
-                      prefixIcon: Icon(Icons.email, color: Colors.deepPurple),
+                      labelText: "Email", // Text "Email" color is not directly settable here
+                      hintText: "Enter your email", // Hint text color is not directly settable here
+                      prefixIcon: Icon(Icons.email, color: Colors.blue),
                       border: OutlineInputBorder( // Rounded borders
                         borderRadius: BorderRadius.circular(12),
                       ),
                       focusedBorder: OutlineInputBorder(
-
-
                         borderRadius: BorderRadius.circular(20),
-                        borderSide: BorderSide(color: Colors.deepPurple, width: 2),
+                        borderSide: BorderSide(color: Colors.blue, width: 2),
                       ),
                       filled: true,
                       fillColor: Colors.grey[100], // Light background
@@ -171,9 +167,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     controller: passwordController,
                     keyboardType: TextInputType.text,
                     decoration: InputDecoration(
-                      labelText: "Password",
-                      hintText: "Enter your Password",
-                      prefixIcon: Icon(Icons.password, color: Colors.deepPurple),
+                      labelText: "Password", // Text "Password" color is not directly settable here
+                      hintText: "Enter your Password", // Hint text color is not directly settable here
+                      prefixIcon: Icon(Icons.password, color: Colors.blue),
                       suffixIcon: GestureDetector(
                         onTap: () {
                           setState(() {
@@ -186,10 +182,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         borderRadius: BorderRadius.circular(12),
                       ),
                       focusedBorder: OutlineInputBorder(
-
-
                         borderRadius: BorderRadius.circular(20),
-                        borderSide: BorderSide(color: Colors.deepPurple, width: 2),
+                        borderSide: BorderSide(color: Colors.blue, width: 2),
                       ),
                       filled: true,
                       fillColor: Colors.grey[100], // Light background
@@ -213,6 +207,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             RoundButton(
               title: "Sign Up",
               loading: loading,
+              color: Colors.blue, // Set the button color to blue
               onTap: () {
                 if (_formKey.currentState!.validate()) {
                   signup();
@@ -224,12 +219,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text("Already have an account?"),
-                  TextButton(
+                  TextButton( // Text color for TextButton's child is blue by default
                       onPressed: () {
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) => LoginScreen()));
                       },
-                      child: Text("Login"))
+                      child: Text("Login", style: TextStyle(color: Colors.blue)))
                 ],
               ),
 

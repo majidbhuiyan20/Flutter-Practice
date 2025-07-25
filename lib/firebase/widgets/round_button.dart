@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class RoundButton extends StatelessWidget {
   String title;
   final VoidCallback onTap;
-  RoundButton({super.key, required this.title, required this.onTap, required bool loading});
+  RoundButton({super.key, required this.title, required this.onTap, required bool loading, required MaterialColor color});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class RoundButton extends StatelessWidget {
       child: Container(
         height: 50,
         decoration: BoxDecoration(
-          color: Colors.deepPurple,
+          color: Colors.blue,
           borderRadius: BorderRadius.circular(20),
         ),
         child: Center(

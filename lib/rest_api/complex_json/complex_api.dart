@@ -55,15 +55,18 @@ class _ComplexApiState extends State<ComplexApi> {
                         padding: const EdgeInsets.all(8.0),
                         child: Card(
                         elevation: 8,
-                        color: Colors.white,
+                        color: Colors.black,
                         shadowColor: Colors.black54,
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
 
                       child: ListTileTheme(
-                        textColor: Colors.black,
+                        textColor: Colors.white,
                         child: ListTile(
-                          leading: CircleAvatar(child: Text(snapshot.data![index].id.toString()),),
-                            title: Text(snapshot.data![index].name.toString()),
+                          leading: CircleAvatar(
+                            backgroundColor: Colors.white,
+                            child: Text(snapshot.data![index].id.toString(), style: TextStyle(color: Colors.black),),
+                          ),
+                            title: Text(snapshot.data![index].name.toString(), style: TextStyle(color: Colors.white),),
                           subtitle: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,6 +74,8 @@ class _ComplexApiState extends State<ComplexApi> {
                               Text(snapshot.data![index].email.toString()),
                               Text(snapshot.data![index].phone.toString()),
                               Text(snapshot.data![index].address!.city.toString()),
+                              Text(snapshot.data![index].address!.geo!.lat.toString()),
+                              Text("Car"),
                             ],
                           ),
 

@@ -9,36 +9,20 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="Update Notifications">
-      <change afterPath="$PROJECT_DIR$/lib/firebase/wrapper_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/rest_api/api_home_page_ui.dart" afterDir="false" />
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="firebase login and signup">
+      <change afterPath="$PROJECT_DIR$/lib/firestore/firestore_send_data.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/firestore/firestore_view.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_graph.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_graph.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/version" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/practice_android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android/practice_android.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/android/settings.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/firebase/ui/auth/login_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/firebase/ui/auth/login_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/firebase/ui/auth/signup_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/firebase/ui/auth/signup_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/firebase/widgets/round_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/firebase/widgets/round_button.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/home_page/feature_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home_page/feature_card.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/home_page/home_page_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home_page/home_page_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/local_notification/local_notification.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/local_notification/local_notification.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/rest_api/complex_json/complex_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/rest_api/complex_json/complex_api.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/router/app_routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/router/app_routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/macos/Podfile" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Podfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/macos/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/macos/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +72,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -373,7 +358,15 @@
       <option name="project" value="LOCAL" />
       <updated>1752731853971</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="firebase login and signup">
+      <option name="closed" value="true" />
+      <created>1753113318261</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1753113318261</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -400,19 +393,20 @@
     <MESSAGE value="Update pack" />
     <MESSAGE value="Notification Permission setup and build.gradle Setup" />
     <MESSAGE value="Update Notifications" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Notifications" />
+    <MESSAGE value="firebase login and signup" />
+    <option name="LAST_COMMIT_MESSAGE" value="firebase login and signup" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
       <map>
         <entry key="com.example.practice">
           <value>
-            <CheckInfo lastCheckTimestamp="1752660666046" />
+            <CheckInfo lastCheckTimestamp="1753113254800" />
           </value>
         </entry>
         <entry key="com.example.practice.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1752660666048" />
+            <CheckInfo lastCheckTimestamp="1753113254785" />
           </value>
         </entry>
       </map>

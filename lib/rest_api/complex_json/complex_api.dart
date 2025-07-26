@@ -10,36 +10,68 @@ class ComplexApi extends StatefulWidget {
 }
 
 class _ComplexApiState extends State<ComplexApi> {
-  late Future<List<UserModel>> _userFuture;
+  List<UserModel> _users = [];
+  int _currentPage = 1;
+  bool _isLoading = false;
+  bool _hasMore = true;
+  final int _pageSize = 5;
+  final ScrollController _scrollController = ScrollController();
 
   @override
   void initState() {
     super.initState();
-    _userFuture = _fetchUsers();
+    _fetchUsers();
+    _scrollController.addListener(() {
+      if (_scrollController.position.pixels == _scrollController.position.maxScrollExtent && _hasMore && !_isLoading) {
+        _fetchUsers();
+      }
+    });
   }
 
-  Future<List<UserModel>> _fetchUsers() async {
+  Future<void> _fetchUsers() async {
+    if (_isLoading || !_hasMore) return;
+    setState(() => _isLoading = true);
+
     try {
       final response = await http.get(
-        Uri.parse("https://jsonplaceholder.typicode.com/users"),
+        Uri.parse("https://jsonplaceholder.typicode.com/users?_page=$_currentPage&_limit=$_pageSize"),
         headers: {'Accept': 'application/json'},
       );
 
       if (response.statusCode == 200) {
         final List<dynamic> jsonData = jsonDecode(response.body);
-        return jsonData.map((json) => UserModel.fromJson(json)).toList();
+        final List<UserModel> fetchedUsers = jsonData.map((json) => UserModel.fromJson(json)).toList();
+        setState(() {
+          _users.addAll(fetchedUsers);
+          _currentPage++;
+          _hasMore = fetchedUsers.length == _pageSize;
+          _isLoading = false;
+        });
       } else {
         throw Exception('Failed to load users: ${response.statusCode}');
       }
     } catch (e) {
-      throw Exception('Network error: $e');
+      setState(() {
+        _isLoading = false;
+      });
+      // Optionally, show an error message to the user
+      // For example, using a SnackBar or a Dialog
+      debugPrint('Network error: $e');
     }
+  }
+  @override
+  void dispose() {
+    _scrollController.dispose();
+    super.dispose();
   }
 
   Future<void> _refreshData() async {
     setState(() {
-      _userFuture = _fetchUsers();
+      _users = [];
+      _currentPage = 1;
+      _hasMore = true;
     });
+    await _fetchUsers();
   }
 
   @override
@@ -56,49 +88,41 @@ class _ComplexApiState extends State<ComplexApi> {
       ),
       body: RefreshIndicator(
         onRefresh: _refreshData,
-        child: FutureBuilder<List<UserModel>>(
-          future: _userFuture,
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return const Center(child: CircularProgressIndicator());
-            }
-
-            if (snapshot.hasError) {
-              return Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Icon(Icons.error, size: 48, color: Colors.red),
-                    const SizedBox(height: 16),
-                    Text(
-                      'Error: ${snapshot.error}',
-                      style: const TextStyle(fontSize: 18),
-                      textAlign: TextAlign.center,
+        child: _users.isEmpty && _isLoading
+            ? const Center(child: CircularProgressIndicator())
+            : _users.isEmpty && !_isLoading
+                ? Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Icon(Icons.info_outline, size: 48, color: Colors.grey),
+                        const SizedBox(height: 16),
+                        const Text('No users found.', style: TextStyle(fontSize: 18)),
+                        const SizedBox(height: 16),
+                        ElevatedButton(
+                          onPressed: _refreshData,
+                          child: const Text('Retry'),
+                        ),
+                      ],
                     ),
-                    const SizedBox(height: 16),
-                    ElevatedButton(
-                      onPressed: _refreshData,
-                      child: const Text('Retry'),
-                    ),
-                  ],
-                ),
-              );
-            }
-
-            if (!snapshot.hasData || snapshot.data!.isEmpty) {
-              return const Center(child: Text('No users found'));
-            }
-
-            return ListView.builder(
-              itemCount: snapshot.data!.length,
+                  )
+                : ListView.builder(
+              controller: _scrollController,
+              itemCount: _users.length + (_hasMore ? 1 : 0),
               itemBuilder: (context, index) {
-                final user = snapshot.data![index];
+                if (index == _users.length) {
+                  return _isLoading
+                      ? const Center(child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: CircularProgressIndicator(),
+                      ))
+                      : const SizedBox.shrink();
+                }
+                final user = _users[index];
                 return _buildUserCard(user);
               },
-            );
-          },
+            ),
         ),
-      ),
     );
   }
 

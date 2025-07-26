@@ -9,11 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="save fetched data on sheared preference">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/firestore/firestore_send_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/firestore/firestore_send_data.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/rest_api/complex_json/complex_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/rest_api/complex_json/complex_api.dart" afterDir="false" />
-    </list>
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="Complex api error solve" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -380,7 +376,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753509387862</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Complex api error solve">
+      <option name="closed" value="true" />
+      <created>1753510921542</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1753510921542</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -411,7 +415,8 @@
     <MESSAGE value="practice send and fetch data from firestore" />
     <MESSAGE value="send and fetch data with specific user" />
     <MESSAGE value="save fetched data on sheared preference" />
-    <option name="LAST_COMMIT_MESSAGE" value="save fetched data on sheared preference" />
+    <MESSAGE value="Complex api error solve" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complex api error solve" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

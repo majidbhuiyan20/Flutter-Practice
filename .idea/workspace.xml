@@ -9,11 +9,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="send and fetch data with specific user">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="save fetched data on sheared preference">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/firebase/ui/auth/login_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/firebase/ui/auth/login_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/firestore/firestore_fetch_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/firestore/firestore_fetch_data.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/firestore/firestore_send_data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/firestore/firestore_send_data.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/rest_api/complex_json/complex_api.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/rest_api/complex_json/complex_api.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -373,7 +372,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753469925412</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="save fetched data on sheared preference">
+      <option name="closed" value="true" />
+      <created>1753509387861</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1753509387862</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -403,7 +410,8 @@
     <MESSAGE value="firebase login and signup" />
     <MESSAGE value="practice send and fetch data from firestore" />
     <MESSAGE value="send and fetch data with specific user" />
-    <option name="LAST_COMMIT_MESSAGE" value="send and fetch data with specific user" />
+    <MESSAGE value="save fetched data on sheared preference" />
+    <option name="LAST_COMMIT_MESSAGE" value="save fetched data on sheared preference" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

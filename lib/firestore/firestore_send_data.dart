@@ -34,9 +34,9 @@ class _FirestoreSendDataState extends State<FirestoreSendData> {
           SnackBar(
             content: Text(
               'Data submitted successfully!',
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: Colors.white), // Text color white
             ),
-            backgroundColor: Colors.green,
+            backgroundColor: Colors.blue, // Background color blue
           ),
         );
 

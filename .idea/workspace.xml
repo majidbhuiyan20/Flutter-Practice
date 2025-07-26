@@ -9,7 +9,15 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="Complex api error solve" />
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="use pagination complex api">
+      <change afterPath="$PROJECT_DIR$/lib/test/test_section.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/home_page/feature_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home_page/feature_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/rest_api/crud_rest_api/crud_api.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/rest_api/crud_rest_api/model/CrudUserModel.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/rest_api/crud_rest_api/view/add_post.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/router/app_routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/router/app_routes.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -384,7 +392,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753510921542</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="use pagination complex api">
+      <option name="closed" value="true" />
+      <created>1753511426924</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1753511426924</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -416,7 +432,8 @@
     <MESSAGE value="send and fetch data with specific user" />
     <MESSAGE value="save fetched data on sheared preference" />
     <MESSAGE value="Complex api error solve" />
-    <option name="LAST_COMMIT_MESSAGE" value="Complex api error solve" />
+    <MESSAGE value="use pagination complex api" />
+    <option name="LAST_COMMIT_MESSAGE" value="use pagination complex api" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

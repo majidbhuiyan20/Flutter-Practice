@@ -38,25 +38,6 @@ class _ApiHomePageUiState extends State<ApiHomePageUi> {
                 ),
               ),
             ),
-            const SizedBox(width: 16),
-            Expanded(
-              child: SizedBox(
-                height: 150, // Standard card height
-                width: 150,  // Standard card width
-                child: Card(
-                  elevation: 4,
-                  child: InkWell(
-                    onTap: () {
-                      context.push('/crudApi');
-                    },
-                    child: const Padding(
-                      padding: EdgeInsets.all(16.0),
-                      child: Center(child: Text('CRUD API', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold))),
-                    ),
-                  ),
-                ),
-              ),
-            ),
           ],
         ),
       ),

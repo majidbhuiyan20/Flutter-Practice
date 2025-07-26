@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 final _fireStore = FirebaseFirestore.instance;
 
@@ -13,6 +14,26 @@ class FirestoreFetchData extends StatefulWidget {
 }
 
 class _FirestoreFetchDataState extends State<FirestoreFetchData> {
+  Future<void> _saveDataLocally(QuerySnapshot data) async {
+    final prefs = await SharedPreferences.getInstance();
+    final List<String> studentDataList = [];
+    for (var doc in data.docs) {
+      final name = doc['name'] as String?;
+      final department = doc['department'] as String?;
+      final university = doc['university'] as String?;
+      // Simple serialization, consider JSON for more complex data
+      studentDataList.add(
+          '${name ?? ''}|${department ?? ''}|${university ?? ''}');
+    }
+    await prefs.setStringList('students_data', studentDataList);
+  }
+
+  // Example of how you might load data (not used in this snippet directly, but for context)
+  // Future<void> _loadDataLocally() async {
+  //   final prefs = await SharedPreferences.getInstance();
+  //   final List<String>? studentDataList = prefs.getStringList('students_data');
+  //   // Process studentDataList
+  // }
   @override
   Widget build(BuildContext context) {
     final user = FirebaseAuth.instance.currentUser;
@@ -45,6 +66,9 @@ class _FirestoreFetchDataState extends State<FirestoreFetchData> {
               );
             }
             final data = snapshot.requireData;
+            // Save data to SharedPreferences when new data is fetched
+            _saveDataLocally(data);
+
             return ListView.builder(
               itemCount: data.size,
               itemBuilder: (context, index) {

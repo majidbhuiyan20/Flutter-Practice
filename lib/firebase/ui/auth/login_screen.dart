@@ -50,7 +50,9 @@ class _LoginScreenState extends State<LoginScreen> {
       }
     }catch(e){
       Utils.toastMessage(e.toString());
-      setState(() {loading = true;});
+      setState(() {
+        loading = false; // Set loading to false on error to stop progress indicator
+      });
     }
   }
 
@@ -142,13 +144,23 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
             SizedBox(height: 20,),
-            RoundButton(title: "Login",color: Colors.blue, onTap: (){
-
-              if(_formKey.currentState!.validate()){
-                logIn();
-              }
-            }, loading: loading,),
+            loading
+                ? CircularProgressIndicator(
+              valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
+            )
+                : RoundButton(
+              title: "Login",
+              color: Colors.blue,
+              onTap: () {
+                if (_formKey.currentState!.validate()) {
+                  logIn();
+                }
+              },
+              loading: loading,
+            ),
+            SizedBox(height: 20,),
             Row(
+
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("Don't have an account?"),

@@ -26,9 +26,7 @@ class HomePageScreen extends ConsumerWidget {
             onPressed: () async {
               try {
                 await _auth.signOut();
-                // Navigate to the login screen
-                // Navigator.pushReplacement(context,
-                //     MaterialPageRoute(builder: (context) => const LoginScreen()));
+              
               } catch (e) {
                 // Handle sign-out errors, e.g., display a SnackBar
                 ScaffoldMessenger.of(context).showSnackBar(

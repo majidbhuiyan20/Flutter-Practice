@@ -183,7 +183,7 @@
     },
     {
       "name": "flutter_local_notifications",
-      "rootUri": "file:///Users/daymon/.pub-cache/hosted/pub.dev/flutter_local_notifications-19.3.0",
+      "rootUri": "file:///Users/daymon/.pub-cache/hosted/pub.dev/flutter_local_notifications-19.4.0",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },
@@ -216,6 +216,12 @@
       "rootUri": "file:///Users/daymon/development/flutter/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "3.7"
+    },
+    {
+      "name": "flutter_timezone",
+      "rootUri": "file:///Users/daymon/.pub-cache/hosted/pub.dev/flutter_timezone-4.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
     },
     {
       "name": "flutter_web_plugins",

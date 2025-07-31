@@ -10,7 +10,7 @@ import 'firebase_options.dart';
 import 'local_notification/local_notification.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
-FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
+final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
 FlutterLocalNotificationsPlugin();
 
 void main() async {
@@ -18,12 +18,14 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  // Initialize Timezone
+  tz.initializeTimeZones();
 
-  // Initialize plugin
+  // Initialize Plugin
   const AndroidInitializationSettings initializationSettingsAndroid =
   AndroidInitializationSettings('@mipmap/ic_launcher');
 
-  final InitializationSettings initializationSettings =
+  const InitializationSettings initializationSettings =
   InitializationSettings(android: initializationSettingsAndroid);
 
   await flutterLocalNotificationsPlugin.initialize(initializationSettings);

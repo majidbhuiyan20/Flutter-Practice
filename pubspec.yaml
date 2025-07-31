@@ -52,7 +52,7 @@ dependencies:
   timezone: ^0.10.1
   rxdart: ^0.28.0
   firebase_messaging: ^15.2.10
-##  flutter_timezone: ^1.0.8
+  flutter_timezone: ^4.1.1
 
 
 dev_dependencies:

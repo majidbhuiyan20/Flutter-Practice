@@ -9,6 +9,9 @@ android {
     namespace = "com.example.practice"
     compileSdk = 36
     ndkVersion =  "27.0.12077973"
+    defaultConfig {
+        multiDexEnabled = true
+    }
 
     compileOptions {
         isCoreLibraryDesugaringEnabled = true

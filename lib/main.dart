@@ -1,17 +1,15 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+//import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:practice/router/app_routes.dart';
-import 'package:timezone/data/latest.dart' as tz;
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+import 'package:practice/router/app_routes.dart'; // Assuming this file exists and is needed. If not, remove this line.
 
 import 'firebase_options.dart';
 import 'local_notification/local_notification.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
-final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
-FlutterLocalNotificationsPlugin();
+// final FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin =
+// FlutterLocalNotificationsPlugin();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,16 +17,17 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   // Initialize Timezone
-  tz.initializeTimeZones();
+ // tz.initializeTimeZones();
+  //tz.setLocalLocation(tz.getLocation('Asia/Dhaka'));
 
   // Initialize Plugin
-  const AndroidInitializationSettings initializationSettingsAndroid =
-  AndroidInitializationSettings('@mipmap/ic_launcher');
+  // const AndroidInitializationSettings initializationSettingsAndroid =
+  // AndroidInitializationSettings('@mipmap/ic_launcher');
 
-  const InitializationSettings initializationSettings =
-  InitializationSettings(android: initializationSettingsAndroid);
+  // const InitializationSettings initializationSettings =
+  // InitializationSettings(android: initializationSettingsAndroid);
 
-  await flutterLocalNotificationsPlugin.initialize(initializationSettings);
+ // await flutterLocalNotificationsPlugin.initialize(initializationSettings);
 
   runApp(const ProviderScope(child: MyApp()));
 }

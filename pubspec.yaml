@@ -48,11 +48,12 @@ dependencies:
   go_router: ^16.0.0
   riverpod: ^2.6.1
   flutter_riverpod: ^2.6.1
-  flutter_local_notifications: ^19.3.0
-  timezone: ^0.10.1
   rxdart: ^0.28.0
   firebase_messaging: ^15.2.10
-  flutter_timezone: ^4.1.1
+#  flutter_timezone: ^4.1.1
+#  flutter_local_notifications: ^17.2.4
+#  timezone: ^0.9.2
+
 
 
 dev_dependencies:

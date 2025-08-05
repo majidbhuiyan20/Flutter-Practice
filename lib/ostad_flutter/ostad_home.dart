@@ -9,9 +9,9 @@ class OstadHome extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final ostadWorkList = ref.watch(OstadListProvider);
     return Scaffold(
-      appBar: AppBar(title: const Text('Ostad Home'),
+      appBar: AppBar(title: const Text('Ostad Home', style: TextStyle(color: Colors.white),), backgroundColor: Colors.blue,
       leading: IconButton(
-        icon: const Icon(Icons.arrow_back),
+        icon: const Icon(Icons.arrow_back, color: Colors.white,),
         onPressed: () {
           Navigator.pop(context);
         },

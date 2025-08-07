@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:practice/firebase/ui/auth/signup_screen.dart';
 import 'package:practice/firebase/widgets/round_button.dart';
 import 'package:practice/home_page/home_page_screen.dart';
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -52,6 +54,43 @@ class _LoginScreenState extends State<LoginScreen> {
       Utils.toastMessage(e.toString());
       setState(() {
         loading = false; // Set loading to false on error to stop progress indicator
+      });
+    }
+  }
+
+  void signInWithGoogle() async {
+    setState(() {
+      loading = true;
+    });
+    try {
+      final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+      if (googleUser == null) {
+        setState(() {
+          loading = false;
+        });
+        return;
+      }
+
+      final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
+      final credential = GoogleAuthProvider.credential(
+        accessToken: googleAuth.accessToken,
+        idToken: googleAuth.idToken,
+      );
+
+      final UserCredential userCredential = await _auth.signInWithCredential(credential);
+      if (userCredential.user != null) {
+        Utils.toastMessage("Google Sign-In Successful");
+        SharedPreferences prefs = await SharedPreferences.getInstance();
+        prefs.setBool("isLoggedIn", true);
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePageScreen()));
+        setState(() {
+          loading = false;
+        });
+      }
+    } catch (e) {
+      Utils.toastMessage(e.toString());
+      setState(() {
+        loading = false;
       });
     }
   }
@@ -159,6 +198,35 @@ class _LoginScreenState extends State<LoginScreen> {
               loading: loading,
             ),
             SizedBox(height: 20,),
+            // Google Sign-In Button
+            Container(
+              width: double.infinity,
+              height: 50,
+              child: ElevatedButton.icon(
+                onPressed: loading ? null : signInWithGoogle,
+                icon: Icon(
+                  Icons.g_mobiledata, // Google icon
+                  color: Colors.white,
+                  size: 24,
+                ),
+                label: Text(
+                  "Sign in with Google",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.red[600],
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  elevation: 2,
+                ),
+              ),
+            ),
+            SizedBox(height: 20,),
             Row(
 
               mainAxisAlignment: MainAxisAlignment.center,
@@ -172,6 +240,16 @@ class _LoginScreenState extends State<LoginScreen> {
           ],
         ),
       ),
+    );
+  }
+}
+
+class Utils {
+  static void toastMessage(String message) {
+    Fluttertoast.showToast(
+      msg: message,
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.BOTTOM,
     );
   }
 }

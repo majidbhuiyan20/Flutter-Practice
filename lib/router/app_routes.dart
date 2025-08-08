@@ -12,11 +12,11 @@ import 'package:practice/rest_api/complex_json/complex_api.dart';
 import 'package:practice/test/test_section.dart';
 final GoRouter router = GoRouter(
   routes: [
-    GoRoute(path: '/', builder: (context, state) => const WrapperScreen()),
-    //GoRoute(path: '/', builder: (context, state) => const AddEmployee()),
+    //GoRoute(path: '/', builder: (context, state) => const WrapperScreen()),
+    GoRoute(path: '/', builder: (context, state) => const AddEmployee()),
     //GoRoute(path: '/', builder: (context, state) => const GrettingAppScreen()),
     GoRoute(path: '/homepage', builder: (context, state) => const HomePageScreen()),
-    GoRoute(path: '/notification', builder: (context, state) => LocalNotification()),
+    //GoRoute(path: '/notification', builder: (context, state) => LocalNotification()),
     GoRoute(path: '/complexApi', builder: (context, state) => const ComplexApi()),
     GoRoute(path: '/apiUI', builder: (context, state) => const ApiHomePageUi()),
     GoRoute(path: '/firestore', builder: (context, state) => const FirestoreView()),

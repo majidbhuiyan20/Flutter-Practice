@@ -24,7 +24,15 @@ class _AddEmployeeState extends State<AddEmployee> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Add Employee"),
+        backgroundColor: Colors.blue,
+        iconTheme: const IconThemeData(
+          color: Colors.white, //change your color here
+        ),
+        elevation: 0,
+        title: const Text(
+          "Add Employee",
+          style: TextStyle(color: Colors.white),
+        ),
       ),
       body: Column(
         children: [
@@ -35,9 +43,17 @@ class _AddEmployeeState extends State<AddEmployee> {
                 child: Column(
                   children: [
                     TextFormField(
+                      style: TextStyle(color: Colors.grey[700]),
                       controller: _nameController,
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         hintText: 'Name',
+                        hintStyle: TextStyle(color: Colors.grey[400]),
+                        prefixIcon: Icon(Icons.person, color: Colors.blue),
+                        filled: true,
+                        fillColor: Colors.grey[200],
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12.0), // Use blue color
+                            borderSide: BorderSide.none),
 
                       ),
                       validator: (value) {
@@ -49,9 +65,17 @@ class _AddEmployeeState extends State<AddEmployee> {
                     ),
                     const SizedBox(height: 16),
                     TextFormField(
+                      style: TextStyle(color: Colors.grey[700]),
                       controller: _ageController,
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         hintText: 'Age',
+                        hintStyle: TextStyle(color: Colors.grey[400]),
+                        prefixIcon: Icon(Icons.cake, color: Colors.blue),
+                        filled: true,
+                        fillColor: Colors.grey[200],
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12.0),
+                            borderSide: BorderSide.none),
                       ),
                       keyboardType: TextInputType.number,
                       validator: (value) {
@@ -66,9 +90,17 @@ class _AddEmployeeState extends State<AddEmployee> {
                     ),
                     const SizedBox(height: 16),
                     TextFormField(
+                      style: TextStyle(color: Colors.grey[700]),
                       controller: _salaryController,
-                      decoration: const InputDecoration(
+                      decoration: InputDecoration(
                         hintText: 'Salary',
+                        hintStyle: TextStyle(color: Colors.grey[400]),
+                        prefixIcon: Icon(Icons.attach_money, color: Colors.blue),
+                        filled: true,
+                        fillColor: Colors.grey[200],
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(12.0),
+                            borderSide: BorderSide.none),
 
                       ),
                       keyboardType: TextInputType.number,
@@ -84,6 +116,11 @@ class _AddEmployeeState extends State<AddEmployee> {
                     ),
                     const SizedBox(height: 24),
                     ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blue,
+                        padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+                        textStyle: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0))),
                       onPressed: () {
                         if (_formKey.currentState!.validate()) {
                           setState(() {
@@ -98,7 +135,7 @@ class _AddEmployeeState extends State<AddEmployee> {
                           });
                         }
                       },
-                      child: const Text('Add Employee'),
+                      child: const Text('Add Employee', style: TextStyle(color: Colors.white)),
                     ),
                   ],
                 )),
@@ -109,10 +146,14 @@ class _AddEmployeeState extends State<AddEmployee> {
               itemBuilder: (context, index) {
                 final employee = _employees[index];
                 return Card(
+                  elevation: 4.0,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
                   margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                   child: ListTile(
-                    title: Text(employee.name, style: const TextStyle(fontWeight: FontWeight.bold)),
-                    subtitle: Text('Age: ${employee.age}, Salary: \$${employee.salary.toStringAsFixed(2)}'),
+                    leading: CircleAvatar(
+                        backgroundColor: Colors.blue, child: Text(employee.name[0], style: const TextStyle(color: Colors.white))),
+                    title: Text(employee.name, style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue[700])),
+                    subtitle: Text('Age: ${employee.age}, Salary: \$${employee.salary.toStringAsFixed(2)}', style: TextStyle(color: Colors.grey[600])),
                   ),
                 );
               },

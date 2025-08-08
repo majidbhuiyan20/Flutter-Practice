@@ -187,7 +187,7 @@
         <entry key="flutter">
           <value>
             <list>
-              <option value="$USER_HOME$/development/flutter/packages/flutter/lib" />
+              <option value="$USER_HOME$/Development/flutter/packages/flutter/lib" />
             </list>
           </value>
         </entry>
@@ -208,14 +208,14 @@
         <entry key="flutter_test">
           <value>
             <list>
-              <option value="$USER_HOME$/development/flutter/packages/flutter_test/lib" />
+              <option value="$USER_HOME$/Development/flutter/packages/flutter_test/lib" />
             </list>
           </value>
         </entry>
         <entry key="flutter_web_plugins">
           <value>
             <list>
-              <option value="$USER_HOME$/development/flutter/packages/flutter_web_plugins/lib" />
+              <option value="$USER_HOME$/Development/flutter/packages/flutter_web_plugins/lib" />
             </list>
           </value>
         </entry>
@@ -453,7 +453,7 @@
         <entry key="sky_engine">
           <value>
             <list>
-              <option value="$USER_HOME$/development/flutter/bin/cache/pkg/sky_engine/lib" />
+              <option value="$USER_HOME$/Development/flutter/bin/cache/pkg/sky_engine/lib" />
             </list>
           </value>
         </entry>
@@ -673,10 +673,10 @@
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/vm_service-15.0.0/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/web-1.1.1/lib" />
       <root url="file://$USER_HOME$/.pub-cache/hosted/pub.dev/xdg_directories-1.1.0/lib" />
-      <root url="file://$USER_HOME$/development/flutter/bin/cache/pkg/sky_engine/lib" />
-      <root url="file://$USER_HOME$/development/flutter/packages/flutter/lib" />
-      <root url="file://$USER_HOME$/development/flutter/packages/flutter_test/lib" />
-      <root url="file://$USER_HOME$/development/flutter/packages/flutter_web_plugins/lib" />
+      <root url="file://$USER_HOME$/Development/flutter/bin/cache/pkg/sky_engine/lib" />
+      <root url="file://$USER_HOME$/Development/flutter/packages/flutter/lib" />
+      <root url="file://$USER_HOME$/Development/flutter/packages/flutter_test/lib" />
+      <root url="file://$USER_HOME$/Development/flutter/packages/flutter_web_plugins/lib" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -9,10 +9,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="init calculator app and custom widgets">
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="make calculator main ui">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/project/calculator/calculatorApp.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/calculator/calculatorApp.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/project/calculator/widget/buildCalculatorButton.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/calculator/widget/buildCalculatorButton.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -488,7 +487,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755160496718</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="make calculator main ui">
+      <option name="closed" value="true" />
+      <created>1755161542623</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1755161542623</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -529,7 +536,8 @@
     <MESSAGE value="sign in with google" />
     <MESSAGE value="update flutter practice project" />
     <MESSAGE value="init calculator app and custom widgets" />
-    <option name="LAST_COMMIT_MESSAGE" value="init calculator app and custom widgets" />
+    <MESSAGE value="make calculator main ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="make calculator main ui" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

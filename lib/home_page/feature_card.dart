@@ -51,4 +51,6 @@ final featureListProvider = StateProvider<List<Feature>>((ref) => [
   Feature(title: 'Firestore', icon: Icons.storage, route: '/firestore'),
   Feature(title: 'Ostad Work', icon: Icons.home_work, route: '/ostadHome'),
   Feature(title: 'Basic Calculator', icon: Icons.calculate, route: '/calculator'),
+  Feature(title: 'Water Tracker', icon: Icons.water_drop, route: '/waterTracker'),
+
   ]);

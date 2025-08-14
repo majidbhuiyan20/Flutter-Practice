@@ -5,6 +5,7 @@ import 'package:practice/home_page/home_page_screen.dart';
 import 'package:go_router/go_router.dart';
 import 'package:practice/ostad_flutter/live_test/add_employe.dart';
 import 'package:practice/ostad_flutter/ostad_home.dart';
+import 'package:practice/project/calculator/calculatorApp.dart';
 import 'package:practice/rest_api/api_home_page_ui.dart';
 import 'package:practice/rest_api/complex_json/complex_api.dart';
 import 'package:practice/test/test_section.dart';
@@ -27,6 +28,7 @@ final GoRouter router = GoRouter(
     GoRoute(path: '/firestoreFetch', builder: (context, state) => const FirestoreFetchData()),
     GoRoute(path: '/test', builder: (context, state) => const TestSection()),
     GoRoute(path: '/ostadHome', builder: (context, state) => const OstadHome()),
+    GoRoute(path: '/calculator', builder: (context, state) => const CalculatorApp()),
 
 
 

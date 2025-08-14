@@ -9,10 +9,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="water_tracker_ui design">
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="dynamic add water button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/project/water_tracker/water_tracker.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/water_tracker/water_tracker.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/project/water_tracker/widget/add_water_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/water_tracker/widget/add_water_button.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -519,7 +518,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755207373874</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="dynamic add water button">
+      <option name="closed" value="true" />
+      <created>1755208040329</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1755208040329</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -564,7 +571,8 @@
     <MESSAGE value="make basic calculator app logic" />
     <MESSAGE value="init water tracker app" />
     <MESSAGE value="water_tracker_ui design" />
-    <option name="LAST_COMMIT_MESSAGE" value="water_tracker_ui design" />
+    <MESSAGE value="dynamic add water button" />
+    <option name="LAST_COMMIT_MESSAGE" value="dynamic add water button" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

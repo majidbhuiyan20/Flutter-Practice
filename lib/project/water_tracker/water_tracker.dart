@@ -9,18 +9,104 @@ class WaterTracker extends StatefulWidget {
 }
 
 class _WaterTrackerState extends State<WaterTracker> {
+  int currentWaterInTank = 0;
+  int targetWater = 2000;
+  bool _isSnackBarVisible = false;
+
+  void waterAdd(int amount){
+    setState((){
+      currentWaterInTank = currentWaterInTank + amount;
+      if(currentWaterInTank >= targetWater){
+        currentWaterInTank = targetWater;
+        if (!_isSnackBarVisible) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Container(
+              padding: EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.blueAccent,
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.2),
+                    spreadRadius: 2,
+                    blurRadius: 5,
+                    offset: Offset(0, 3),
+                  ),
+                ],
+              ),
+              child: Text('Congratulations! You have reached your target.', style: TextStyle(color: Colors.white, fontSize: 16),),
+            ),
+            duration: Duration(seconds: 3),
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+          ),
+        )
+            .closed
+            .then((SnackBarClosedReason reason) {
+            setState(() {
+              _isSnackBarVisible = false;
+            });
+          });
+        _isSnackBarVisible = true;}
+      }
+      print(currentWaterInTank);
+    });
+  }
+  void waterRemove(int amount){
+    setState((){
+      currentWaterInTank = currentWaterInTank - amount;
+      if(currentWaterInTank <= 0){
+        currentWaterInTank = 0;
+        if (!_isSnackBarVisible) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Container(
+                padding: EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: Colors.redAccent, // Changed color for empty tank
+                  borderRadius: BorderRadius.circular(10),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.2),
+                      spreadRadius: 2,
+                      blurRadius: 5,
+                      offset: Offset(0, 3),
+                    ),
+                  ],
+                ),
+                child: Text('Your Water Tank is Empty.', style: TextStyle(color: Colors.white, fontSize: 16),),
+              ),
+              duration: Duration(seconds: 3),
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+            )
+        )
+            .closed
+            .then((SnackBarClosedReason reason) {
+            setState(() {
+              _isSnackBarVisible = false;
+            });
+          });
+          _isSnackBarVisible = true;
+        }
+      }
+      print(currentWaterInTank);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Water Tracker', style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.blue,
-        leading: BackButton(color: Colors.white),
+        leading: const BackButton(color: Colors.white),
       ),
       body: Center(
         child: Column(
           children: [
-            SizedBox(height: 30),
+            SizedBox(height: 10),
             Container(
               padding: EdgeInsets.all(80),
               decoration: BoxDecoration(
@@ -31,7 +117,6 @@ class _WaterTrackerState extends State<WaterTracker> {
                     color: Colors.blue.withOpacity(0.2),
                     spreadRadius: 2,
                     blurRadius: 10,
-
                     //offset: Offset(0, 9),
                   ),
                 ],
@@ -40,11 +125,12 @@ class _WaterTrackerState extends State<WaterTracker> {
                 children: [
                   Text(
                     'Today\'s in Tank',
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    style:
+                        TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 10),
                   Text(
-                    "2000 LTR",
+                    currentWaterInTank.toString(),
                     style: TextStyle(
                       fontSize: 30,
                       fontWeight: FontWeight.bold,
@@ -55,7 +141,6 @@ class _WaterTrackerState extends State<WaterTracker> {
               ),
             ),
             SizedBox(height: 30),
-
             Stack(
               alignment: Alignment.center,
               children: [
@@ -67,11 +152,11 @@ class _WaterTrackerState extends State<WaterTracker> {
                     strokeWidth: 15,
                     color: Colors.blue,
                     strokeCap: StrokeCap.round,
-                    value: 0.7,
+                    value: currentWaterInTank / targetWater,
                   ),
                 ),
                 Text(
-                  "70%",
+                  "${(currentWaterInTank / targetWater * 100).toStringAsFixed(0)}%",
                   style: TextStyle(
                     fontSize: 40,
                     fontWeight: FontWeight.bold,
@@ -80,17 +165,34 @@ class _WaterTrackerState extends State<WaterTracker> {
                 ),
               ],
             ),
-            SizedBox(height: 30,),
-            Wrap(
-              spacing: 1,
-              children: [
-              addWaterButton(amount: 100, callBack: () { },),
-              addWaterButton(amount: 200, callBack: () { },icon: Icons.water_drop_rounded,),
-                ],),
+            SizedBox(
+              height: 10,
+            ),
+            Center(
+              child: Wrap(
+                spacing: 1,
+                children: [
+                  addWaterButton(
+                    amount: 100,
+                    callBack: () => waterAdd(100),
+                  ),
+                  addWaterButton(
+                    amount: 200,
+                    callBack: () => waterAdd(200),
+                    icon: Icons.water_drop_rounded,
+                  ),
+                  addWaterButton(
+                    amount: 100,
+                    callBack: () => waterRemove(100),
+                    icon: Icons.water_drop_rounded,
+                    text: "Sub",
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
-

@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 
 class addWaterButton extends StatelessWidget {
   final int amount;
+  String ? text;
   IconData? icon;
   final VoidCallback callBack;
 
-   addWaterButton({
+   addWaterButton({this.text,
     super.key, required this.amount,this.icon, required this.callBack
   });
 
@@ -24,7 +25,7 @@ class addWaterButton extends StatelessWidget {
         onPressed: callBack,
         label: Padding(
           padding: const EdgeInsets.all(14.0),
-          child: Text('Add $amount LTR', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),),
+          child: Text('${text ?? "ADD"} $amount LTR', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),),
         ),
         icon: Icon(icon ?? Icons.water_drop, color: Colors.white, size: 28,),
       ),

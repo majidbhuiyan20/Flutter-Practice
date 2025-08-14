@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:practice/home_page/feature_card.dart';
+import 'ostad_provider.dart';
 
 class OstadHome extends ConsumerWidget {
   const OstadHome({super.key});

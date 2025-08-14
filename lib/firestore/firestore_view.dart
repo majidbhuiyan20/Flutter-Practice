@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'firestore_send_data.dart';
 import 'firestore_fetch_data.dart';
 
@@ -46,7 +44,7 @@ class _FirestoreViewState extends State<FirestoreView> {
                     borderRadius: BorderRadius.circular(8.0),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
+                        color: Colors.grey.withValues(alpha: 0.5),
                         spreadRadius: 2,
                         blurRadius: 5,
                         offset: const Offset(0, 3), // changes position of shadow

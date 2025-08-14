@@ -50,12 +50,6 @@ final featureListProvider = StateProvider<List<Feature>>((ref) => [
   Feature(title: 'API Call', icon: Icons.cloud_download, route: '/apiUI'),
   Feature(title: 'Firestore', icon: Icons.storage, route: '/firestore'),
   Feature(title: 'Ostad Work', icon: Icons.home_work, route: '/ostadHome'),
-  // Add more with routes here
-]);
-final OstadListProvider = StateProvider<List<Feature>>((ref) => [
-  Feature(title: 'Greeting App', icon: Icons.assignment, route: '/greetingApp'),
-  Feature(title: 'Add Employee', icon: Icons.assessment_rounded, route: '/addEmployee'),
 
-  // Add more with routes here
-]);
-
+  Feature(title: 'Basic Calculator', icon: Icons.calculate, route: '/ostadHome'),
+  ]);

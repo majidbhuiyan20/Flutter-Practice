@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -77,7 +76,7 @@ class _FirestoreFetchDataState extends State<FirestoreFetchData> {
                 final department = document['department'] as String?;
                 final university = document['university'] as String?;
                 return Card(
-                  color: Colors.white.withOpacity(0.8), // Make card semi-transparent
+                  color: Colors.white.withValues(alpha: 0.8), // Make card semi-transparent
                   margin: const EdgeInsets.all(8.0),
                   child: ListTile(
                     title: Text(name ?? 'No Name'),

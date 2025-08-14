@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class GrettingAppScreen extends StatelessWidget {
@@ -19,6 +18,11 @@ class GrettingAppScreen extends StatelessWidget {
             children: [
               Text("Hello, World!", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.red),),
               SizedBox(height: 20,),
+              Icon(
+                Icons.flutter_dash,
+                size: 80,
+                color: Colors.blue,
+              ),
               Text("Welcome To Flutter!"),
               SizedBox(height: 20,),
               Image.network(

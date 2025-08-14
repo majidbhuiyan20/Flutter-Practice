@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:practice/firebase/ui/auth/signup_screen.dart';
 import 'package:practice/firebase/widgets/round_button.dart';
@@ -22,8 +21,9 @@ class _LoginScreenState extends State<LoginScreen> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   bool _obscureText = true;
-  FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseAuth _auth = FirebaseAuth.instance;
   bool loading = false;
+  bool googleLoading = false; // Separate loading state for Google Sign-In
 
   @override
   void dispose() {
@@ -41,11 +41,13 @@ class _LoginScreenState extends State<LoginScreen> {
       final user = await _auth.signInWithEmailAndPassword(
           email: emailController.text.toString(),
           password: passwordController.text.toString());
-      if(user != null){
+      if(user.user != null){
         Utils.toastMessage("LogIn Successful");
         SharedPreferences prefs = await SharedPreferences.getInstance();
         prefs.setBool("isLoggedIn", true);
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> HomePageScreen()));
+        if (mounted) {
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> HomePageScreen()));
+        }
         setState(() {
           loading = false;
         });
@@ -58,46 +60,61 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
 
-  void signInWithGoogle() async {
-    setState(() {
-      loading = true;
-    });
+  Future<void> signInWithGoogle() async {
+    setState(() => googleLoading = true); // Use googleLoading for Google Sign-In
+
     try {
-      final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
+      final GoogleSignIn googleSignIn = GoogleSignIn(scopes: ['email', 'profile']);
+
+      // Always sign out before starting to avoid cached account issues
+      // await googleSignIn.signOut(); // Consider if this is always needed
+
+      // Start Google Sign-In
+      final GoogleSignInAccount? googleUser = await googleSignIn.signIn();
       if (googleUser == null) {
-        setState(() {
-          loading = false;
-        });
+        Utils.toastMessage("Google Sign-In cancelled or failed.");
+        if (mounted) setState(() => googleLoading = false);
         return;
       }
 
+      // Get authentication tokens
       final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
-      final credential = GoogleAuthProvider.credential(
+
+      // Create Firebase credential
+      final OAuthCredential credential = GoogleAuthProvider.credential(
         accessToken: googleAuth.accessToken,
         idToken: googleAuth.idToken,
       );
 
-      final UserCredential userCredential = await _auth.signInWithCredential(credential);
-      if (userCredential.user != null) {
-        Utils.toastMessage("Google Sign-In Successful");
-        SharedPreferences prefs = await SharedPreferences.getInstance();
-        prefs.setBool("isLoggedIn", true);
-        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePageScreen()));
-        setState(() {
-          loading = false;
-        });
-      }
+      // Sign in to Firebase
+      final UserCredential userCredential =
+      await FirebaseAuth.instance.signInWithCredential(credential);
+
+      // Save login state
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+      await prefs.setBool("isLoggedIn", true);
+
+      Utils.toastMessage("✅ Google Sign-In Successful");
+
+      if (!mounted) return;
+
+      // Navigate to home
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const HomePageScreen()),
+      );
     } catch (e) {
-      Utils.toastMessage(e.toString());
-      setState(() {
-        loading = false;
-      });
+      Utils.toastMessage("❌ Google Sign-In error: ${e.toString()}");
+    } finally {
+      // Ensure googleLoading is set to false in all cases
+      if (mounted) setState(() => googleLoading = false);
     }
   }
 
+
   @override
   Widget build(BuildContext context) {
-    print("This is majid");
+    // print("This is majid");
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -143,7 +160,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   return null;
                 },
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20),
                 TextFormField(
                   obscureText: _obscureText,
                   controller: passwordController,
@@ -181,8 +198,8 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ],
             ),
-          ),
-            SizedBox(height: 20,),
+                      ),
+            const SizedBox(height: 20),
             loading
                 ? CircularProgressIndicator(
               valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
@@ -197,15 +214,21 @@ class _LoginScreenState extends State<LoginScreen> {
               },
               loading: loading,
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20),
             // Google Sign-In Button
             Container(
               width: double.infinity,
               height: 50,
-              child: ElevatedButton.icon(
-                onPressed: loading ? null : signInWithGoogle,
+              child: googleLoading
+                  ? Center(
+                child: CircularProgressIndicator(
+                  valueColor: AlwaysStoppedAnimation<Color>(Colors.deepPurple),
+                ),
+              )
+                  : ElevatedButton.icon(
+                onPressed: loading ? null : signInWithGoogle, // Disable if email/password login is in progress
                 icon: Icon(
-                  Icons.g_mobiledata, // Google icon
+                  Icons.g_mobiledata, // Google icon, consider using a more standard Google logo
                   color: Colors.white,
                   size: 24,
                 ),
@@ -218,15 +241,17 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.red[600],
+                  backgroundColor: Colors.deepPurple, // Changed Google Sign-In button color
+                  disabledBackgroundColor: Colors.deepPurple.withOpacity(0.5), // Visual feedback when disabled
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
                   elevation: 2,
                 ),
               ),
+
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20),
             Row(
 
               mainAxisAlignment: MainAxisAlignment.center,

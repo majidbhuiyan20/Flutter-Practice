@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'firestore_fetch_data.dart';
 
@@ -30,34 +29,38 @@ class _FirestoreSendDataState extends State<FirestoreSendData> {
           'userId': user!.uid,  // Add this line to store user ID
         });
 
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text(
-              'Data submitted successfully!',
-              style: TextStyle(color: Colors.white), // Text color white
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(
+                'Data submitted successfully!',
+                style: TextStyle(color: Colors.white), // Text color white
+              ),
+              backgroundColor: Colors.blue, // Background color blue
             ),
-            backgroundColor: Colors.blue, // Background color blue
-          ),
-        );
+          );
 
-        _nameController.clear();
-        _universityController.clear();
-        _deptController.clear();
+          _nameController.clear();
+          _universityController.clear();
+          _deptController.clear();
 
-        // Navigate to FirestoreFetchData screen
-        Navigator.pushReplacement(context, MaterialPageRoute(
-            builder: (context) => const FirestoreFetchData()
-        ));
+          // Navigate to FirestoreFetchData screen
+          Navigator.pushReplacement(context, MaterialPageRoute(
+              builder: (context) => const FirestoreFetchData()
+          ));
+        }
       } catch (e) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text(
-              'Error: $e',
-              style: TextStyle(color: Colors.white),
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text(
+                'Error: $e',
+                style: TextStyle(color: Colors.white),
+              ),
+              backgroundColor: Colors.red,
             ),
-            backgroundColor: Colors.red,
-          ),
-        );
+          );
+        }
       }
     }
   }

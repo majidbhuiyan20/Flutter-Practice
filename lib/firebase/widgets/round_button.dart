@@ -1,10 +1,18 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class RoundButton extends StatelessWidget {
-  String title;
+  final String title;
   final VoidCallback onTap;
-  RoundButton({super.key, required this.title, required this.onTap, required bool loading, required MaterialColor color});
+  final bool loading;
+  final MaterialColor color;
+  
+  const RoundButton({
+    super.key, 
+    required this.title, 
+    required this.onTap, 
+    required this.loading, 
+    required this.color
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +21,7 @@ class RoundButton extends StatelessWidget {
       child: Container(
         height: 50,
         decoration: BoxDecoration(
-          color: Colors.blue,
+          color: color,
           borderRadius: BorderRadius.circular(20),
         ),
         child: Center(

@@ -1,24 +1,40 @@
-
 import 'package:flutter/material.dart';
 
 class buildCalculatorButton extends StatelessWidget {
-  const buildCalculatorButton({
+  String text;
+  Color? color;
+  final VoidCallback onClick;
+  buildCalculatorButton({
     super.key,
+    required this.onClick,
+    required this.text,
+    required this.color,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: ElevatedButton(
+    return Expanded(
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ElevatedButton(
           style: ElevatedButton.styleFrom(
             padding: EdgeInsets.all(15),
-            shape:RoundedRectangleBorder(
+            shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15),
             ),
-            backgroundColor: Colors.grey[800],
+            backgroundColor: color ?? Colors.grey[800],
           ),
-          onPressed: (){}, child: Text("1", style: TextStyle(color: Colors.white, fontSize: 25,fontWeight: FontWeight.bold),)),
+          onPressed: onClick,
+          child: Text(
+            text,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 25,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

@@ -2,14 +2,18 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class addWaterButton extends StatelessWidget {
-  const addWaterButton({
-    super.key,
+  final int amount;
+  IconData? icon;
+  final VoidCallback callBack;
+
+   addWaterButton({
+    super.key, required this.amount,this.icon, required this.callBack
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(12.0),
+      padding: const EdgeInsets.all(8.0),
       child: ElevatedButton.icon(
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.blue,
@@ -17,12 +21,12 @@ class addWaterButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(15),
           ),
         ),
-        onPressed: () {},
+        onPressed: callBack,
         label: Padding(
           padding: const EdgeInsets.all(14.0),
-          child: Text('Add 100LTR', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),),
+          child: Text('Add $amount LTR', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),),
         ),
-        icon: Icon(Icons.water_drop, color: Colors.white, size: 28,),
+        icon: Icon(icon ?? Icons.water_drop, color: Colors.white, size: 28,),
       ),
     );
   }

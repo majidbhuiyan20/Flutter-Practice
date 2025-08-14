@@ -9,9 +9,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="init water tracker app">
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="water_tracker_ui design">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/project/water_tracker/water_tracker.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/water_tracker/water_tracker.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/project/water_tracker/widget/add_water_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/water_tracker/widget/add_water_button.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -510,7 +511,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755204305344</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="water_tracker_ui design">
+      <option name="closed" value="true" />
+      <created>1755207373874</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1755207373874</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -554,7 +563,8 @@
     <MESSAGE value="make calculator main ui" />
     <MESSAGE value="make basic calculator app logic" />
     <MESSAGE value="init water tracker app" />
-    <option name="LAST_COMMIT_MESSAGE" value="init water tracker app" />
+    <MESSAGE value="water_tracker_ui design" />
+    <option name="LAST_COMMIT_MESSAGE" value="water_tracker_ui design" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

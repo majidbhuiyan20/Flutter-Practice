@@ -81,7 +81,12 @@ class _WaterTrackerState extends State<WaterTracker> {
               ],
             ),
             SizedBox(height: 30,),
-            addWaterButton(),
+            Wrap(
+              spacing: 1,
+              children: [
+              addWaterButton(amount: 100, callBack: () { },),
+              addWaterButton(amount: 200, callBack: () { },icon: Icons.water_drop_rounded,),
+                ],),
           ],
         ),
       ),

@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="dynamic add water button">
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="water tracker functional done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/project/water_tracker/water_tracker.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/water_tracker/water_tracker.dart" afterDir="false" />
     </list>
@@ -526,7 +526,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755208040329</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="water tracker functional done">
+      <option name="closed" value="true" />
+      <created>1755210139822</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1755210139822</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -547,7 +555,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="firebase integration" />
     <MESSAGE value="home page create add go router and riverpod" />
     <MESSAGE value="Update pack" />
     <MESSAGE value="Notification Permission setup and build.gradle Setup" />
@@ -572,7 +579,8 @@
     <MESSAGE value="init water tracker app" />
     <MESSAGE value="water_tracker_ui design" />
     <MESSAGE value="dynamic add water button" />
-    <option name="LAST_COMMIT_MESSAGE" value="dynamic add water button" />
+    <MESSAGE value="water tracker functional done" />
+    <option name="LAST_COMMIT_MESSAGE" value="water tracker functional done" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

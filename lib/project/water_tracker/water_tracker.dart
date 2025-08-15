@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:practice/project/water_tracker/widget/add_water_button.dart';
 
@@ -11,6 +13,7 @@ class WaterTracker extends StatefulWidget {
 class _WaterTrackerState extends State<WaterTracker> {
   int currentWaterInTank = 0;
   int targetWater = 2000;
+  Timer ? _timer;
   bool _isSnackBarVisible = false;
 
   void waterAdd(int amount){
@@ -93,6 +96,24 @@ class _WaterTrackerState extends State<WaterTracker> {
       }
       print(currentWaterInTank);
     });
+  }
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _timer = Timer.periodic(Duration(seconds: 1 ), (timer) {
+
+      setState(() {
+        currentWaterInTank++;
+        if(currentWaterInTank >= targetWater){
+          currentWaterInTank = targetWater;
+
+        }
+
+      });
+    } );
+
+
   }
 
   @override

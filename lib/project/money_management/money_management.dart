@@ -1,5 +1,7 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class MoneyManagement extends StatefulWidget {
   const MoneyManagement({super.key});
@@ -24,6 +26,38 @@ class _MoneyManagementState extends State<MoneyManagement>
     // TODO: implement initState
     super.initState();
     _tabController = TabController(length: 2, vsync: this);
+    _loadData();
+  }
+
+  Future<void> _loadData() async {
+    final prefs = await SharedPreferences.getInstance();
+    final earningData = prefs.getStringList('earning') ?? [];
+    final expenseData = prefs.getStringList('expense') ?? [];
+
+    setState(() {
+      _earning = earningData.map((item) {
+        final decodedItem = jsonDecode(item);
+        return {
+          'title': decodedItem['title'],
+          'amount': decodedItem['amount'],
+          'date': DateTime.parse(decodedItem['date']),
+        };
+      }).toList();
+      _expense = expenseData.map((item) {
+        final decodedItem = jsonDecode(item);
+        return {
+          'title': decodedItem['title'],
+          'amount': decodedItem['amount'],
+          'date': DateTime.parse(decodedItem['date']),
+        };
+      }).toList();
+    });
+  }
+
+  Future<void> _saveData() async {
+    final prefs = await SharedPreferences.getInstance();
+    prefs.setStringList('earning', _earning.map((item) => jsonEncode({'title': item['title'], 'amount': item['amount'], 'date': item['date'].toIso8601String()})).toList());
+    prefs.setStringList('expense', _expense.map((item) => jsonEncode({'title': item['title'], 'amount': item['amount'], 'date': item['date'].toIso8601String()})).toList());
   }
 
   void _showFABOptions(BuildContext context){
@@ -163,6 +197,7 @@ class _MoneyManagementState extends State<MoneyManagement>
         });
       });
     }
+    _saveData();
 
   }
 

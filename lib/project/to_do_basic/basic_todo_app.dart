@@ -27,7 +27,13 @@ class _BasicTodoAppState extends State<BasicTodoApp> {
           },
         ),
       ),
-      body: ListView.builder(
+      body: todoList.isEmpty
+          ? const Center(
+        child: Text(
+          'Todo list is empty. Tap (+) to add.',
+          style: TextStyle(fontSize: 18),
+        ),
+      ) : ListView.builder(
           itemCount: todoList.length,
           itemBuilder: (context, index){
           return ListTile(
@@ -43,11 +49,12 @@ class _BasicTodoAppState extends State<BasicTodoApp> {
           );
       }),
       floatingActionButton: FloatingActionButton(
-          onPressed: (){
-                Navigator.push(context, MaterialPageRoute(builder: (context){
+          onPressed: () async {
+               ToDo todo = await Navigator.push(context, MaterialPageRoute(builder: (context){
                   return AddTodoScreen();
                 }));
-          },
+               todoList.add(todo);
+               setState(() {});},
       backgroundColor: Colors.blue,
       child: Icon(Icons.add, color: Colors.white,),
       ),

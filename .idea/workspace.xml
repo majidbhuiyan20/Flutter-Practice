@@ -9,8 +9,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="create todo model and listview builder">
-      <change beforePath="$PROJECT_DIR$/lib/project/to_do_basic/add_todo_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/to_do_basic/add_todo_screen.dart" afterDir="false" />
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="add todo list page and pass todo data">
+      <change beforePath="$PROJECT_DIR$/lib/project/to_do_basic/basic_todo_app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/to_do_basic/basic_todo_app.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -582,7 +582,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755502955886</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="add todo list page and pass todo data">
+      <option name="closed" value="true" />
+      <created>1755503385134</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1755503385134</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -603,7 +611,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="send and fetch data with specific user" />
     <MESSAGE value="save fetched data on sheared preference" />
     <MESSAGE value="Complex api error solve" />
     <MESSAGE value="use pagination complex api" />
@@ -628,7 +635,8 @@
     <MESSAGE value="used sheared preference for save locally data" />
     <MESSAGE value="basic todo app init" />
     <MESSAGE value="create todo model and listview builder" />
-    <option name="LAST_COMMIT_MESSAGE" value="create todo model and listview builder" />
+    <MESSAGE value="add todo list page and pass todo data" />
+    <option name="LAST_COMMIT_MESSAGE" value="add todo list page and pass todo data" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

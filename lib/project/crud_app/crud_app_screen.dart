@@ -44,6 +44,24 @@ class _CrudAppScreenState extends State<CrudAppScreen> {
             ],
             
           ),
+          trailing: PopupMenuButton<productOptions>(itemBuilder: (context){
+            return [PopupMenuItem(
+              value: productOptions.update,
+              child: Text("Update"),),
+            PopupMenuItem(
+              value: productOptions.delete,
+              child: Text("Delete"),)];
+          },
+            onSelected: (productOptions selectedOption){
+            if(selectedOption == productOptions.delete){
+                print("delete");
+            }
+            else if(selectedOption == productOptions.update){
+                print("Update");
+            }
+            },
+
+          ),
         );
       },
         separatorBuilder: (context, index) {
@@ -61,4 +79,10 @@ class _CrudAppScreenState extends State<CrudAppScreen> {
 
     );
   }
+}
+
+
+enum productOptions{
+  update,
+  delete,
 }

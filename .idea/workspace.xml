@@ -9,7 +9,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="add todo list page and pass todo data">
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="receive todo and show in screen">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/project/to_do_basic/basic_todo_app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/to_do_basic/basic_todo_app.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -590,7 +591,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755503385134</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="receive todo and show in screen">
+      <option name="closed" value="true" />
+      <created>1755503872408</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1755503872408</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -611,7 +620,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="save fetched data on sheared preference" />
     <MESSAGE value="Complex api error solve" />
     <MESSAGE value="use pagination complex api" />
     <MESSAGE value="update" />
@@ -636,7 +644,8 @@
     <MESSAGE value="basic todo app init" />
     <MESSAGE value="create todo model and listview builder" />
     <MESSAGE value="add todo list page and pass todo data" />
-    <option name="LAST_COMMIT_MESSAGE" value="add todo list page and pass todo data" />
+    <MESSAGE value="receive todo and show in screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="receive todo and show in screen" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

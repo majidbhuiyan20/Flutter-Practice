@@ -36,16 +36,18 @@ class _BasicTodoAppState extends State<BasicTodoApp> {
       ) : ListView.builder(
           itemCount: todoList.length,
           itemBuilder: (context, index){
-          return ListTile(
-            title: Text(todoList[index].title),
-            subtitle: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(todoList[index].description),
-                Text("Created Date: ${todoList[index].createdDate}"),
-              ],
+          return Card(
+            child: ListTile(
+              title: Text(todoList[index].title),
+              subtitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(todoList[index].description),
+                  Text("Created Date: ${todoList[index].createdDate}"),
+                ],
+              ),
+              trailing: Text(todoList[index].status),
             ),
-            trailing: Text(todoList[index].status),
           );
       }),
       floatingActionButton: FloatingActionButton(

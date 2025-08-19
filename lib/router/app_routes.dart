@@ -6,6 +6,7 @@ import 'package:go_router/go_router.dart';
 import 'package:practice/ostad_flutter/live_test/add_employe.dart';
 import 'package:practice/ostad_flutter/ostad_home.dart';
 import 'package:practice/project/calculator/calculatorApp.dart';
+import 'package:practice/project/crud_app/crud_app_screen.dart';
 import 'package:practice/project/money_management/money_management.dart';
 import 'package:practice/project/to_do_basic/basic_todo_app.dart';
 import 'package:practice/project/water_tracker/water_tracker.dart';
@@ -35,6 +36,7 @@ final GoRouter router = GoRouter(
     GoRoute(path: '/waterTracker', builder: (context, state) => const WaterTracker()),
     GoRoute(path: '/moneyManagement', builder: (context, state) => const MoneyManagement()),
     GoRoute(path: '/toDo', builder: (context, state) => const BasicTodoApp()),
+    GoRoute(path: '/crudApp', builder: (context, state) => const CrudAppScreen()),
 
 
 

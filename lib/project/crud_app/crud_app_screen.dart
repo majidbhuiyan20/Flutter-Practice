@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice/project/crud_app/add_new_product_screen.dart';
 
 class CrudAppScreen extends StatefulWidget {
   const CrudAppScreen({super.key});
@@ -46,8 +47,16 @@ class _CrudAppScreenState extends State<CrudAppScreen> {
         );
       },
         separatorBuilder: (context, index) {
-            return Divider();
+            return Divider(
+              indent: 70,
+            );
         }
+      ),
+      floatingActionButton: FloatingActionButton(onPressed: (){
+        Navigator.push(context, MaterialPageRoute(builder: (context)=> AddNewProductScreen()));
+        },
+        backgroundColor: Colors.blue,
+      child: Icon(Icons.add, color: Colors.white),
       ),
 
     );

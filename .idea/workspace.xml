@@ -9,7 +9,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="init crud app">
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="add separatorBuilder">
+      <change afterPath="$PROJECT_DIR$/lib/project/crud_app/add_new_product_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/project/crud_app/crud_app_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/crud_app/crud_app_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -605,7 +607,23 @@
       <option name="project" value="LOCAL" />
       <updated>1755638896525</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="add list in product list screen">
+      <option name="closed" value="true" />
+      <created>1755639189302</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1755639189302</updated>
+    </task>
+    <task id="LOCAL-00040" summary="add separatorBuilder">
+      <option name="closed" value="true" />
+      <created>1755639351464</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1755639351464</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -626,8 +644,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="use pagination complex api" />
-    <MESSAGE value="update" />
     <MESSAGE value="Instant Notification working well" />
     <MESSAGE value="schedule and instant notification work properly" />
     <MESSAGE value="ostad greeting app assignment" />
@@ -651,7 +667,9 @@
     <MESSAGE value="add todo list page and pass todo data" />
     <MESSAGE value="receive todo and show in screen" />
     <MESSAGE value="init crud app" />
-    <option name="LAST_COMMIT_MESSAGE" value="init crud app" />
+    <MESSAGE value="add list in product list screen" />
+    <MESSAGE value="add separatorBuilder" />
+    <option name="LAST_COMMIT_MESSAGE" value="add separatorBuilder" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

@@ -22,7 +22,29 @@ class _CrudAppScreenState extends State<CrudAppScreen> {
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
+      body: ListView.builder(
+          itemCount: 10,
+          itemBuilder: (context, index){
+        return ListTile(
+          leading: CircleAvatar(),
+          title: const Text("Product Name"),
+          subtitle:  Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text("Code: 65dghs65"),
+              Row(
+                spacing: 16,
+                children: [
+                  Text("Quantity"),
+                  Text("Unit Price"),
+                ],
 
+              ),
+            ],
+            
+          ),
+        );
+      }),
     );
   }
 }

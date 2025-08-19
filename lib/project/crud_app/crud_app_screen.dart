@@ -22,7 +22,7 @@ class _CrudAppScreenState extends State<CrudAppScreen> {
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
-      body: ListView.builder(
+      body: ListView.separated(
           itemCount: 10,
           itemBuilder: (context, index){
         return ListTile(
@@ -44,7 +44,12 @@ class _CrudAppScreenState extends State<CrudAppScreen> {
             
           ),
         );
-      }),
+      },
+        separatorBuilder: (context, index) {
+            return Divider();
+        }
+      ),
+
     );
   }
 }

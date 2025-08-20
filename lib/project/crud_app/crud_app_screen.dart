@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practice/project/crud_app/add_new_product_screen.dart';
-import 'package:practice/project/crud_app/product_item.dart';
+import 'package:practice/project/crud_app/widgets/product_item.dart';
 import 'package:practice/project/crud_app/update_product_screen.dart';
 
 class CrudAppScreen extends StatefulWidget {
@@ -35,5 +35,4 @@ class _CrudAppScreenState extends State<CrudAppScreen> {
 
     );
   }
-}
 }

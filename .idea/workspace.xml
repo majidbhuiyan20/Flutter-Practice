@@ -9,18 +9,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="Test">
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_graph.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_graph.json" afterDir="false" />
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="on tap function init">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/project/crud_app/add_new_product_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/crud_app/screens/add_new_product_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/project/crud_app/crud_app_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/crud_app/screens/crud_app_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/project/crud_app/update_product_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/crud_app/screens/update_product_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/project/crud_app/widgets/product_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/crud_app/widgets/product_item.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/router/app_routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/router/app_routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/project/crud_app/screens/add_new_product_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/crud_app/screens/add_new_product_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -676,7 +667,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755726329542</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="on tap function init">
+      <option name="closed" value="true" />
+      <created>1755819510491</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1755819510491</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -697,7 +696,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="sign in with google" />
     <MESSAGE value="update flutter practice project" />
     <MESSAGE value="init calculator app and custom widgets" />
     <MESSAGE value="make calculator main ui" />
@@ -722,7 +720,8 @@
     <MESSAGE value="add update product screen" />
     <MESSAGE value="widget extraction product list" />
     <MESSAGE value="Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test" />
+    <MESSAGE value="on tap function init" />
+    <option name="LAST_COMMIT_MESSAGE" value="on tap function init" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

@@ -1,4 +1,7 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
 
 class AddNewProductScreen extends StatefulWidget {
   const AddNewProductScreen({super.key});
@@ -136,7 +139,18 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
   }
 
   void _onTapAddProductButton(){
-    //Prepare Url to request
+    //Prepare Uri to request
+    
+    Uri uri = Uri.parse("http://35.73.30.144:2008/api/v1/CreateProduct");
+    double totalPrice = double.parse(_unitPriceController.text) * double.parse(_quantityController.text);
+    Map<String, dynamic> requestBody =   {
+      "ProductName": _productNameController.text,
+    "ProductCode": _productCodeController.text,
+    "Img": _imageUrlController.text,
+    "Qty": _quantityController.text,
+    "UnitPrice": _unitPriceController.text,
+    "TotalPrice": totalPrice,
+  };
     //Prepare data
     //Request with data
   }

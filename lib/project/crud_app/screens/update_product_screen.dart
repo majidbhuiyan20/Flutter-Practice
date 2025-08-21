@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AddNewProductScreen extends StatefulWidget {
-  const AddNewProductScreen({super.key});
+class UpdateProductScreen extends StatefulWidget {
+  UpdateProductScreen({super.key});
 
   @override
-  State<AddNewProductScreen> createState() => _AddNewProductScreenState();
+  State<UpdateProductScreen> createState() => _UpdateProductScreen();
 }
 
-class _AddNewProductScreenState extends State<AddNewProductScreen> {
+class _UpdateProductScreen extends State<UpdateProductScreen> {
   GlobalKey _formKey = GlobalKey<FormState>();
   TextEditingController _productNameController = TextEditingController();
   TextEditingController _productCodeController = TextEditingController();
@@ -18,11 +18,11 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.blue,
-            title: Text("Add New Product", style: TextStyle(color: Colors.white),),
-            leading: BackButton(color: Colors.white),
-          ),
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: Text("Update Product", style: TextStyle(color: Colors.white),),
+        leading: BackButton(color: Colors.white),
+      ),
       body:SingleChildScrollView(
         child: Form(
             key: _formKey,
@@ -126,7 +126,7 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
                         ),
                         onPressed: (){
 
-                        }, child: Text("Add Product", style: TextStyle(color: Colors.white),)),
+                        }, child: Text("Update Product", style: TextStyle(color: Colors.white),)),
                   ),
                 ],
               ),

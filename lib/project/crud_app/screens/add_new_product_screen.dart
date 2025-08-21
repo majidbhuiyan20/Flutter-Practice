@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class UpdateProductScreen extends StatefulWidget {
-  UpdateProductScreen({super.key});
+class AddNewProductScreen extends StatefulWidget {
+  const AddNewProductScreen({super.key});
 
   @override
-  State<UpdateProductScreen> createState() => _UpdateProductScreen();
+  State<AddNewProductScreen> createState() => _AddNewProductScreenState();
 }
 
-class _UpdateProductScreen extends State<UpdateProductScreen> {
+class _AddNewProductScreenState extends State<AddNewProductScreen> {
   GlobalKey _formKey = GlobalKey<FormState>();
   TextEditingController _productNameController = TextEditingController();
   TextEditingController _productCodeController = TextEditingController();
@@ -18,11 +18,11 @@ class _UpdateProductScreen extends State<UpdateProductScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-        title: Text("Update Product", style: TextStyle(color: Colors.white),),
-        leading: BackButton(color: Colors.white),
-      ),
+          appBar: AppBar(
+            backgroundColor: Colors.blue,
+            title: Text("Add New Product", style: TextStyle(color: Colors.white),),
+            leading: BackButton(color: Colors.white),
+          ),
       body:SingleChildScrollView(
         child: Form(
             key: _formKey,
@@ -125,7 +125,7 @@ class _UpdateProductScreen extends State<UpdateProductScreen> {
                           padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                         ),
                         onPressed: (){
-
+                            _onTapAddProductButton();
                         }, child: Text("Add Product", style: TextStyle(color: Colors.white),)),
                   ),
                 ],
@@ -134,6 +134,14 @@ class _UpdateProductScreen extends State<UpdateProductScreen> {
       ),
     );
   }
+
+  void _onTapAddProductButton(){
+    //Prepare Url to request
+    //Prepare data
+    //Request with data
+  }
+
+
   @override
   void dispose() {
     _productNameController.dispose();

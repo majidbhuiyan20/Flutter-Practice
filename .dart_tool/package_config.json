@@ -267,7 +267,7 @@
     },
     {
       "name": "http",
-      "rootUri": "file:///Users/daymon/.pub-cache/hosted/pub.dev/http-1.3.0",
+      "rootUri": "file:///Users/daymon/.pub-cache/hosted/pub.dev/http-1.5.0",
       "packageUri": "lib/",
       "languageVersion": "3.4"
     },

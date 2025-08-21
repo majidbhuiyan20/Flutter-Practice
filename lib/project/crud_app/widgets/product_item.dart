@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:practice/project/crud_app/update_product_screen.dart';
+import 'package:practice/project/crud_app/screens/update_product_screen.dart';
 class product_item extends StatelessWidget {
   const product_item({
     super.key,

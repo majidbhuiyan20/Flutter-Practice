@@ -138,7 +138,7 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
     );
   }
 
-  void _onTapAddProductButton(){
+   Future<void> _onTapAddProductButton()async{
     //Prepare Uri to request
     
     Uri uri = Uri.parse("http://35.73.30.144:2008/api/v1/CreateProduct");
@@ -152,6 +152,7 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
     "TotalPrice": totalPrice,
   };
     //Prepare data
+    Response response = await post(uri, body: jsonEncode(requestBody));
     //Request with data
   }
 

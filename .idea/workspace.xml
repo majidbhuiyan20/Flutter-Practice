@@ -9,8 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="on tap function init">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="create map for post add product">
       <change beforePath="$PROJECT_DIR$/lib/project/crud_app/screens/add_new_product_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/crud_app/screens/add_new_product_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -675,7 +674,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755819510491</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="create map for post add product">
+      <option name="closed" value="true" />
+      <created>1755820299428</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1755820299428</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -696,7 +703,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update flutter practice project" />
     <MESSAGE value="init calculator app and custom widgets" />
     <MESSAGE value="make calculator main ui" />
     <MESSAGE value="make basic calculator app logic" />
@@ -721,7 +727,8 @@
     <MESSAGE value="widget extraction product list" />
     <MESSAGE value="Test" />
     <MESSAGE value="on tap function init" />
-    <option name="LAST_COMMIT_MESSAGE" value="on tap function init" />
+    <MESSAGE value="create map for post add product" />
+    <option name="LAST_COMMIT_MESSAGE" value="create map for post add product" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

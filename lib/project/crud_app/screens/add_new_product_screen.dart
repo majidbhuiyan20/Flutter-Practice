@@ -154,6 +154,8 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
     //Prepare data
     Response response = await post(uri, body: jsonEncode(requestBody));
     //Request with data
+
+     print(response.statusCode);
   }
 
 

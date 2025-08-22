@@ -173,10 +173,27 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
 
      print(response.statusCode);
      print(response.body);
+     if(response.statusCode == 200){
+        final decodedJson = jsonDecode(response.body);
+        if(decodedJson['status']=='success'){
+          _clearTextField();
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Product Added Successfully")));
+        }
+     }
+
+
       _addProductInProgress = false;
       setState(() {
 
       });
+  }
+
+  void _clearTextField(){
+    _productNameController.clear();
+    _productCodeController.clear();
+    _quantityController.clear();
+    _unitPriceController.clear();
+    _imageUrlController.clear();
   }
 
   @override

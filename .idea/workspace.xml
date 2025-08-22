@@ -9,7 +9,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="circular progress in add product on loading" />
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="clear textfield when success">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/project/crud_app/screens/add_new_product_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/crud_app/screens/add_new_product_screen.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -301,14 +304,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741888031466</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Update pack">
-      <option name="closed" value="true" />
-      <created>1752660069777</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1752660069777</updated>
     </task>
     <task id="LOCAL-00005" summary="Notification Permission setup and build.gradle Setup">
       <option name="closed" value="true" />
@@ -694,7 +689,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755822076084</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="clear textfield when success">
+      <option name="closed" value="true" />
+      <created>1755822440451</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1755822440451</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -715,7 +718,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="water_tracker_ui design" />
     <MESSAGE value="dynamic add water button" />
     <MESSAGE value="water tracker functional done" />
     <MESSAGE value="add timer in water tank" />
@@ -740,7 +742,8 @@
     <MESSAGE value="status code check" />
     <MESSAGE value="make post request successfully" />
     <MESSAGE value="circular progress in add product on loading" />
-    <option name="LAST_COMMIT_MESSAGE" value="circular progress in add product on loading" />
+    <MESSAGE value="clear textfield when success" />
+    <option name="LAST_COMMIT_MESSAGE" value="clear textfield when success" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

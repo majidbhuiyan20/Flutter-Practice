@@ -150,8 +150,9 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
     setState(() {
 
     });
+
+
     //Prepare Uri to request
-    
     Uri uri = Uri.parse("http://35.73.30.144:2008/api/v1/CreateProduct");
     double totalPrice = double.parse(_unitPriceController.text) * double.parse(_quantityController.text);
     Map<String, dynamic> requestBody =   {
@@ -178,6 +179,10 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
         if(decodedJson['status']=='success'){
           _clearTextField();
           ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Product Added Successfully")));
+        }
+        else{
+          final errorMessage = decodedJson['message'];
+          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(errorMessage)));
         }
      }
 

@@ -145,19 +145,27 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
     double totalPrice = double.parse(_unitPriceController.text) * double.parse(_quantityController.text);
     Map<String, dynamic> requestBody =   {
       "ProductName": _productNameController.text,
-    "ProductCode": _productCodeController.text,
+    "ProductCode": int.parse(_productCodeController.text),
     "Img": _imageUrlController.text,
-    "Qty": _quantityController.text,
-    "UnitPrice": _unitPriceController.text,
+    "Qty": int.parse(_quantityController.text),
+    "UnitPrice": int.parse(_unitPriceController.text),
     "TotalPrice": totalPrice,
   };
     //Prepare data
-    Response response = await post(uri, body: jsonEncode(requestBody));
+    Response response = await post(
+        uri,
+        headers: {'content-type':'application/json'},
+        body: jsonEncode(requestBody),
+
+    );
     //Request with data
 
      print(response.statusCode);
+     print(response.body);
+     if(response.statusCode == 200){
+       Navigator.pop(context, true);
+     }
   }
-
 
   @override
   void dispose() {

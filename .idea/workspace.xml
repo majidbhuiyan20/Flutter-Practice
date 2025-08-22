@@ -9,7 +9,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="create map for post add product">
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="status code check">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/project/crud_app/screens/add_new_product_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/crud_app/screens/add_new_product_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -273,6 +274,12 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="AppleRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" IS_LOCATION_SIMULATION_SUPPORTED="false" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
+      <embedded_app_extension_list />
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="android.flutter_local_notifications" />
       <method v="2">
@@ -297,14 +304,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741888031466</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Update">
-      <option name="closed" value="true" />
-      <created>1752606990143</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1752606990143</updated>
     </task>
     <task id="LOCAL-00002" summary="firebase integration">
       <option name="closed" value="true" />
@@ -682,7 +681,23 @@
       <option name="project" value="LOCAL" />
       <updated>1755820299428</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="prepare async data and wait">
+      <option name="closed" value="true" />
+      <created>1755820510496</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1755820510496</updated>
+    </task>
+    <task id="LOCAL-00050" summary="status code check">
+      <option name="closed" value="true" />
+      <created>1755820581674</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1755820581675</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -703,8 +718,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="init calculator app and custom widgets" />
-    <MESSAGE value="make calculator main ui" />
     <MESSAGE value="make basic calculator app logic" />
     <MESSAGE value="init water tracker app" />
     <MESSAGE value="water_tracker_ui design" />
@@ -728,7 +741,9 @@
     <MESSAGE value="Test" />
     <MESSAGE value="on tap function init" />
     <MESSAGE value="create map for post add product" />
-    <option name="LAST_COMMIT_MESSAGE" value="create map for post add product" />
+    <MESSAGE value="prepare async data and wait" />
+    <MESSAGE value="status code check" />
+    <option name="LAST_COMMIT_MESSAGE" value="status code check" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

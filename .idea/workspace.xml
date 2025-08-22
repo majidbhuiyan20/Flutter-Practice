@@ -9,9 +9,16 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="clear textfield when success">
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/lib/local_storage/local_storage_home_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/local_storage/shared_preferances/shared_preferances_home_screen.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/local_storage/sqflite/sqflite_home_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_graph.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_graph.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/project/crud_app/screens/add_new_product_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/crud_app/screens/add_new_product_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/home_page/feature_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home_page/feature_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/router/app_routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/router/app_routes.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -304,14 +311,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741888031466</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Notification Permission setup and build.gradle Setup">
-      <option name="closed" value="true" />
-      <created>1752663778757</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1752663778757</updated>
     </task>
     <task id="LOCAL-00006" summary="Update Notifications">
       <option name="closed" value="true" />
@@ -697,7 +696,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755822440451</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="update">
+      <option name="closed" value="true" />
+      <created>1755871648091</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1755871648091</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -718,7 +725,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="dynamic add water button" />
     <MESSAGE value="water tracker functional done" />
     <MESSAGE value="add timer in water tank" />
     <MESSAGE value="expense tracker app ui build" />
@@ -743,7 +749,8 @@
     <MESSAGE value="make post request successfully" />
     <MESSAGE value="circular progress in add product on loading" />
     <MESSAGE value="clear textfield when success" />
-    <option name="LAST_COMMIT_MESSAGE" value="clear textfield when success" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

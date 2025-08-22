@@ -3,6 +3,9 @@ import 'package:practice/firestore/firestore_send_data.dart';
 import 'package:practice/firestore/firestore_view.dart';
 import 'package:practice/home_page/home_page_screen.dart';
 import 'package:go_router/go_router.dart';
+import 'package:practice/local_storage/local_storage_home_screen.dart';
+import 'package:practice/local_storage/shared_preferances/shared_preferances_home_screen.dart';
+import 'package:practice/local_storage/sqflite/sqflite_home_screen.dart';
 import 'package:practice/ostad_flutter/live_test/add_employe.dart';
 import 'package:practice/ostad_flutter/ostad_home.dart';
 import 'package:practice/project/calculator/calculatorApp.dart';
@@ -37,6 +40,10 @@ final GoRouter router = GoRouter(
     GoRoute(path: '/moneyManagement', builder: (context, state) => const MoneyManagement()),
     GoRoute(path: '/toDo', builder: (context, state) => const BasicTodoApp()),
     GoRoute(path: '/crudApp', builder: (context, state) => const CrudAppScreen()),
+    GoRoute(path: '/localStorage', builder: (context, state) => const LocalStorageHomeScreen()),
+    GoRoute(path: '/sharedPreferences', builder: (context, state) => const SharedPreferencesHomeScreen()),
+    GoRoute(path: '/studentDatabasePage', builder: (context, state) =>  StudentDatabasePage()),
+
 
 
 

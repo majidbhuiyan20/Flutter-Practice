@@ -21,6 +21,7 @@
         "go_router",
         "google_sign_in",
         "http",
+        "path",
         "path_provider",
         "provider",
         "riverpod",
@@ -69,6 +70,11 @@
         "vector_math",
         "vm_service"
       ]
+    },
+    {
+      "name": "path",
+      "version": "1.9.1",
+      "dependencies": []
     },
     {
       "name": "timezone",
@@ -421,11 +427,6 @@
         "clock",
         "collection"
       ]
-    },
-    {
-      "name": "path",
-      "version": "1.9.1",
-      "dependencies": []
     },
     {
       "name": "matcher",

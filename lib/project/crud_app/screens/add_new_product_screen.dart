@@ -11,6 +11,7 @@ class AddNewProductScreen extends StatefulWidget {
 }
 
 class _AddNewProductScreenState extends State<AddNewProductScreen> {
+  bool _addProductInProgress = false;
   GlobalKey _formKey = GlobalKey<FormState>();
   TextEditingController _productNameController = TextEditingController();
   TextEditingController _productCodeController = TextEditingController();
@@ -118,18 +119,24 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
                     ),
                   ),
                   SizedBox(height: 20,),
-                  SizedBox(
-                    width: double.infinity,
-                    child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)),
-                          backgroundColor: Colors.blue,
-                          padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
-                        ),
-                        onPressed: (){
-                            _onTapAddProductButton();
-                        }, child: Text("Add Product", style: TextStyle(color: Colors.white),)),
+                  Visibility(
+                    visible: _addProductInProgress == false,
+                    replacement: Center(
+                      child: CircularProgressIndicator(),
+                    ),
+                    child: SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10)),
+                            backgroundColor: Colors.blue,
+                            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+                          ),
+                          onPressed: (){
+                              _onTapAddProductButton();
+                          }, child: Text("Add Product", style: TextStyle(color: Colors.white),)),
+                    ),
                   ),
                 ],
               ),
@@ -139,6 +146,10 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
   }
 
    Future<void> _onTapAddProductButton()async{
+    _addProductInProgress = true;
+    setState(() {
+
+    });
     //Prepare Uri to request
     
     Uri uri = Uri.parse("http://35.73.30.144:2008/api/v1/CreateProduct");
@@ -162,9 +173,10 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
 
      print(response.statusCode);
      print(response.body);
-     if(response.statusCode == 200){
-       Navigator.pop(context, true);
-     }
+      _addProductInProgress = false;
+      setState(() {
+
+      });
   }
 
   @override

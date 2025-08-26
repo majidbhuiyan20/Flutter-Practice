@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
+import 'package:practice/project/crud_app/widgets/snackbar_message.dart';
 
 class AddNewProductScreen extends StatefulWidget {
   const AddNewProductScreen({super.key});
@@ -224,11 +225,11 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
         final decodedJson = jsonDecode(response.body);
         if(decodedJson['status']=='success'){
           _clearTextField();
-          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Product Added Successfully")));
+          showSnackBarMessage(context, "Product Added Successfully");
         }
         else{
           final errorMessage = decodedJson['message'];
-          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(errorMessage)));
+         showSnackBarMessage(context, errorMessage);
         }
      }
 

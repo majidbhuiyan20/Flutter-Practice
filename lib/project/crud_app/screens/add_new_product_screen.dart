@@ -12,7 +12,7 @@ class AddNewProductScreen extends StatefulWidget {
 
 class _AddNewProductScreenState extends State<AddNewProductScreen> {
   bool _addProductInProgress = false;
-  GlobalKey _formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   TextEditingController _productNameController = TextEditingController();
   TextEditingController _productCodeController = TextEditingController();
   TextEditingController _quantityController = TextEditingController();
@@ -47,6 +47,14 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
                             borderSide: BorderSide(color: Colors.blue)
                         )
                     ),
+                    validator: (String? value){
+                      if(value?.trim().isEmpty ?? true){
+                        return "Please enter product name";
+                      }
+                      else{
+                        return null;
+                      }
+                    },
                   ),
                   SizedBox(
                     height: 10,
@@ -64,6 +72,14 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
                             borderSide: BorderSide(color: Colors.blue)
                         )
                     ),
+                    validator: (String? value){
+                      if(value?.trim().isEmpty ?? true){
+                        return "Please Enter Product Code";
+                      }
+                      else{
+                        return null;
+                      }
+                    },
                   ),
                   SizedBox(
                     height: 10,
@@ -82,6 +98,15 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
                             borderSide: BorderSide(color: Colors.blue)
                         )
                     ),
+                    validator: (String? value){
+                      if(value?.trim().isEmpty ?? true){
+                        return "Please Enter Quantity";
+                      }
+                      else
+                        {
+                          return null;
+                        }
+                    },
                   ),
                   SizedBox(
                     height: 10,
@@ -100,6 +125,15 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
                             borderSide: BorderSide(color: Colors.blue)
                         )
                     ),
+                    validator: (String ? value){
+                      if(value?.trim().isEmpty ?? true){
+                        return "Please Enter Unit Price";
+                      }
+                      else
+                        {
+                          return null;
+                        }
+                    },
                   ),
                   SizedBox(
                     height: 10,
@@ -117,6 +151,14 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
                             borderSide: BorderSide(color: Colors.blue)
                         )
                     ),
+                    validator: (String ? value){
+                      if(value?.trim().isEmpty ?? true){
+                        return "Please Enter Image Url";
+                      }
+                      else{
+                        return null;
+                      }
+                    },
                   ),
                   SizedBox(height: 20,),
                   Visibility(
@@ -134,8 +176,9 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
                             padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
                           ),
                           onPressed: (){
-                              _onTapAddProductButton();
-                          }, child: Text("Add Product", style: TextStyle(color: Colors.white),)),
+                            _onTapAddProductButton();
+                            },
+                          child: Text("Add Product", style: TextStyle(color: Colors.white),)),
                     ),
                   ),
                 ],
@@ -146,11 +189,14 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
   }
 
    Future<void> _onTapAddProductButton()async{
+    if(!_formKey.currentState!.validate()){
+      return;
+
+    }
     _addProductInProgress = true;
     setState(() {
 
     });
-
 
     //Prepare Uri to request
     Uri uri = Uri.parse("http://35.73.30.144:2008/api/v1/CreateProduct");

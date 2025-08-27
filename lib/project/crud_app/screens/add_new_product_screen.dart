@@ -203,11 +203,11 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
     Uri uri = Uri.parse("http://35.73.30.144:2008/api/v1/CreateProduct");
     double totalPrice = double.parse(_unitPriceController.text) * double.parse(_quantityController.text);
     Map<String, dynamic> requestBody =   {
-      "ProductName": _productNameController.text,
-    "ProductCode": int.parse(_productCodeController.text),
-    "Img": _imageUrlController.text,
-    "Qty": int.parse(_quantityController.text),
-    "UnitPrice": int.parse(_unitPriceController.text),
+      "ProductName": _productNameController.text.trim(),
+    "ProductCode": int.parse(_productCodeController.text.trim()),
+    "Img": _imageUrlController.text.trim(),
+    "Qty": int.parse(_quantityController.text.trim()),
+    "UnitPrice": int.parse(_unitPriceController.text.trim()),
     "TotalPrice": totalPrice,
   };
     //Prepare data

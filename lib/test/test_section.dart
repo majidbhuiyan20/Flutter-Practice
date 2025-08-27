@@ -48,8 +48,20 @@ class _TestSectionState extends State<TestSection> {
   }
 }
 
-class AddProductScreen extends StatelessWidget {
+class AddProductScreen extends StatefulWidget {
   const AddProductScreen({super.key});
+
+  @override
+  State<AddProductScreen> createState() => _AddProductScreenState();
+}
+
+class _AddProductScreenState extends State<AddProductScreen> {
+  final _formKey = GlobalKey<FormState>();
+  final _productNameController = TextEditingController();
+  final _productCodeController = TextEditingController();
+  final _quantityController = TextEditingController();
+  final _unitPriceController = TextEditingController();
+  final _imageUrlController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -62,10 +74,13 @@ class AddProductScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Form(
+            key: _formKey,
             child: Column(
           children: [
             SizedBox(height: 10,),
             TextFormField(
+              textInputAction: TextInputAction.next,
+              controller: _productNameController,
               decoration: InputDecoration(
                 labelText: "Product Name",
                 focusColor: Colors.blue,
@@ -74,9 +89,17 @@ class AddProductScreen extends StatelessWidget {
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                 ),
               ),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter product name';
+                }
+                return null;
+              },
             ),
             SizedBox(height: 10,),
             TextFormField(
+              textInputAction: TextInputAction.next,
+              controller: _productCodeController,
               decoration: InputDecoration(
                 labelText: "Product Code",
                 focusColor: Colors.blue,
@@ -85,9 +108,18 @@ class AddProductScreen extends StatelessWidget {
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                 ),
               ),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter product code';
+                }
+                return null;
+              },
             ),
             SizedBox(height: 10,),
             TextFormField(
+              textInputAction: TextInputAction.next,
+              controller: _quantityController,
+              keyboardType: TextInputType.number,
               decoration: InputDecoration(
                 labelText: "Quantity",
                 focusColor: Colors.blue,
@@ -96,9 +128,19 @@ class AddProductScreen extends StatelessWidget {
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                 ),
               ),
+
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter quantity';
+                }
+                return null;
+              },
             ),
             SizedBox(height: 10,),
             TextFormField(
+              controller: _unitPriceController,
+              textInputAction: TextInputAction.next,
+                keyboardType: TextInputType.number,
               decoration: InputDecoration(
                 labelText: "Unit Price",
                 focusColor: Colors.blue,
@@ -107,10 +149,19 @@ class AddProductScreen extends StatelessWidget {
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                 ),
               ),
+              //keyboardType: TextInputType.number,
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter unit price';
+                }
+                return null;
+              },
             ),
             SizedBox(height: 10,),
 
             TextFormField(
+              keyboardType: TextInputType.number,
+              controller: _imageUrlController,
               decoration: InputDecoration(
                 labelText: "Img url",
                 focusColor: Colors.blue,
@@ -119,6 +170,12 @@ class AddProductScreen extends StatelessWidget {
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                 ),
               ),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter image URL';
+                }
+                return null;
+              },
             ),
             SizedBox(height: 10,),
 
@@ -132,7 +189,12 @@ class AddProductScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
-                  onPressed: (){}, child: Text("Add Product", style: TextStyle(color: Colors.white, fontSize: 16),)),
+                  onPressed: (){
+                    if(_formKey.currentState!.validate()){
+
+
+                    }
+                  }, child: Text("Add Product", style: TextStyle(color: Colors.white, fontSize: 16),)),
             ),
 
           ],
@@ -141,5 +203,16 @@ class AddProductScreen extends StatelessWidget {
 
     );
   }
-}
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    _productNameController.dispose();
+    _productCodeController.dispose();
+    _quantityController.dispose();
+    _unitPriceController.dispose();
+    _imageUrlController.dispose();
+    super.dispose();
 
+
+  }
+}

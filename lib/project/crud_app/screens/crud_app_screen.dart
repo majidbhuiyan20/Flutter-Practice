@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:practice/project/crud_app/models/products.dart';
@@ -14,11 +16,41 @@ class CrudAppScreen extends StatefulWidget {
 
 class _CrudAppScreenState extends State<CrudAppScreen> {
 
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _getProductList();
+  }
+
   List<Product> _productList = [];
 
   Future<void> _getProductList() async{
     Uri uri = Uri.parse(Urls.getProductUrl);
-    get(uri);
+    Response response = await  get(uri);
+
+    debugPrint(response.statusCode.toString());
+    debugPrint(response.body);
+
+
+    if(response.statusCode == 200){
+      final decodedJson = jsonDecode(response.body);
+      for(Map<String, dynamic> productJson in decodedJson['data']){
+        Product product = Product();
+        product.id = productJson['_id'];
+        product.name = productJson['ProductName'];
+        product.code = productJson['ProductCode'];
+        product.quantity = productJson['Qty'];
+        product.unitPrice = productJson['UnitPrice'];
+        product.totalPrice = productJson['TotalPrice'];
+
+        setState(() {
+          _productList.add(product);
+        });
+
+      }
+    }
+
 }
   @override
   Widget build(BuildContext context) {
@@ -34,7 +66,13 @@ class _CrudAppScreenState extends State<CrudAppScreen> {
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
-      body: product_item(),
+      body: ListView.builder(
+        itemCount: _productList.length,
+          itemBuilder: (context, index){
+            return product_item(product: _productList[index]);
+          }
+      ),
+      // body: product_item(product: _productList[index]),
       floatingActionButton: FloatingActionButton(onPressed: (){
         Navigator.push(context, MaterialPageRoute(builder: (context)=> AddNewProductScreen()));
         },

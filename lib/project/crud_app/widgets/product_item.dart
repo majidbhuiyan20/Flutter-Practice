@@ -1,59 +1,56 @@
 import 'package:flutter/material.dart';
 import 'package:practice/project/crud_app/screens/update_product_screen.dart';
+
+import '../models/products.dart';
 class product_item extends StatelessWidget {
   const product_item({
-    super.key,
+    super.key, required this.product,
   });
+  final Product product;
 
-  @override
   Widget build(BuildContext context) {
-    return ListView.separated(
-        itemCount: 10,
-        itemBuilder: (context, index){
-          return ListTile(
-            leading: CircleAvatar(),
-            title: const Text("Product Name"),
-            subtitle:  Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text("Code: 65dghs65"),
-                Row(
-                  spacing: 16,
-                  children: [
-                    Text("Quantity"),
-                    Text("Unit Price"),
-                  ],
-
-                ),
-              ],
-
+    return ListTile(
+      leading: CircleAvatar(),
+      title: Text(product.name),
+      subtitle: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text("Code: ${product.code}"),
+          Row(
+            // spacing: 16, // Row does not have a spacing property, consider using SizedBox or Wrap
+            children: [
+              Text("Quantity:${product.quantity}"),
+              SizedBox(width: 16), // Added SizedBox for spacing
+              Text("Unit Price:${product.unitPrice}"),
+            ],
+          ),
+        ],
+      ),
+      trailing: PopupMenuButton<productOptions>(
+        itemBuilder: (context) {
+          return [
+            PopupMenuItem(
+              value: productOptions.update,
+              child: Text("Update"),
             ),
-            trailing: PopupMenuButton<productOptions>(itemBuilder: (context){
-              return [PopupMenuItem(
-                value: productOptions.update,
-                child: Text("Update"),),
-                PopupMenuItem(
-                  value: productOptions.delete,
-                  child: Text("Delete"),)];
-            },
-              onSelected: (productOptions selectedOption){
-                if(selectedOption == productOptions.delete){
-                  print("delete");
-                }
-                else if(selectedOption == productOptions.update){
-                  print("Update");
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> UpdateProductScreen()));
-                }
-              },
-
+            PopupMenuItem(
+              value: productOptions.delete,
+              child: Text("Delete"),
             ),
-          );
+          ];
         },
-        separatorBuilder: (context, index) {
-          return Divider(
-            indent: 70,
-          );
-        }
+        onSelected: (productOptions selectedOption) {
+          if (selectedOption == productOptions.delete) {
+            print("delete");
+          } else if (selectedOption == productOptions.update) {
+            print("Update");
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => UpdateProductScreen()));
+          }
+        },
+      ),
     );
   }
 }

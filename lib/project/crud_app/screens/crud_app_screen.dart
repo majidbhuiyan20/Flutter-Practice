@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart';
+import 'package:practice/project/crud_app/models/products.dart';
 import 'package:practice/project/crud_app/screens/add_new_product_screen.dart';
+import 'package:practice/project/crud_app/utils/urls.dart';
 import 'package:practice/project/crud_app/widgets/product_item.dart';
 
 class CrudAppScreen extends StatefulWidget {
@@ -10,6 +13,13 @@ class CrudAppScreen extends StatefulWidget {
 }
 
 class _CrudAppScreenState extends State<CrudAppScreen> {
+
+  List<Product> _productList = [];
+
+  Future<void> _getProductList() async{
+    Uri uri = Uri.parse(Urls.getProductUrl);
+    get(uri);
+}
   @override
   Widget build(BuildContext context) {
     return Scaffold(

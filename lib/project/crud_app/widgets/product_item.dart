@@ -10,7 +10,15 @@ class product_item extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return ListTile(
-      leading: CircleAvatar(),
+      leading: product.image != null
+          ? Image.network(
+              product.image!,
+              width: 40,
+              errorBuilder: (context, error, stackTrace) {
+                return Icon(Icons.error_outline, size: 40);
+              },
+            )
+          : Icon(Icons.error_outline, size: 40),
       title: Text(product.name),
       subtitle: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

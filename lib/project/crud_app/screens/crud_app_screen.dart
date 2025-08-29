@@ -43,6 +43,7 @@ class _CrudAppScreenState extends State<CrudAppScreen> {
         product.quantity = productJson['Qty'];
         product.unitPrice = productJson['UnitPrice'];
         product.totalPrice = productJson['TotalPrice'];
+        product.image = productJson['Img'];
 
         setState(() {
           _productList.add(product);

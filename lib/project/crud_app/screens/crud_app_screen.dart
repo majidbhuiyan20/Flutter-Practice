@@ -58,6 +58,12 @@ class _CrudAppScreenState extends State<CrudAppScreen> {
           icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => Navigator.of(context).pop(),
         ),
+        actions: [
+          IconButton(onPressed: (){
+            _getProductList();
+          }, icon: Icon(Icons.refresh, color: Colors.white,),)
+
+        ],
       ),
       body: ListView.builder(
         itemCount: _productList.length,

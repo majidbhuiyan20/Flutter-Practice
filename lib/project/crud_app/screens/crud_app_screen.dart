@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
-import 'package:practice/project/crud_app/models/products.dart';
+import 'package:practice/project/crud_app/models/products_model.dart';
 import 'package:practice/project/crud_app/screens/add_new_product_screen.dart';
 import 'package:practice/project/crud_app/utils/urls.dart';
 import 'package:practice/project/crud_app/widgets/product_item.dart';
@@ -23,7 +23,7 @@ class _CrudAppScreenState extends State<CrudAppScreen> {
     _getProductList();
   }
 
-  List<Product> _productList = [];
+  List<ProductsModel> _productList = [];
 
   Future<void> _getProductList() async{
     Uri uri = Uri.parse(Urls.getProductUrl);
@@ -36,21 +36,13 @@ class _CrudAppScreenState extends State<CrudAppScreen> {
     if(response.statusCode == 200){
       final decodedJson = jsonDecode(response.body);
       for(Map<String, dynamic> productJson in decodedJson['data']){
-        Product product = Product();
-        product.id = productJson['_id'];
-        product.name = productJson['ProductName'];
-        product.code = productJson['ProductCode'];
-        product.quantity = productJson['Qty'];
-        product.unitPrice = productJson['UnitPrice'];
-        product.totalPrice = productJson['TotalPrice'];
-        product.image = productJson['Img'];
 
-        setState(() {
-          _productList.add(product);
-        });
-
+    ProductsModel productsModel = ProductsModel.fromJson(productJson);
+    _productList.add(productsModel);
       }
     }
+    setState(() {
+    });
 
 }
   @override

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:practice/project/crud_app/screens/update_product_screen.dart';
 
-import '../models/products.dart';
+import '../models/products_model.dart';
 class product_item extends StatelessWidget {
   const product_item({
     super.key, required this.product,
   });
-  final Product product;
+  final ProductsModel product;
 
   Widget build(BuildContext context) {
     return ListTile(

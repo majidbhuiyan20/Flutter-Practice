@@ -9,9 +9,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="update on refresh">
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="successfully delete product">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/project/crud_app/screens/crud_app_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/crud_app/screens/crud_app_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/project/crud_app/screens/update_product_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/crud_app/screens/update_product_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/project/crud_app/utils/urls.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/crud_app/utils/urls.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/project/crud_app/widgets/product_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/crud_app/widgets/product_item.dart" afterDir="false" />
     </list>
@@ -306,14 +306,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741888031466</updated>
-    </task>
-    <task id="LOCAL-00019" summary="ostad live test done">
-      <option name="closed" value="true" />
-      <created>1754155869472</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1754155869472</updated>
     </task>
     <task id="LOCAL-00020" summary="Update">
       <option name="closed" value="true" />
@@ -699,7 +691,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756488602534</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="successfully delete product">
+      <option name="closed" value="true" />
+      <created>1756493370587</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1756493370587</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -720,7 +720,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add new product screen" />
     <MESSAGE value="PopupMenuButton add in product list screen trailing" />
     <MESSAGE value="add update product screen" />
     <MESSAGE value="widget extraction product list" />
@@ -745,7 +744,8 @@
     <MESSAGE value="flutter code optimize" />
     <MESSAGE value="icon button to refresh" />
     <MESSAGE value="update on refresh" />
-    <option name="LAST_COMMIT_MESSAGE" value="update on refresh" />
+    <MESSAGE value="successfully delete product" />
+    <option name="LAST_COMMIT_MESSAGE" value="successfully delete product" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

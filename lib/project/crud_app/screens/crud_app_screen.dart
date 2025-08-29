@@ -48,7 +48,9 @@ class _CrudAppScreenState extends State<CrudAppScreen> {
       }
     }
     _getProductInProgress = false;
+
     setState(() {
+
     });
 
 }
@@ -80,7 +82,9 @@ class _CrudAppScreenState extends State<CrudAppScreen> {
         child: ListView.builder(
           itemCount: _productList.length,
             itemBuilder: (context, index){
-              return product_item(product: _productList[index]);
+              return product_item(product: _productList[index], refreshProductList: () {
+                _getProductList();
+              },);
             }
         ),
       ),

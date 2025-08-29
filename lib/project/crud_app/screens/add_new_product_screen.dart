@@ -178,6 +178,7 @@ class _AddNewProductScreenState extends State<AddNewProductScreen> {
                           ),
                           onPressed: (){
                             _onTapAddProductButton();
+                           // Navigator.of(context).pop();
                             },
                           child: Text("Add Product", style: TextStyle(color: Colors.white),)),
                     ),

@@ -23,9 +23,15 @@ class _CrudAppScreenState extends State<CrudAppScreen> {
     _getProductList();
   }
 
-  List<ProductsModel> _productList = [];
+  final List<ProductsModel> _productList = [];
+  bool _getProductInProgress = false;
 
   Future<void> _getProductList() async{
+    _productList.clear();
+    _getProductInProgress = true;
+    setState(() {
+
+    });
     Uri uri = Uri.parse(Urls.getProductUrl);
     Response response = await  get(uri);
 
@@ -41,6 +47,7 @@ class _CrudAppScreenState extends State<CrudAppScreen> {
     _productList.add(productsModel);
       }
     }
+    _getProductInProgress = false;
     setState(() {
     });
 
@@ -65,11 +72,17 @@ class _CrudAppScreenState extends State<CrudAppScreen> {
 
         ],
       ),
-      body: ListView.builder(
-        itemCount: _productList.length,
-          itemBuilder: (context, index){
-            return product_item(product: _productList[index]);
-          }
+      body: Visibility(
+        visible: _getProductInProgress == false,
+        replacement: Center(
+          child: CircularProgressIndicator(),
+        ),
+        child: ListView.builder(
+          itemCount: _productList.length,
+            itemBuilder: (context, index){
+              return product_item(product: _productList[index]);
+            }
+        ),
       ),
       // body: product_item(product: _productList[index]),
       floatingActionButton: FloatingActionButton(onPressed: (){

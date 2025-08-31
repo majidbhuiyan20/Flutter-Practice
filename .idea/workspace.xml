@@ -9,11 +9,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="successfully delete product">
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="successfully update product by api">
+      <change afterPath="$PROJECT_DIR$/lib/project/money_management/utils/language.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/project/crud_app/screens/update_product_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/crud_app/screens/update_product_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/project/crud_app/utils/urls.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/crud_app/utils/urls.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/project/crud_app/widgets/product_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/project/crud_app/widgets/product_item.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,10 +274,9 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="AppleRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" IS_LOCATION_SIMULATION_SUPPORTED="false" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
-      <embedded_app_extension_list />
+    <configuration default="true" type="Application" factoryName="Application">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
@@ -306,14 +303,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741888031466</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Update">
-      <option name="closed" value="true" />
-      <created>1754382359195</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1754382359195</updated>
     </task>
     <task id="LOCAL-00021" summary="sign in with google">
       <option name="closed" value="true" />
@@ -699,7 +688,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756493370587</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="successfully update product by api">
+      <option name="closed" value="true" />
+      <created>1756499339047</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1756499339047</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -720,7 +717,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="PopupMenuButton add in product list screen trailing" />
     <MESSAGE value="add update product screen" />
     <MESSAGE value="widget extraction product list" />
     <MESSAGE value="Test" />
@@ -745,7 +741,8 @@
     <MESSAGE value="icon button to refresh" />
     <MESSAGE value="update on refresh" />
     <MESSAGE value="successfully delete product" />
-    <option name="LAST_COMMIT_MESSAGE" value="successfully delete product" />
+    <MESSAGE value="successfully update product by api" />
+    <option name="LAST_COMMIT_MESSAGE" value="successfully update product by api" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

@@ -14,5 +14,10 @@ final OstadListProvider = StateProvider<List<Feature>>((ref) => [
     icon: Icons.quiz, 
     route: '/addEmployee'
   ),
+  Feature(
+      title: 'Live Test Json',
+      icon: Icons.quiz,
+      route: '/recipeScreen'
+  ),
   // Add more ostad features here
 ]);

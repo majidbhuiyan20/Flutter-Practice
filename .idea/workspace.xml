@@ -9,9 +9,11 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="successfully update product by api">
-      <change afterPath="$PROJECT_DIR$/lib/project/money_management/utils/language.dart" afterDir="false" />
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="update">
+      <change afterPath="$PROJECT_DIR$/lib/ostad_flutter/live_test_json/display_recipes_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ostad_flutter/ostad_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ostad_flutter/ostad_provider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/router/app_routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/router/app_routes.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,9 +276,10 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
+    <configuration default="true" type="AppleRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" IS_LOCATION_SIMULATION_SUPPORTED="false" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
+      <embedded_app_extension_list />
       <method v="2">
-        <option name="Make" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="JetRunConfigurationType">
@@ -303,14 +306,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741888031466</updated>
-    </task>
-    <task id="LOCAL-00021" summary="sign in with google">
-      <option name="closed" value="true" />
-      <created>1754594659608</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1754594659608</updated>
     </task>
     <task id="LOCAL-00022" summary="update flutter practice project">
       <option name="closed" value="true" />
@@ -696,7 +691,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756499339047</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="update">
+      <option name="closed" value="true" />
+      <created>1756628100028</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1756628100028</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -731,7 +734,6 @@
     <MESSAGE value="practice in test card" />
     <MESSAGE value="add validator" />
     <MESSAGE value="custom snackbar create" />
-    <MESSAGE value="update" />
     <MESSAGE value="create product model" />
     <MESSAGE value="create custom url" />
     <MESSAGE value="init get product uri" />
@@ -742,7 +744,8 @@
     <MESSAGE value="update on refresh" />
     <MESSAGE value="successfully delete product" />
     <MESSAGE value="successfully update product by api" />
-    <option name="LAST_COMMIT_MESSAGE" value="successfully update product by api" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

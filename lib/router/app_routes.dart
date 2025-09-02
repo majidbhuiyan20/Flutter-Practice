@@ -7,6 +7,7 @@ import 'package:practice/local_storage/local_storage_home_screen.dart';
 import 'package:practice/local_storage/shared_preferances/shared_preferances_home_screen.dart';
 import 'package:practice/local_storage/sqflite/sqflite_home_screen.dart';
 import 'package:practice/ostad_flutter/live_test/add_employe.dart';
+import 'package:practice/ostad_flutter/live_test_json/display_recipes_screen.dart';
 import 'package:practice/ostad_flutter/ostad_home.dart';
 import 'package:practice/project/calculator/calculatorApp.dart';
 import 'package:practice/project/crud_app/screens/crud_app_screen.dart';
@@ -26,6 +27,10 @@ final GoRouter router = GoRouter(
     GoRoute(path: '/', builder: (context, state) => const WrapperScreen()),
     GoRoute(path: '/addEmployee', builder: (context, state) => const AddEmployee()),
     GoRoute(path: '/grettingApp', builder: (context, state) => const GrettingAppScreen()),
+    GoRoute(path: '/recipeScreen', builder: (context, state) => const DisplayRecipesScreen()),
+
+
+
     GoRoute(path: '/homepage', builder: (context, state) => const HomePageScreen()),
     GoRoute(path: '/notification', builder: (context, state) => LocalNotification()),
     GoRoute(path: '/complexApi', builder: (context, state) => const ComplexApi()),

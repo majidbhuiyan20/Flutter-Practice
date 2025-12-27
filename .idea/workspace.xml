@@ -9,12 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="navigate from notification">
-      <change afterPath="$PROJECT_DIR$/lib/local_notification/notification_navigator.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/local_notification/fcm_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/local_notification/fcm_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ostad_flutter/ostad_home.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ostad_flutter/ostad_home.dart" afterDir="false" />
-    </list>
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="tap notification and navigate" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -302,14 +297,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741888031466</updated>
-    </task>
-    <task id="LOCAL-00028" summary="dynamic add water button">
-      <option name="closed" value="true" />
-      <created>1755208040329</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1755208040329</updated>
     </task>
     <task id="LOCAL-00029" summary="water tracker functional done">
       <option name="closed" value="true" />
@@ -695,7 +682,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766817794256</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="tap notification and navigate">
+      <option name="closed" value="true" />
+      <created>1766823527929</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1766823527929</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -716,7 +711,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="status code check" />
     <MESSAGE value="make post request successfully" />
     <MESSAGE value="circular progress in add product on loading" />
     <MESSAGE value="clear textfield when success" />
@@ -741,7 +735,8 @@
     <MESSAGE value="update firebase notification services" />
     <MESSAGE value="update" />
     <MESSAGE value="navigate from notification" />
-    <option name="LAST_COMMIT_MESSAGE" value="navigate from notification" />
+    <MESSAGE value="tap notification and navigate" />
+    <option name="LAST_COMMIT_MESSAGE" value="tap notification and navigate" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

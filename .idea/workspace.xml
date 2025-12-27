@@ -9,12 +9,15 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="successfully update product by api">
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/version" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="update dependencies">
+      <change afterPath="$PROJECT_DIR$/lib/local_notification/fcm_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/local_notification/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/local_notification/add_notification_dialog.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/local_notification/local_notification.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/local_notification/local_notification.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/local_notification/notification_model.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/local_notification/notification_service.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +66,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
@@ -110,7 +118,7 @@
     "cidr.known.project.marker": "true",
     "com.google.services.firebase.aqiPopupShown": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "notification-branch",
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/betopia/Documents/Majid/Flutter-Practice",
@@ -298,14 +306,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741888031466</updated>
-    </task>
-    <task id="LOCAL-00022" summary="update flutter practice project">
-      <option name="closed" value="true" />
-      <created>1755158759506</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1755158759506</updated>
     </task>
     <task id="LOCAL-00023" summary="init calculator app and custom widgets">
       <option name="closed" value="true" />
@@ -691,7 +691,15 @@
       <option name="project" value="LOCAL" />
       <updated>1756830474348</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="update dependencies">
+      <option name="closed" value="true" />
+      <created>1766808201564</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1766808201564</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -712,7 +720,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="widget extraction product list" />
     <MESSAGE value="Test" />
     <MESSAGE value="on tap function init" />
     <MESSAGE value="create map for post add product" />
@@ -737,7 +744,8 @@
     <MESSAGE value="successfully delete product" />
     <MESSAGE value="successfully update product by api" />
     <MESSAGE value="api call practice" />
-    <option name="LAST_COMMIT_MESSAGE" value="api call practice" />
+    <MESSAGE value="update dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="update dependencies" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

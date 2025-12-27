@@ -9,9 +9,10 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="notification permission take in main">
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="add foreground background and terminated notification">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/local_notification/fcm_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/local_notification/fcm_service.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,14 +301,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741888031466</updated>
-    </task>
-    <task id="LOCAL-00024" summary="make calculator main ui">
-      <option name="closed" value="true" />
-      <created>1755161542623</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1755161542623</updated>
     </task>
     <task id="LOCAL-00025" summary="make basic calculator app logic">
       <option name="closed" value="true" />
@@ -693,7 +686,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766810794605</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="add foreground background and terminated notification">
+      <option name="closed" value="true" />
+      <created>1766812228339</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1766812228339</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -714,7 +715,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="on tap function init" />
     <MESSAGE value="create map for post add product" />
     <MESSAGE value="prepare async data and wait" />
     <MESSAGE value="status code check" />
@@ -739,7 +739,8 @@
     <MESSAGE value="api call practice" />
     <MESSAGE value="update dependencies" />
     <MESSAGE value="notification permission take in main" />
-    <option name="LAST_COMMIT_MESSAGE" value="notification permission take in main" />
+    <MESSAGE value="add foreground background and terminated notification" />
+    <option name="LAST_COMMIT_MESSAGE" value="add foreground background and terminated notification" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

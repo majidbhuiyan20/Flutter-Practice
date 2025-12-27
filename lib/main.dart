@@ -17,7 +17,7 @@ void main() async {
   );
   await FCMService.initialize();
 
-
+  print("build");
   runApp(const ProviderScope(child: MyApp()));
 }
 

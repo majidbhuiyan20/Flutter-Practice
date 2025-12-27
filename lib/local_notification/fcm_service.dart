@@ -14,21 +14,20 @@ class FCMService {
     );
 
     //Bellow code is working on App Foreground Notification
-    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-      print(message.data);
-      print(message.notification?.title);
-      print(message.notification?.body);
-    });
+    FirebaseMessaging.onMessage.listen(_handleNotification);
     //Bellow code is work in App Background Notification
-    FirebaseMessaging.onMessageOpenedApp.listen((RemoteMessage message) {
-      print(message.data);
-      print(message.notification?.title);
-      print(message.notification?.body);
-    });
+    FirebaseMessaging.onMessageOpenedApp.listen(_handleNotification);
 
     //Bellow message is working in Terminated app
     FirebaseMessaging.onBackgroundMessage(_handleTerminatedMessage);
   }
+  static void _handleNotification(RemoteMessage message){
+    print(message.data);
+    print(message.notification?.title);
+    print(message.notification?.body);
+  }
+
+
 }
 
 // Here handle notification on terminated background app

@@ -1,4 +1,7 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:practice/ostad_flutter/ostad_home.dart';
 
 class FCMService {
   //Bellow code is firebase notification service is Initialize and it call from main.dart
@@ -25,6 +28,10 @@ class FCMService {
     print(message.data);
     print(message.notification?.title);
     print(message.notification?.body);
+
+    if(message.data['route_name'] == '/lol'){
+      Navigator.push(context, MaterialPageRoute(builder: (_)=> OstadHome()));
+    }
   }
 
   static Future<String?> getToken(){

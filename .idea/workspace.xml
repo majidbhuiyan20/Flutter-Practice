@@ -9,11 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="update firebase notification services">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/local_notification/fcm_service.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/local_notification/fcm_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-    </list>
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="update" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -301,14 +297,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741888031466</updated>
-    </task>
-    <task id="LOCAL-00026" summary="init water tracker app">
-      <option name="closed" value="true" />
-      <created>1755204305343</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1755204305344</updated>
     </task>
     <task id="LOCAL-00027" summary="water_tracker_ui design">
       <option name="closed" value="true" />
@@ -694,7 +682,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766815827538</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="update">
+      <option name="closed" value="true" />
+      <created>1766817634582</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1766817634582</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -724,7 +720,6 @@
     <MESSAGE value="practice in test card" />
     <MESSAGE value="add validator" />
     <MESSAGE value="custom snackbar create" />
-    <MESSAGE value="update" />
     <MESSAGE value="create product model" />
     <MESSAGE value="create custom url" />
     <MESSAGE value="init get product uri" />
@@ -740,7 +735,8 @@
     <MESSAGE value="notification permission take in main" />
     <MESSAGE value="add foreground background and terminated notification" />
     <MESSAGE value="update firebase notification services" />
-    <option name="LAST_COMMIT_MESSAGE" value="update firebase notification services" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

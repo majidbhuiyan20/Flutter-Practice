@@ -27,6 +27,16 @@ class FCMService {
     print(message.notification?.body);
   }
 
+  static Future<String?> getToken(){
+    return FirebaseMessaging.instance.getToken();
+  }
+  static void onTokenRefresh(){
+    FirebaseMessaging.instance.onTokenRefresh.listen((newToken){
+      print(newToken);
+      //Call Update token API
+    });
+  }
+
 
 }
 

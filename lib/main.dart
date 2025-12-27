@@ -18,6 +18,7 @@ void main() async {
   await FCMService.initialize();
 
   print("build");
+  print(await FCMService.getToken());
   runApp(const ProviderScope(child: MyApp()));
 }
 

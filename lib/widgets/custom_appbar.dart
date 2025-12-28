@@ -21,9 +21,15 @@ class _CustomAppbarState extends State<CustomAppbar> {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Text(widget.title),
+      title: Text(
+        widget.title,
+        style: const TextStyle(color: Colors.white),
+      ),
       backgroundColor: widget.backgroundColor,
       centerTitle: true,
+      leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () => Navigator.of(context).pop()),
     );
   }
 }

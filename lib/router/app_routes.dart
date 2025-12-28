@@ -12,6 +12,7 @@ import 'package:practice/ostad_flutter/ostad_home.dart';
 import 'package:practice/project/calculator/calculatorApp.dart';
 import 'package:practice/project/crud_app/screens/crud_app_screen.dart';
 import 'package:practice/project/money_management/money_management.dart';
+import 'package:practice/project/state_management/change_notifier/change_notifier_screen.dart';
 import 'package:practice/project/to_do_basic/basic_todo_app.dart';
 import 'package:practice/project/water_tracker/water_tracker.dart';
 import 'package:practice/rest_api/api_home_page_ui.dart';
@@ -48,6 +49,7 @@ final GoRouter router = GoRouter(
     GoRoute(path: '/localStorage', builder: (context, state) => const LocalStorageHomeScreen()),
     GoRoute(path: '/sharedPreferences', builder: (context, state) => const SharedPreferencesHomeScreen()),
     GoRoute(path: '/studentDatabasePage', builder: (context, state) =>  StudentDatabasePage()),
+    GoRoute(path: '/stateManage', builder: (context, state) =>  ChangeNotifierScreen()),
 
 
 

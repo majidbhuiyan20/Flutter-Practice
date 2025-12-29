@@ -9,13 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="successfully update product by api">
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/version" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-    </list>
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="tap notification and navigate" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,6 +57,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
@@ -110,7 +109,7 @@
     "cidr.known.project.marker": "true",
     "com.google.services.firebase.aqiPopupShown": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "notification-branch",
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/betopia/Documents/Majid/Flutter-Practice",
@@ -298,62 +297,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741888031466</updated>
-    </task>
-    <task id="LOCAL-00022" summary="update flutter practice project">
-      <option name="closed" value="true" />
-      <created>1755158759506</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1755158759506</updated>
-    </task>
-    <task id="LOCAL-00023" summary="init calculator app and custom widgets">
-      <option name="closed" value="true" />
-      <created>1755160496718</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1755160496718</updated>
-    </task>
-    <task id="LOCAL-00024" summary="make calculator main ui">
-      <option name="closed" value="true" />
-      <created>1755161542623</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1755161542623</updated>
-    </task>
-    <task id="LOCAL-00025" summary="make basic calculator app logic">
-      <option name="closed" value="true" />
-      <created>1755166311458</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1755166311458</updated>
-    </task>
-    <task id="LOCAL-00026" summary="init water tracker app">
-      <option name="closed" value="true" />
-      <created>1755204305343</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1755204305344</updated>
-    </task>
-    <task id="LOCAL-00027" summary="water_tracker_ui design">
-      <option name="closed" value="true" />
-      <created>1755207373874</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1755207373874</updated>
-    </task>
-    <task id="LOCAL-00028" summary="dynamic add water button">
-      <option name="closed" value="true" />
-      <created>1755208040329</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1755208040329</updated>
     </task>
     <task id="LOCAL-00029" summary="water tracker functional done">
       <option name="closed" value="true" />
@@ -691,7 +634,63 @@
       <option name="project" value="LOCAL" />
       <updated>1756830474348</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="update dependencies">
+      <option name="closed" value="true" />
+      <created>1766808201564</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1766808201564</updated>
+    </task>
+    <task id="LOCAL-00072" summary="notification permission take in main">
+      <option name="closed" value="true" />
+      <created>1766810794605</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1766810794605</updated>
+    </task>
+    <task id="LOCAL-00073" summary="add foreground background and terminated notification">
+      <option name="closed" value="true" />
+      <created>1766812228339</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1766812228339</updated>
+    </task>
+    <task id="LOCAL-00074" summary="update firebase notification services">
+      <option name="closed" value="true" />
+      <created>1766815827538</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1766815827538</updated>
+    </task>
+    <task id="LOCAL-00075" summary="update">
+      <option name="closed" value="true" />
+      <created>1766817634582</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1766817634582</updated>
+    </task>
+    <task id="LOCAL-00076" summary="navigate from notification">
+      <option name="closed" value="true" />
+      <created>1766817794255</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1766817794256</updated>
+    </task>
+    <task id="LOCAL-00077" summary="tap notification and navigate">
+      <option name="closed" value="true" />
+      <created>1766823527929</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1766823527929</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -712,12 +711,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="widget extraction product list" />
-    <MESSAGE value="Test" />
-    <MESSAGE value="on tap function init" />
-    <MESSAGE value="create map for post add product" />
-    <MESSAGE value="prepare async data and wait" />
-    <MESSAGE value="status code check" />
     <MESSAGE value="make post request successfully" />
     <MESSAGE value="circular progress in add product on loading" />
     <MESSAGE value="clear textfield when success" />
@@ -725,7 +718,6 @@
     <MESSAGE value="practice in test card" />
     <MESSAGE value="add validator" />
     <MESSAGE value="custom snackbar create" />
-    <MESSAGE value="update" />
     <MESSAGE value="create product model" />
     <MESSAGE value="create custom url" />
     <MESSAGE value="init get product uri" />
@@ -737,7 +729,14 @@
     <MESSAGE value="successfully delete product" />
     <MESSAGE value="successfully update product by api" />
     <MESSAGE value="api call practice" />
-    <option name="LAST_COMMIT_MESSAGE" value="api call practice" />
+    <MESSAGE value="update dependencies" />
+    <MESSAGE value="notification permission take in main" />
+    <MESSAGE value="add foreground background and terminated notification" />
+    <MESSAGE value="update firebase notification services" />
+    <MESSAGE value="update" />
+    <MESSAGE value="navigate from notification" />
+    <MESSAGE value="tap notification and navigate" />
+    <option name="LAST_COMMIT_MESSAGE" value="tap notification and navigate" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

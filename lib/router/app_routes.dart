@@ -1,3 +1,4 @@
+import 'package:practice/ecommerce/view/ecommerce_app.dart';
 import 'package:practice/firestore/firestore_fetch_data.dart';
 import 'package:practice/firestore/firestore_send_data.dart';
 import 'package:practice/firestore/firestore_view.dart';
@@ -48,6 +49,7 @@ final GoRouter router = GoRouter(
     GoRoute(path: '/localStorage', builder: (context, state) => const LocalStorageHomeScreen()),
     GoRoute(path: '/sharedPreferences', builder: (context, state) => const SharedPreferencesHomeScreen()),
     GoRoute(path: '/studentDatabasePage', builder: (context, state) =>  StudentDatabasePage()),
+    GoRoute(path: '/ecommerceApp', builder: (context, state) =>  EcommerceApp()),
 
 
 

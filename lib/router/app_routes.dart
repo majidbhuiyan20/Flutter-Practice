@@ -2,6 +2,7 @@ import 'package:practice/ecommerce/view/ecommerce_app.dart';
 import 'package:practice/firestore/firestore_fetch_data.dart';
 import 'package:practice/firestore/firestore_send_data.dart';
 import 'package:practice/firestore/firestore_view.dart';
+import 'package:practice/health/step_counter/step_counter_page.dart';
 import 'package:practice/home_page/home_page_screen.dart';
 import 'package:go_router/go_router.dart';
 import 'package:practice/local_storage/local_storage_home_screen.dart';
@@ -29,6 +30,7 @@ final GoRouter router = GoRouter(
     GoRoute(path: '/addEmployee', builder: (context, state) => const AddEmployee()),
     GoRoute(path: '/grettingApp', builder: (context, state) => const GrettingAppScreen()),
     GoRoute(path: '/recipeScreen', builder: (context, state) => const DisplayRecipesScreen()),
+    GoRoute(path: '/health', builder: (context, state) => StepCounterPage()),
 
 
 

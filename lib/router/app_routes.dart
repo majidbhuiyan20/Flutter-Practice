@@ -23,6 +23,7 @@ import 'package:practice/test/test_section.dart';
 import '../firebase/wrapper_screen.dart';
 import '../local_notification/local_notification.dart';
 import '../ostad_flutter/extend_the_greeting_app/gretting_app_screen.dart';
+import '../recipe_app/features/home/view/recipe_home_screen.dart';
 final GoRouter router = GoRouter(
   routes: [
 
@@ -52,6 +53,7 @@ final GoRouter router = GoRouter(
     GoRoute(path: '/sharedPreferences', builder: (context, state) => const SharedPreferencesHomeScreen()),
     GoRoute(path: '/studentDatabasePage', builder: (context, state) =>  StudentDatabasePage()),
     GoRoute(path: '/ecommerceApp', builder: (context, state) =>  EcommerceApp()),
+    GoRoute(path: '/recipeHome', builder: (context, state) =>  RecipeHomeScreen()),
 
 
 

@@ -9,19 +9,18 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="custom app bar">
-      <change afterPath="$PROJECT_DIR$/lib/project/state_management/change_notifier/change_notifier_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/project/state_management/change_notifier/change_notifier_second_screen.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/project/state_management/change_notifier/counter_controller.dart" afterDir="false" />
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/package_graph.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_graph.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/version" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/home_page/feature_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home_page/feature_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/recipe_app/features/home/view/recipe_home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/view/recipe_home_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/router/app_routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/router/app_routes.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/widgets/custom_appbar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/widgets/custom_appbar.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +31,6 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=/Users/daymon/.android/avd/Pixel_4_API_27.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$/android">
       <ProjectState />
@@ -126,7 +124,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "com.android.studio.ml.bot.mainConfigurable",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
@@ -307,14 +305,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741888031466</updated>
-    </task>
-    <task id="LOCAL-00024" summary="make calculator main ui">
-      <option name="closed" value="true" />
-      <created>1755161542623</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1755161542623</updated>
     </task>
     <task id="LOCAL-00025" summary="make basic calculator app logic">
       <option name="closed" value="true" />
@@ -700,7 +690,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762883589048</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="update">
+      <option name="closed" value="true" />
+      <created>1771258613429</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1771258613429</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -732,7 +730,6 @@
     <MESSAGE value="practice in test card" />
     <MESSAGE value="add validator" />
     <MESSAGE value="custom snackbar create" />
-    <MESSAGE value="update" />
     <MESSAGE value="create product model" />
     <MESSAGE value="create custom url" />
     <MESSAGE value="init get product uri" />
@@ -746,7 +743,8 @@
     <MESSAGE value="api call practice" />
     <MESSAGE value="ui update for test screen" />
     <MESSAGE value="custom app bar" />
-    <option name="LAST_COMMIT_MESSAGE" value="custom app bar" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

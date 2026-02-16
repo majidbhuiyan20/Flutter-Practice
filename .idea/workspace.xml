@@ -9,10 +9,15 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="feat(ui): init recipe app">
-      <change afterPath="$PROJECT_DIR$/lib/recipe_app/features/common/widgets/custom_app_bar.dart" afterDir="false" />
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="feat(ui): add app bar and search bar for recipe app">
+      <change afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/model/recipe_model.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/recipe_app/features/network/api_client.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_graph.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_graph.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/recipe_app/features/home/view/recipe_home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/view/recipe_home_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,14 +301,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741888031466</updated>
-    </task>
-    <task id="LOCAL-00026" summary="init water tracker app">
-      <option name="closed" value="true" />
-      <created>1755204305343</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1755204305344</updated>
     </task>
     <task id="LOCAL-00027" summary="water_tracker_ui design">
       <option name="closed" value="true" />
@@ -689,7 +686,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771266288780</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="feat(ui): add app bar and search bar for recipe app">
+      <option name="closed" value="true" />
+      <created>1771267192021</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1771267192021</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -710,7 +715,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="create map for post add product" />
     <MESSAGE value="prepare async data and wait" />
     <MESSAGE value="status code check" />
     <MESSAGE value="make post request successfully" />
@@ -735,7 +739,8 @@
     <MESSAGE value="custom app bar" />
     <MESSAGE value="update" />
     <MESSAGE value="feat(ui): init recipe app" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(ui): init recipe app" />
+    <MESSAGE value="feat(ui): add app bar and search bar for recipe app" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(ui): add app bar and search bar for recipe app" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

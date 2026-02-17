@@ -1,21 +1,21 @@
-import 'package:practice/ostad_flutter/live_test_json/display_recipes_screen.dart';
-import 'package:practice/recipe_app/features/network/api_client.dart';
-
 import '../home/model/recipe_model.dart';
+import 'api_client.dart';
 
 class RecipeRepository {
   final ApiClient apiClient;
+
   RecipeRepository(this.apiClient);
 
+  // Fetch all recipes
   Future<List<MajidRecipeRepo>> fetchRecipe() async {
     final response = await apiClient.get("/recipes");
-
-    final List recipes = response.data['recipes'];
-
-    return recipes
-        .map((recipe) => MajidRecipeRepo.fromJson(recipe))
-        .toList();
+    final data = response.data['recipes'] as List;
+    return data.map((e) => MajidRecipeRepo.fromJson(e)).toList();
   }
 
-
+  // Fetch single recipe details by ID
+  Future<MajidRecipeRepo> fetchRecipeDetails(int id) async {
+    final response = await apiClient.get("/recipes/$id");
+    return MajidRecipeRepo.fromJson(response.data);
+  }
 }

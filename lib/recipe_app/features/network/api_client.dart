@@ -9,8 +9,11 @@ class ApiClient {
       receiveTimeout: const Duration(seconds: 20)
     );
   }
-  Future<Response> get(String path) async {
-    return await dio.get(path);
+  // Future<Response> get(String path) async {
+  //   return await dio.get(path);
+  // }
+  Future<Response> get(String path, {Map<String, dynamic>? queryParameters}) async {
+    return await dio.get(path, queryParameters: queryParameters);
   }
 
 }

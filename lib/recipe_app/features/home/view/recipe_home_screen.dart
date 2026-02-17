@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:practice/recipe_app/features/home/view/recipe_details_screen.dart';
 
 import '../../common/widgets/custom_app_bar.dart';
 import '../../common/widgets/custom_search_bar.dart';
@@ -31,6 +32,15 @@ class _RecipeHomeScreenState extends ConsumerState<RecipeHomeScreen> {
                 return ListView.builder(itemBuilder: (context, index){
                   final recipe = data[index];
                   return ListTile(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => RecipeDetailsScreen(recipeId: recipe.id),
+                        ),
+                      );
+                    },
+
                     leading: Image.network(recipe.image, width: 50,),
                     title: Text(recipe.name),
                   );

@@ -20,6 +20,7 @@ import 'package:practice/rest_api/complex_json/complex_api.dart';
 import 'package:practice/test/test_section.dart';
 
 import '../firebase/wrapper_screen.dart';
+import '../health/step_counter/step_counter_page.dart';
 import '../local_notification/local_notification.dart';
 import '../ostad_flutter/extend_the_greeting_app/gretting_app_screen.dart';
 import '../recipe_app/features/home/view/recipe_home_screen.dart';
@@ -30,6 +31,7 @@ final GoRouter router = GoRouter(
     GoRoute(path: '/addEmployee', builder: (context, state) => const AddEmployee()),
     GoRoute(path: '/grettingApp', builder: (context, state) => const GrettingAppScreen()),
     GoRoute(path: '/recipeScreen', builder: (context, state) => const DisplayRecipesScreen()),
+    GoRoute(path: '/healthApp', builder: (context, state) => const StepCounterPage()),
 
 
 

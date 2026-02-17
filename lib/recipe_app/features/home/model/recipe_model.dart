@@ -1,4 +1,4 @@
-class Recipe {
+class MajidRecipeRepo {
   final int id;
   final String name;
   final List<String> ingredients;
@@ -16,7 +16,7 @@ class Recipe {
   final int reviewCount;
   final List<String> mealType;
 
-  Recipe({
+  MajidRecipeRepo({
     required this.id,
     required this.name,
     required this.ingredients,
@@ -35,8 +35,8 @@ class Recipe {
     required this.mealType,
   });
 
-  factory Recipe.fromJson(Map<String, dynamic> json) {
-    return Recipe(
+  factory MajidRecipeRepo.fromJson(Map<String, dynamic> json) {
+    return MajidRecipeRepo(
       id: json['id'],
       name: json['name'],
       ingredients: List<String>.from(json['ingredients']),

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:practice/recipe_app/features/home/view/recipe_details_screen.dart';
+import 'package:practice/recipe_app/features/home/widgets/top_chef_horizontal_list.dart';
 
 import '../../common/widgets/custom_app_bar.dart';
 import '../../common/widgets/custom_search_bar.dart';
 import '../view_model/providers.dart';
+import '../widgets/recipe_horizontal_list.dart';
 
 class RecipeHomeScreen extends ConsumerStatefulWidget {
   const RecipeHomeScreen({super.key});
@@ -27,24 +29,52 @@ class _RecipeHomeScreenState extends ConsumerState<RecipeHomeScreen> {
           children: [
             CustomSearchBar(),
             SizedBox(height: 16,),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Popular Recipes",
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(height: 12),
+                DummyRecipeHorizontalList(),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const SizedBox(height: 20),
+                    Text(
+                      "Top Chefs",
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(height: 12),
+                    TopChefHorizontalList(),
+                  ],
+                )
+
+              ],
+            ),
             Expanded(
               child: recipeState.when(data: (data){
-                return ListView.builder(itemBuilder: (context, index){
-                  final recipe = data[index];
-                  return ListTile(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (_) => RecipeDetailsScreen(recipeId: recipe.id),
-                        ),
-                      );
-                    },
+                return ListView.builder(
+                  itemCount: data.length,
+                  itemBuilder: (context, index) {
+                    final recipe = data[index];
 
-                    leading: Image.network(recipe.image, width: 50,),
-                    title: Text(recipe.name),
-                  );
-                });
+                    return ListTile(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => RecipeDetailsScreen(recipeId: recipe.id),
+                          ),
+                        );
+                      },
+                      leading: Image.network(recipe.image, width: 50),
+                      title: Text(recipe.name),
+                    );
+                  },
+                );
+
               },
                   error: (error, stack){
                 return Center(child: Text(error.toString()));

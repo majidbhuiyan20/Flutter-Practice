@@ -5,28 +5,28 @@ import '../../network/repository.dart';
 import '../model/recipe_model.dart';
 
 // ------------------- Dio Provider -------------------
-final dioProvider = Provider<Dio>((ref) => Dio());
+final dioProvider = Provider<Dio>((ref) => Dio()); /// This is Global dependency Container of Riverpod State Management
 
 // ------------------- ApiClient Provider -------------------
 final apiClientProvider = Provider<ApiClient>(
       (ref) => ApiClient(ref.read(dioProvider)),
 );
 
-// ------------------- Repository Provider -------------------
+// ------------------- Repository Provider ------------------
 final recipeRepositoryProvider = Provider<RecipeRepository>(
       (ref) => RecipeRepository(ref.read(apiClientProvider)),
 );
 
-// ------------------- Recipe List Provider -------------------
+// ------------------- Recipe List Provider -----------------
 final recipeProvider = FutureProvider<List<MajidRecipeRepo>>((ref) async {
   final repo = ref.read(recipeRepositoryProvider);
-  return await repo.fetchRecipe(); // returns List<MajidRecipeRepo>
+  return await repo.fetchRecipe();
 });
 
-// ------------------- Recipe Details Provider -------------------
-// Use .family to pass recipeId dynamically
+// ------------------- Recipe Details Provider ---------------
+
 final recipeDetailsProvider =
 FutureProvider.family<MajidRecipeRepo, int>((ref, id) async {
   final repo = ref.read(recipeRepositoryProvider);
-  return await repo.fetchRecipeDetails(id); // returns a single MajidRecipeRepo
+  return await repo.fetchRecipeDetails(id);
 });

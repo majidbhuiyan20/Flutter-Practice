@@ -25,7 +25,7 @@ class RecipeDetailsScreen extends ConsumerWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Image.network(recipe.image, width: double.infinity),
+                Image.network(recipe.image, width: double.infinity, ),
                 const SizedBox(height: 16),
                 Text(
                   recipe.name,

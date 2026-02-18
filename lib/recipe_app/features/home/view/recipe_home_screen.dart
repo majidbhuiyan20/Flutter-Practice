@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:practice/recipe_app/features/home/view/recipe_details_screen.dart';
+import 'package:practice/recipe_app/features/home/widgets/top_chef_horizontal_list.dart';
 
 import '../../common/widgets/custom_app_bar.dart';
 import '../../common/widgets/custom_search_bar.dart';
@@ -37,6 +38,19 @@ class _RecipeHomeScreenState extends ConsumerState<RecipeHomeScreen> {
                 ),
                 SizedBox(height: 12),
                 DummyRecipeHorizontalList(),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const SizedBox(height: 20),
+                    Text(
+                      "Top Chefs",
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(height: 12),
+                    TopChefHorizontalList(),
+                  ],
+                )
+
               ],
             ),
             Expanded(

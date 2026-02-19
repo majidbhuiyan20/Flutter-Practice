@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="feat(ui): create popular recipe card">
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="feat(api): Popular recipe api with card">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/recipe_app/features/home/view/recipe_home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/view/recipe_home_screen.dart" afterDir="false" />
     </list>
@@ -305,14 +305,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741888031466</updated>
-    </task>
-    <task id="LOCAL-00035" summary="create todo model and listview builder">
-      <option name="closed" value="true" />
-      <created>1755502955886</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1755502955886</updated>
     </task>
     <task id="LOCAL-00036" summary="add todo list page and pass todo data">
       <option name="closed" value="true" />
@@ -698,7 +690,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771431560141</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="feat(api): Popular recipe api with card">
+      <option name="closed" value="true" />
+      <created>1771432337461</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1771432337461</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -719,7 +719,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add validator" />
     <MESSAGE value="custom snackbar create" />
     <MESSAGE value="create product model" />
     <MESSAGE value="create custom url" />
@@ -744,7 +743,8 @@
     <MESSAGE value="feat(api): recipe image and title fetched" />
     <MESSAGE value="update" />
     <MESSAGE value="feat(ui): create popular recipe card" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(ui): create popular recipe card" />
+    <MESSAGE value="feat(api): Popular recipe api with card" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(api): Popular recipe api with card" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

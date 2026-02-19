@@ -23,7 +23,7 @@ class _RecipeHomeScreenState extends ConsumerState<RecipeHomeScreen> {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: CustomAppBar(),
+      appBar: CustomAppBar(backgroundColor: Colors.transparent, elevation:0, title: Text("Recipe"),),
       body: Padding(
         padding: EdgeInsets.all(16.0),
         child: Column(

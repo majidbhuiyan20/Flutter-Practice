@@ -9,8 +9,16 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="feat(api): Popular recipe api with card">
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="feat(api): recipe card navigate to recipe details screen">
+      <change afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/widgets/recipe_header_image.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/widgets/recipe_ingradient_card.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/widgets/recipe_instruction_card.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/widgets/recipe_meta_info.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/widgets/recipe_nutration_card.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/widgets/recipe_rating_card.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/recipe_app/features/common/widgets/custom_app_bar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/recipe_app/features/common/widgets/custom_app_bar.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/recipe_app/features/home/view/recipe_details_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/view/recipe_details_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/recipe_app/features/home/view/recipe_home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/view/recipe_home_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -305,14 +313,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741888031466</updated>
-    </task>
-    <task id="LOCAL-00036" summary="add todo list page and pass todo data">
-      <option name="closed" value="true" />
-      <created>1755503385134</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1755503385134</updated>
     </task>
     <task id="LOCAL-00037" summary="receive todo and show in screen">
       <option name="closed" value="true" />
@@ -698,7 +698,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771432337461</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="feat(api): recipe card navigate to recipe details screen">
+      <option name="closed" value="true" />
+      <created>1771521297286</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1771521297287</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -719,7 +727,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="custom snackbar create" />
     <MESSAGE value="create product model" />
     <MESSAGE value="create custom url" />
     <MESSAGE value="init get product uri" />
@@ -744,7 +751,8 @@
     <MESSAGE value="update" />
     <MESSAGE value="feat(ui): create popular recipe card" />
     <MESSAGE value="feat(api): Popular recipe api with card" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(api): Popular recipe api with card" />
+    <MESSAGE value="feat(api): recipe card navigate to recipe details screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(api): recipe card navigate to recipe details screen" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

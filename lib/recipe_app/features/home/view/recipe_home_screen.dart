@@ -81,9 +81,13 @@ class _RecipeHomeScreenState extends ConsumerState<RecipeHomeScreen> {
                 itemCount: majidRecipeList.length,
                 itemBuilder: (context, index) {
                   final recipe = majidRecipeList[index];
-
-                  return RecipeHorizontalCard(
-                    recipe: recipe,
+                  return GestureDetector(
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(builder: (_)=>RecipeDetailsScreen(recipeId: index)));
+                    },
+                    child: RecipeHorizontalCard(
+                      recipe: recipe,
+                    ),
                   );
                 },
               ),

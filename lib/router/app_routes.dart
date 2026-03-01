@@ -5,6 +5,7 @@ import 'package:practice/home_page/home_page_screen.dart';
 import 'package:go_router/go_router.dart';
 import 'package:practice/local_storage/local_storage_home_screen.dart';
 import 'package:practice/local_storage/shared_preferances/shared_preferances_home_screen.dart';
+import 'package:practice/local_storage/sqflite/features/student/view/student_page.dart';
 import 'package:practice/local_storage/sqflite/sqflite_home_screen.dart';
 import 'package:practice/ostad_flutter/live_test/add_employe.dart';
 import 'package:practice/ostad_flutter/live_test_json/display_recipes_screen.dart';
@@ -53,7 +54,7 @@ final GoRouter router = GoRouter(
     GoRoute(path: '/crudApp', builder: (context, state) => const CrudAppScreen()),
     GoRoute(path: '/localStorage', builder: (context, state) => const LocalStorageHomeScreen()),
     GoRoute(path: '/sharedPreferences', builder: (context, state) => const SharedPreferencesHomeScreen()),
-    GoRoute(path: '/studentDatabasePage', builder: (context, state) =>  StudentDatabasePage()),
+    GoRoute(path: '/studentDatabasePage', builder: (context, state) =>  StudentPage()),
     GoRoute(path: '/stateManage', builder: (context, state) =>  ChangeNotifierScreen()),
     GoRoute(path: '/homeRecipe', builder: (context, state) =>  RecipeHomeScreen()),
 

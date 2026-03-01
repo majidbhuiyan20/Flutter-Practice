@@ -59,5 +59,6 @@ final featureListProvider = StateProvider<List<Feature>>((ref) => [
   Feature(title: 'State Manage', icon: Icons.change_circle_outlined, route: '/stateManage'),
   Feature(title: 'Health App', icon: Icons.health_and_safety, route: '/healthApp'),
   Feature(title: 'Recipe App', icon: Icons.fastfood_outlined, route: '/homeRecipe'),
+  Feature(title: 'Stripe Pay', icon: Icons.payment_outlined, route: '/stripePay'),
 
 ]);

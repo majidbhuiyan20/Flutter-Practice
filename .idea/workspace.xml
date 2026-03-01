@@ -9,14 +9,16 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="feat(api): recipe card navigate to recipe details screen">
-      <change afterPath="$PROJECT_DIR$/android/app/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/stripe/view/stripe_payment_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="init stripe">
+      <change afterPath="$PROJECT_DIR$/lib/local_storage/sqflite/database/database_helper.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/local_storage/sqflite/features/student/model/student.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/local_storage/sqflite/features/student/repository/student_repository.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/local_storage/sqflite/features/student/view/student_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/version" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/kotlin/com/example/practice/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/kotlin/com/example/practice/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/home_page/feature_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/home_page/feature_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/local_storage/sqflite/sqflite_home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/local_storage/sqflite/sqflite_home_screen.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/router/app_routes.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/router/app_routes.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -311,14 +313,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741888031466</updated>
-    </task>
-    <task id="LOCAL-00037" summary="receive todo and show in screen">
-      <option name="closed" value="true" />
-      <created>1755503872408</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1755503872408</updated>
     </task>
     <task id="LOCAL-00038" summary="init crud app">
       <option name="closed" value="true" />
@@ -704,7 +698,15 @@
       <option name="project" value="LOCAL" />
       <updated>1771521297287</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="init stripe">
+      <option name="closed" value="true" />
+      <created>1772355252638</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1772355252638</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -725,7 +727,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="create product model" />
     <MESSAGE value="create custom url" />
     <MESSAGE value="init get product uri" />
     <MESSAGE value="get product from api and show in ui" />
@@ -750,7 +751,8 @@
     <MESSAGE value="feat(ui): create popular recipe card" />
     <MESSAGE value="feat(api): Popular recipe api with card" />
     <MESSAGE value="feat(api): recipe card navigate to recipe details screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat(api): recipe card navigate to recipe details screen" />
+    <MESSAGE value="init stripe" />
+    <option name="LAST_COMMIT_MESSAGE" value="init stripe" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

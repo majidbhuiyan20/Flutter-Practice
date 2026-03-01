@@ -9,9 +9,17 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="feat(api): recipe card navigate to recipe details screen">
+      <change afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/widgets/recipe_header_image.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/widgets/recipe_ingradient_card.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/widgets/recipe_instruction_card.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/widgets/recipe_meta_info.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/widgets/recipe_nutration_card.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/widgets/recipe_rating_card.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/recipe_app/features/common/widgets/custom_app_bar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/recipe_app/features/common/widgets/custom_app_bar.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/recipe_app/features/home/view/recipe_details_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/view/recipe_details_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/recipe_app/features/home/view/recipe_home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/view/recipe_home_screen.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +29,6 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=/Users/daymon/.android/avd/Pixel_4_API_27.avd)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$/android">
       <ProjectState />
@@ -113,7 +120,6 @@
     &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;io.flutter.project.isFirstOpen&quot;: &quot;true&quot;,
     &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/betopia/Documents/GitHub/Flutter-Practice&quot;,
@@ -129,14 +135,20 @@
       <recent name="$PROJECT_DIR$/android/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/lib/recipe_app/features/home/widgets" />
       <recent name="$PROJECT_DIR$/lib/ecommerce/view" />
       <recent name="$PROJECT_DIR$/lib/project/crud_app/screens" />
       <recent name="$PROJECT_DIR$/lib/project/crud_app/widget" />
       <recent name="$PROJECT_DIR$/lib/firestore" />
+      <recent name="$PROJECT_DIR$/android/app" />
     </key>
   </component>
   <component name="RunManager" selected="Flutter.main.dart">
+    <configuration default="true" type="AppleRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" IS_LOCATION_SIMULATION_SUPPORTED="false" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" DEVELOPMENT_TEAM="${TEAM_ID}" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
+      <embedded_app_extension_list />
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="android.app" />
       <option name="ANDROID_RUN_CONFIGURATION_SCHEMA_VERSION" value="1" />
@@ -662,37 +674,37 @@
       <option name="project" value="LOCAL" />
       <updated>1771299535351</updated>
     </task>
-    <task id="LOCAL-00082" summary="feat(api): fetch recipe details with recipe api">
+    <task id="LOCAL-00082" summary="update">
       <option name="closed" value="true" />
-      <created>1771319133196</created>
+      <created>1771428974308</created>
       <option name="number" value="00082" />
       <option name="presentableId" value="LOCAL-00082" />
       <option name="project" value="LOCAL" />
-      <updated>1771319133196</updated>
+      <updated>1771428974308</updated>
     </task>
-    <task id="LOCAL-00083" summary="feat(ui): add a listview of popular item">
+    <task id="LOCAL-00083" summary="feat(ui): create popular recipe card">
       <option name="closed" value="true" />
-      <created>1771409166659</created>
+      <created>1771431560141</created>
       <option name="number" value="00083" />
       <option name="presentableId" value="LOCAL-00083" />
       <option name="project" value="LOCAL" />
-      <updated>1771409166659</updated>
+      <updated>1771431560141</updated>
     </task>
-    <task id="LOCAL-00084" summary="feat(ui): add top chef list">
+    <task id="LOCAL-00084" summary="feat(api): Popular recipe api with card">
       <option name="closed" value="true" />
-      <created>1771409797528</created>
+      <created>1771432337461</created>
       <option name="number" value="00084" />
       <option name="presentableId" value="LOCAL-00084" />
       <option name="project" value="LOCAL" />
-      <updated>1771409797528</updated>
+      <updated>1771432337461</updated>
     </task>
-    <task id="LOCAL-00085" summary="update">
+    <task id="LOCAL-00085" summary="feat(api): recipe card navigate to recipe details screen">
       <option name="closed" value="true" />
-      <created>1771478361055</created>
+      <created>1771521297286</created>
       <option name="number" value="00085" />
       <option name="presentableId" value="LOCAL-00085" />
       <option name="project" value="LOCAL" />
-      <updated>1771478361055</updated>
+      <updated>1771521297287</updated>
     </task>
     <option name="localTasksCounter" value="86" />
     <servers />
@@ -736,11 +748,11 @@
     <MESSAGE value="problem solve for ios" />
     <MESSAGE value="issue solve" />
     <MESSAGE value="feat(api): recipe image and title fetched" />
-    <MESSAGE value="feat(api): fetch recipe details with recipe api" />
-    <MESSAGE value="feat(ui): add a listview of popular item" />
-    <MESSAGE value="feat(ui): add top chef list" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="feat(ui): create popular recipe card" />
+    <MESSAGE value="feat(api): Popular recipe api with card" />
+    <MESSAGE value="feat(api): recipe card navigate to recipe details screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(api): recipe card navigate to recipe details screen" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

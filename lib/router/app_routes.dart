@@ -17,6 +17,7 @@ import 'package:practice/project/to_do_basic/basic_todo_app.dart';
 import 'package:practice/project/water_tracker/water_tracker.dart';
 import 'package:practice/rest_api/api_home_page_ui.dart';
 import 'package:practice/rest_api/complex_json/complex_api.dart';
+import 'package:practice/stripe/view/stripe_payment_screen.dart';
 import 'package:practice/test/test_section.dart';
 
 import '../firebase/wrapper_screen.dart';
@@ -32,6 +33,7 @@ final GoRouter router = GoRouter(
     GoRoute(path: '/grettingApp', builder: (context, state) => const GrettingAppScreen()),
     GoRoute(path: '/recipeScreen', builder: (context, state) => const DisplayRecipesScreen()),
     GoRoute(path: '/healthApp', builder: (context, state) => const StepCounterPage()),
+    GoRoute(path: '/stripePay', builder: (context, state) => const StripePaymentScreen()),
 
 
 

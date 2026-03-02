@@ -75,7 +75,7 @@ struct LruResults;
 /**
  * Local storage in the Firestore client. Coordinates persistence components
  * like the mutation queue and remote document cache to present a latency
- * compensated ui of stored data.
+ * compensated view of stored data.
  *
  * The LocalStore is responsible for accepting mutations from the SyncEngine.
  * Writes from the client are put into a queue as provisional Mutations until
@@ -147,7 +147,7 @@ class LocalStore : public bundle::BundleCallback {
    *
    * + remove the batch from the mutation queue;
    * + apply the changes to the remote document cache;
-   * + recalculate the latency compensated ui implied by those changes (there
+   * + recalculate the latency compensated view implied by those changes (there
    * may be mutations in the queue that affect the documents but haven't been
    * acknowledged yet); and
    * + give the changed documents back the sync engine
@@ -200,7 +200,7 @@ class LocalStore : public bundle::BundleCallback {
   /**
    * Assigns a target an internal ID so that its results can be pinned so they
    * don't get GC'd. A target must be allocated in the local store before the
-   * store can be used to manage its ui.
+   * store can be used to manage its view.
    *
    * Allocating an already allocated target will return the existing
    * `TargetData` for that target.
@@ -254,7 +254,7 @@ class LocalStore : public bundle::BundleCallback {
    * Runs a single backfill operation and returns the number of documents
    * processed.
    */
-  int Backfill() const;
+  size_t Backfill() const;
 
   /**
    * Returns whether the given bundle has already been loaded and its create
@@ -417,7 +417,7 @@ class LocalStore : public bundle::BundleCallback {
   OverlayMigrationManager* overlay_migration_manager_ = nullptr;
 
   /**
-   * The "local" ui of all documents (layering mutation queue on top of
+   * The "local" view of all documents (layering mutation queue on top of
    * remote_document_cache_).
    */
   std::unique_ptr<LocalDocumentsView> local_documents_;

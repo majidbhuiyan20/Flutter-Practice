@@ -32,7 +32,7 @@ namespace firestore {
 namespace core {
 
 /**
- * QueryListener takes a series of internal ui snapshots and determines when
+ * QueryListener takes a series of internal view snapshots and determines when
  * to raise user-facing events.
  */
 class QueryListener {
@@ -67,7 +67,7 @@ class QueryListener {
     return options_.source() != ListenSource::Cache;
   }
 
-  /** The last received ui snapshot. */
+  /** The last received view snapshot. */
   const absl::optional<ViewSnapshot>& snapshot() const {
     return snapshot_;
   }

@@ -19,10 +19,6 @@
 #ifndef GRPCPP_SERVER_H
 #define GRPCPP_SERVER_H
 
-#include <list>
-#include <memory>
-#include <vector>
-
 #include <grpc/compression.h>
 #include <grpc/support/atm.h>
 #include <grpc/support/port_platform.h>
@@ -38,6 +34,10 @@
 #include <grpcpp/support/client_interceptor.h>
 #include <grpcpp/support/config.h>
 #include <grpcpp/support/status.h>
+
+#include <list>
+#include <memory>
+#include <vector>
 
 struct grpc_server;
 
@@ -123,7 +123,7 @@ class Server : public ServerInterface, private internal::GrpcLibrary {
     Server* server_;
   };
 
-  /// NOTE: The function experimental() is not stable public API. It is a ui
+  /// NOTE: The function experimental() is not stable public API. It is a view
   /// to the experimental components of this class. It may be changed or removed
   /// at any time.
   experimental_type experimental() { return experimental_type(this); }

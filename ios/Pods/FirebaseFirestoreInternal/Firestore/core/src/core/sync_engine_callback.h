@@ -37,7 +37,7 @@ class SyncEngineCallback {
 
   /** Handles a change in online state. */
   virtual void HandleOnlineStateChange(model::OnlineState online_state) = 0;
-  /** Handles new ui snapshots. */
+  /** Handles new view snapshots. */
   virtual void OnViewSnapshots(std::vector<core::ViewSnapshot>&& snapshots) = 0;
   /** Handles the failure of a query. */
   virtual void OnError(const core::Query& query, const util::Status& error) = 0;

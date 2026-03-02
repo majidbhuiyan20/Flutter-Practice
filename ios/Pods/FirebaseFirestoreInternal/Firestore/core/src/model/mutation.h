@@ -205,7 +205,7 @@ class Mutation {
                              const MutationResult& mutation_result) const;
 
   /**
-   * Estimates the latency compensated ui of this mutation applied to the
+   * Estimates the latency compensated view of this mutation applied to the
    * given MaybeDocument.
    *
    * Unlike ApplyToRemoteDocument, this method is used before the mutation has

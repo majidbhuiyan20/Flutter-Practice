@@ -112,7 +112,7 @@ class ByteString : public util::Comparable<ByteString> {
   }
 
   /**
-   * Returns a const ui of the raw underlying byte array pointer.
+   * Returns a const view of the raw underlying byte array pointer.
    *
    * This value may be null because nanopb (and protobuf generally) treat null
    * and empty byte arrays as equivalent.

@@ -2645,7 +2645,7 @@ bool CondVar::WaitCommon(Mutex* mutex, KernelTimeout t) {
     PostSynchEvent(this, SYNCH_EV_WAIT_RETURNING);
   }
 
-  // From synchronization point of ui Wait is unlock of the mutex followed
+  // From synchronization point of view Wait is unlock of the mutex followed
   // by lock of the mutex. We've annotated start of unlock in the beginning
   // of the function. Now, finish unlock and annotate lock of the mutex.
   // (Trans is effectively lock).

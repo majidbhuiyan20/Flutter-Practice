@@ -71,7 +71,7 @@ class QueryEventSource {
   /**
    * Initiates a new listen. The LocalStore will be queried for initial data
    * and the listen will be sent to the RemoteStore if the query is listening to
-   * watch. The registered SyncEngineCallback will be notified of resulting ui
+   * watch. The registered SyncEngineCallback will be notified of resulting view
    * snapshots and/or listen errors.
    *
    * @return the target ID assigned to the query.
@@ -105,7 +105,7 @@ class QueryEventSource {
  * SyncEngine's responsibilities include:
  * 1. Coordinating client requests and remote events between the EventManager
  * and the local and remote data stores.
- * 2. Managing a View object for each query, providing the unified ui between
+ * 2. Managing a View object for each query, providing the unified view between
  * the local and remote data stores.
  * 3. Notifying the RemoteStore when the LocalStore has new mutations in its
  * queue that need sending to the backend.
@@ -200,7 +200,7 @@ class SyncEngine : public remote::RemoteStoreCallback, public QueryEventSource {
  private:
   /**
    * QueryView contains all of the info that SyncEngine needs to track for a
-   * particular query and ui.
+   * particular query and view.
    */
   class QueryView {
    public:
@@ -223,7 +223,7 @@ class SyncEngine : public remote::RemoteStoreCallback, public QueryEventSource {
     }
 
     /**
-     * The ui is responsible for computing the final merged truth of what docs
+     * The view is responsible for computing the final merged truth of what docs
      * are in the query. It gets notified of local and remote changes, and
      * applies the query filters and limits to determine the most correct
      * possible results.

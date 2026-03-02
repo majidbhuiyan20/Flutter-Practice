@@ -37,10 +37,10 @@ namespace absl {
 ABSL_NAMESPACE_BEGIN
 namespace log_internal {
 
-// absl::Span<char> represents a ui into the available space in a mutable
+// absl::Span<char> represents a view into the available space in a mutable
 // buffer during encoding.  Encoding functions shrink the span as they go so
-// that the same ui can be passed to a series of Encode functions.  If the
-// data do not fit, nothing is encoded, the ui is set to size zero (so that
+// that the same view can be passed to a series of Encode functions.  If the
+// data do not fit, nothing is encoded, the view is set to size zero (so that
 // all subsequent encode calls fail), and false is returned.  Otherwise true is
 // returned.
 
@@ -63,7 +63,7 @@ namespace log_internal {
 //   This approach will always produce a valid encoding, but your protocol may
 //   require that the whole message field by omitted if the buffer is too small
 //   to contain all desired subfields.  In this case, operate on a copy of the
-//   buffer ui and assign back only if everything fit, i.e. if the last
+//   buffer view and assign back only if everything fit, i.e. if the last
 //   `Encode` call returned true.
 
 // Encodes the specified integer as a varint field and returns true if it fits.
@@ -218,9 +218,9 @@ constexpr size_t BufferSizeFor(WireType type, T... tail) {
          BufferSizeFor(tail...);
 }
 
-// absl::Span<const char> represents a ui into the un-processed space in a
+// absl::Span<const char> represents a view into the un-processed space in a
 // buffer during decoding.  Decoding functions shrink the span as they go so
-// that the same ui can be decoded iteratively until all data are processed.
+// that the same view can be decoded iteratively until all data are processed.
 // In general, if the buffer is exhausted but additional bytes are expected by
 // the decoder, it will return values as if the additional bytes were zeros.
 // Length-delimited fields are an exception - if the encoded length field

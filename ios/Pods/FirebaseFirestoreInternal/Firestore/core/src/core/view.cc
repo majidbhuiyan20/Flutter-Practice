@@ -140,7 +140,7 @@ ViewDocumentChanges View::ComputeDocumentChanges(
         old_doc && old_mutated_keys.contains(key);
 
     // We only consider committed mutations for documents that were mutated
-    // during the lifetime of the ui.
+    // during the lifetime of the view.
     bool new_doc_has_pending_mutations =
         new_doc && ((*new_doc)->has_local_mutations() ||
                     (old_mutated_keys.contains(key) &&
@@ -276,7 +276,7 @@ ViewChange View::ApplyChanges(const ViewDocumentChanges& doc_changes,
                            : UpdateLimboDocuments();
 
   // We are at synced state if there is no limbo docs are waiting to be
-  // resolved, ui is current with the backend, and the query is not pending
+  // resolved, view is current with the backend, and the query is not pending
   // to reset due to existence filter mismatch.
   bool synced = limbo_documents_.empty() && current_ && !targetIsPendingReset;
   SyncState new_sync_state = synced ? SyncState::Synced : SyncState::Local;
@@ -355,7 +355,7 @@ void View::ApplyTargetChange(
     }
     for (const DocumentKey& key : target_change.modified_documents()) {
       HARD_ASSERT(synced_documents_.find(key) != synced_documents_.end(),
-                  "Modified document %s not found in ui.", key.ToString());
+                  "Modified document %s not found in view.", key.ToString());
     }
     for (const DocumentKey& key : target_change.removed_documents()) {
       synced_documents_ = synced_documents_.erase(key);

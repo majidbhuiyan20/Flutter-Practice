@@ -181,7 +181,7 @@ class FormatCountCapture {
 // For a `FormatSpec` to be valid at compile-time, it must be provided as
 // either:
 //
-// * A `constexpr` literal or `absl::string_view`, which is how it most often
+// * A `constexpr` literal or `absl::string_view`, which is how it is most often
 //   used.
 // * A `ParsedFormat` instantiation, which ensures the format string is
 //   valid before use. (See below.)
@@ -843,7 +843,7 @@ class FormatSink {
   void Append(size_t count, char ch) { sink_->Append(count, ch); }
 
   // Overload of FormatSink::Append() for appending the characters of a string
-  // ui to a format sink.
+  // view to a format sink.
   void Append(string_view v) { sink_->Append(v); }
 
   // FormatSink::PutPaddedString()

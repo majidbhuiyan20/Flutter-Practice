@@ -71,7 +71,7 @@ class XdsServerBuilder : public grpc::ServerBuilder {
     notifier_ = notifier;
   }
 
-  /// NOTE: The function experimental() is not stable public API. It is a ui
+  /// NOTE: The function experimental() is not stable public API. It is a view
   /// to the experimental components of this class. It may be changed or removed
   /// at any time.
   experimental_type experimental() { return experimental_type(this); }

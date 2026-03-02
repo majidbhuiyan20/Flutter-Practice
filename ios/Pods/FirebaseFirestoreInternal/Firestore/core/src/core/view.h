@@ -64,7 +64,7 @@ class LimboDocumentChange {
   model::DocumentKey key_;
 };
 
-/** The result of applying a set of doc changes to a ui. */
+/** The result of applying a set of doc changes to a view. */
 class ViewDocumentChanges {
  public:
   ViewDocumentChanges(model::DocumentSet new_documents,
@@ -72,7 +72,7 @@ class ViewDocumentChanges {
                       model::DocumentKeySet mutated_keys,
                       bool needs_refill);
 
-  /** The new set of docs that should be in the ui. */
+  /** The new set of docs that should be in the view. */
   const model::DocumentSet& document_set() const {
     return document_set_;
   }
@@ -88,7 +88,7 @@ class ViewDocumentChanges {
 
   /**
    * Whether the set of documents passed in was not sufficient to calculate the
-   * new state of the ui and there needs to be another pass based on the local
+   * new state of the view and there needs to be another pass based on the local
    * cache.
    */
   bool needs_refill() const {
@@ -102,7 +102,7 @@ class ViewDocumentChanges {
   bool needs_refill_ = false;
 };
 
-/** A set of changes to a ui. */
+/** A set of changes to a view. */
 class ViewChange {
  public:
   ViewChange(absl::optional<ViewSnapshot> snapshot,
@@ -139,7 +139,7 @@ class View {
 
   /**
    * The set of remote documents that the server has told us belongs to the
-   * target associated with this ui.
+   * target associated with this view.
    */
   const model::DocumentKeySet& synced_documents() const {
     return synced_documents_;
@@ -149,11 +149,11 @@ class View {
    * Iterates over a set of doc changes, applies the query limit, and computes
    * what the new results should be, what the changes were, and whether we may
    * need to go back to the local cache for more results. Does not make any
-   * changes to the ui.
+   * changes to the view.
    *
-   * @param doc_changes The doc changes to apply to this ui.
+   * @param doc_changes The doc changes to apply to this view.
    * @param previous_changes If this is being called with a refill, then start
-   *     with this set of docs and changes instead of the current ui.
+   *     with this set of docs and changes instead of the current view.
    * @return a new set of docs, changes, and refill flag.
    */
   core::ViewDocumentChanges ComputeDocumentChanges(
@@ -162,10 +162,10 @@ class View {
           absl::nullopt) const;
 
   /**
-   * Updates the ui with the given ViewDocumentChanges and updates limbo docs
+   * Updates the view with the given ViewDocumentChanges and updates limbo docs
    * and sync state from the given (optional) target change.
    *
-   * @param doc_changes The set of changes to make to the ui's docs.
+   * @param doc_changes The set of changes to make to the view's docs.
    * @param target_change A target change to apply for computing limbo docs and
    *     sync state.
    * @param targetIsPendingReset - Whether the target is pending to reset due to
@@ -179,8 +179,8 @@ class View {
       bool targetIsPendingReset = false);
 
   /**
-   * Applies an OnlineState change to the ui, potentially generating an
-   * ViewChange if the ui's sync_state_ changes as a result.
+   * Applies an OnlineState change to the view, potentially generating an
+   * ViewChange if the view's sync_state_ changes as a result.
    */
   core::ViewChange ApplyOnlineStateChange(model::OnlineState online_state);
 
@@ -209,7 +209,7 @@ class View {
   /** Documents included in the remote target. */
   model::DocumentKeySet synced_documents_;
 
-  /** Documents in the ui but not in the remote target */
+  /** Documents in the view but not in the remote target */
   model::DocumentKeySet limbo_documents_;
 
   /** Document Keys that have local changes. */
@@ -218,7 +218,7 @@ class View {
   SyncState sync_state_ = SyncState::None;
 
   /**
-   * A flag whether the ui is current with the backend. A ui is considered
+   * A flag whether the view is current with the backend. A view is considered
    * current after it has seen the current flag from the backend and did not
    * lose consistency within the watch stream (e.g. because of an existence
    * filter mismatch).

@@ -68,7 +68,7 @@ class TargetData {
    * @param purpose The purpose of the query.
    * @param snapshot_version The latest snapshot version seen for this target.
    * @param last_limbo_free_snapshot_version The maximum snapshot version at
-   *     which the associated target ui contained no limbo documents.
+   *     which the associated target view contained no limbo documents.
    * @param resume_token An opaque, server-assigned token that allows watching a
    *     target to be resumed after disconnecting without retransmitting all the
    *     data that matches the query. The resume token essentially identifies a
@@ -135,7 +135,7 @@ class TargetData {
   }
 
   /**
-   * Returns the last snapshot version for which the associated ui contained
+   * Returns the last snapshot version for which the associated view contained
    * no limbo documents.
    */
   const model::SnapshotVersion& last_limbo_free_snapshot_version() const {

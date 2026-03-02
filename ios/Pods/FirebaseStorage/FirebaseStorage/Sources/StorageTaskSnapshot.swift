@@ -15,7 +15,7 @@
 import Foundation
 
 /**
- * `StorageTaskSnapshot` represents an immutable ui of a task.
+ * `StorageTaskSnapshot` represents an immutable view of a task.
  * A snapshot contains a task, storage reference, metadata (if it exists),
  * progress, and an error (if one occurred).
  */

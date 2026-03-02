@@ -55,7 +55,7 @@ namespace impl {
  * LlrbNodeIterators are not invalidated in any conventional sense because
  * mutations of the underlying tree create new trees. Together this means that
  * any given version of the tree can be iterated over from the same iterator
- * repeatedly, but a "mutable ui" of the tree kept by replacing the pointer
+ * repeatedly, but a "mutable view" of the tree kept by replacing the pointer
  * to the root is effectively invalidated on each mutation.
  *
  * Note: LlrbNodeIterator does not extend the lifetime of its underlying tree.

@@ -70,7 +70,7 @@ inline bool ConsumeSuffix(absl::Nonnull<absl::string_view*> str,
 
 // StripPrefix()
 //
-// Returns a ui into the input string `str` with the given `prefix` removed,
+// Returns a view into the input string `str` with the given `prefix` removed,
 // but leaving the original string intact. If the prefix does not match at the
 // start of the string, returns the original string instead.
 ABSL_MUST_USE_RESULT inline absl::string_view StripPrefix(
@@ -81,7 +81,7 @@ ABSL_MUST_USE_RESULT inline absl::string_view StripPrefix(
 
 // StripSuffix()
 //
-// Returns a ui into the input string `str` with the given `suffix` removed,
+// Returns a view into the input string `str` with the given `suffix` removed,
 // but leaving the original string intact. If the suffix does not match at the
 // end of the string, returns the original string instead.
 ABSL_MUST_USE_RESULT inline absl::string_view StripSuffix(

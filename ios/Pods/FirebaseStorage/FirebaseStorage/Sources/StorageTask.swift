@@ -32,7 +32,7 @@ import Foundation
 @available(iOS 13, tvOS 13, macOS 10.15, macCatalyst 13, watchOS 7, *)
 @objc(FIRStorageTask) open class StorageTask: NSObject {
   /**
-   * An immutable ui of the task and associated metadata, progress, error, etc.
+   * An immutable view of the task and associated metadata, progress, error, etc.
    */
   @objc public var snapshot: StorageTaskSnapshot {
     objc_sync_enter(StorageTask.self)
@@ -104,20 +104,20 @@ import Foundation
   /**
    * Prepares a task and begins execution.
    */
-  @objc func enqueue() -> Void
+  @objc func enqueue()
 
   /**
    * Pauses a task currently in progress.
    */
-  @objc optional func pause() -> Void
+  @objc optional func pause()
 
   /**
    * Cancels a task.
    */
-  @objc optional func cancel() -> Void
+  @objc optional func cancel()
 
   /**
    * Resumes a paused task.
    */
-  @objc optional func resume() -> Void
+  @objc optional func resume()
 }

@@ -106,7 +106,7 @@ class MutationBatch {
       const MutationBatchResult& mutation_batch_result) const;
 
   /**
-   * Computes the local ui of a document given all the mutations in this
+   * Computes the local view of a document given all the mutations in this
    * batch. Returns a `FieldMask` representing all the fields that are mutated.
    */
   absl::optional<FieldMask> ApplyToLocalView(
@@ -114,7 +114,7 @@ class MutationBatch {
       absl::optional<FieldMask>&& mutated_fields) const;
 
   /**
-   * Estimates the latency compensated ui of all the mutations in this batch
+   * Estimates the latency compensated view of all the mutations in this batch
    * applied to the given MaybeDocument.
    *
    * Unlike ApplyToRemoteDocument, this method is used before the mutation has
@@ -129,7 +129,7 @@ class MutationBatch {
       MutableDocument& document) const;
 
   /**
-   * Estimates the latency compensated ui of all the mutations in this batch
+   * Estimates the latency compensated view of all the mutations in this batch
    * applied to the given MaybeDocument.
    *
    * Unlike ApplyToRemoteDocument, this method is used before the mutation has
@@ -147,7 +147,7 @@ class MutationBatch {
       absl::optional<FieldMask> previously_mutated_fields) const;
 
   /**
-   * Computes the local ui for all provided documents given the mutations in
+   * Computes the local view for all provided documents given the mutations in
    * this batch. Returns a `DocumentKey` to `Mutation` map which can be used to
    * replace all the mutation applications.
    */

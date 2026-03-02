@@ -36,7 +36,7 @@ namespace local {
 
 /**
  * LevelDBTransaction tracks pending changes to entries in leveldb, including
- * deletions. It also provides an Iterator to traverse a merged ui of pending
+ * deletions. It also provides an Iterator to traverse a merged view of pending
  * changes and committed values.
  */
 class LevelDbTransaction {
@@ -45,7 +45,7 @@ class LevelDbTransaction {
 
  public:
   /**
-   * Iterator iterates over a merged ui of pending changes from the
+   * Iterator iterates over a merged view of pending changes from the
    * transaction and any unchanged values in the underlying leveldb instance.
    */
   class Iterator {

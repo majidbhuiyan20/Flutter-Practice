@@ -71,7 +71,7 @@ class BundleLoader {
 
   /**
    * Applies the loaded documents and queries to local store. Returns the
-   * document ui changes. If an error occurred, returns a not `ok()` status.
+   * document view changes. If an error occurred, returns a not `ok()` status.
    */
   util::StatusOr<model::DocumentMap> ApplyChanges();
 

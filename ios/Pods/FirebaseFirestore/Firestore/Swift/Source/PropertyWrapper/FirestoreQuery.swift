@@ -135,7 +135,7 @@ public struct FirestoreQuery<T>: DynamicProperty {
     /// If any errors occurred, they will be exposed here as well.
     public var error: Error?
 
-    /// The type of animation to apply when updating the ui. If this is omitted then no
+    /// The type of animation to apply when updating the view. If this is omitted then no
     /// animations are fired.
     public var animation: Animation?
   }

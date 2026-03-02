@@ -67,7 +67,7 @@ class QueryEngine {
   virtual ~QueryEngine() = default;
 
   /**
-   * Sets the document ui and index manager to query against.
+   * Sets the document view and index manager to query against.
    *
    * The caller owns the LocalDocumentView and IndexManager,
    * and must ensure that both of them outlives the QueryEngine.

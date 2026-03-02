@@ -37,7 +37,7 @@ class DocumentOverlayCacheTestHelper;
 /**
  * Provides methods to read and write document overlays.
  *
- * An overlay is a saved `Mutation`, that gives a local ui of a document when
+ * An overlay is a saved `Mutation`, that gives a local view of a document when
  * applied to the remote version of the document.
  *
  * Each overlay stores the largest batch ID that is included in the overlay,

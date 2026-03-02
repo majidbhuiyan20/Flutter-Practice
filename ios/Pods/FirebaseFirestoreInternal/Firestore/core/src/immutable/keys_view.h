@@ -39,7 +39,7 @@ KeysRange<Iterator> MakeKeysRange(Iterator begin, Iterator end) {
 }
 
 /**
- * Returns a ui of the keys of the given key-value range.
+ * Returns a view of the keys of the given key-value range.
  */
 template <typename Range>
 auto KeysView(const Range& range) -> KeysRange<decltype(std::begin(range))> {
@@ -55,7 +55,7 @@ auto KeysViewFrom(const Range& range, const K& key)
 }
 
 /**
- * Returns a ui of keys of the given key-value range that are greater than or
+ * Returns a view of keys of the given key-value range that are greater than or
  * equal to the given start_key and less than the given end_key.
  *
  * If `end_key` is less than or equal to `start_key`, creates empty range.

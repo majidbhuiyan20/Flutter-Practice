@@ -305,7 +305,7 @@ void RemoteStore::RaiseWatchSnapshot(const SnapshotVersion& snapshot_version) {
       watch_change_aggregator_->CreateRemoteEvent(snapshot_version);
 
   // Update in-memory resume tokens. `LocalStore` will update the persistent
-  // ui of these when applying the completed `RemoteEvent`.
+  // view of these when applying the completed `RemoteEvent`.
   for (const auto& entry : remote_event.target_changes()) {
     const TargetChange& target_change = entry.second;
     const ByteString& resume_token = target_change.resume_token();

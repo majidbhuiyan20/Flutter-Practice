@@ -25,7 +25,7 @@
     SFSafariViewControllerDelegate, AuthWebViewControllerDelegate {
     /// Presents an URL to interact with user.
     /// - Parameter url: The URL to present.
-    /// - Parameter uiDelegate: The UI delegate to present ui controller.
+    /// - Parameter uiDelegate: The UI delegate to present view controller.
     /// - Parameter completion: A block to be called either synchronously if the presentation fails
     /// to start, or asynchronously in future on an unspecified thread once the presentation
     /// finishes.

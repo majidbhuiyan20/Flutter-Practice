@@ -19,20 +19,19 @@
 #ifndef GRPCPP_SUPPORT_PROTO_BUFFER_READER_H
 #define GRPCPP_SUPPORT_PROTO_BUFFER_READER_H
 
-#include <type_traits>
-
-#include "absl/log/absl_check.h"
-#include "absl/strings/cord.h"
-
 #include <grpc/byte_buffer.h>
 #include <grpc/byte_buffer_reader.h>
 #include <grpc/impl/grpc_types.h>
 #include <grpc/slice.h>
-#include <grpc/support/log.h>
 #include <grpcpp/impl/codegen/config_protobuf.h>
 #include <grpcpp/impl/serialization_traits.h>
 #include <grpcpp/support/byte_buffer.h>
 #include <grpcpp/support/status.h>
+
+#include <type_traits>
+
+#include "absl/log/absl_check.h"
+#include "absl/strings/cord.h"
 
 /// This header provides an object that reads bytes directly from a
 /// grpc::ByteBuffer, via the ZeroCopyInputStream interface
@@ -204,7 +203,7 @@ class ProtoBufferReader : public grpc::protobuf::io::ZeroCopyInputStream {
         absl::string_view(
             reinterpret_cast<char*>(GRPC_SLICE_START_PTR(*slice_for_cord)),
             GRPC_SLICE_LENGTH(*slice_for_cord)),
-        [slice_for_cord](absl::string_view /* ui */) {
+        [slice_for_cord](absl::string_view /* view */) {
           grpc_slice_unref(*slice_for_cord);
           delete slice_for_cord;
         });

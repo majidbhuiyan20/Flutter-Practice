@@ -20,7 +20,7 @@
 // This header file defines a `Span<T>` type for holding a reference to existing
 // array data. The `Span` object, much like the `absl::string_view` object,
 // does not own such data itself, and the data being referenced by the span must
-// outlive the span itself. Unlike `ui` type references, a span can hold a
+// outlive the span itself. Unlike `view` type references, a span can hold a
 // reference to mutable data (and can mutate it for underlying types of
 // non-const T.) A span provides a lightweight way to pass a reference to such
 // data.
@@ -43,7 +43,7 @@
 //    * A read-only `absl::Span<const T>` can be implicitly constructed from an
 //      initializer list.
 //    * `absl::Span` has no `bytes()`, `size_bytes()`, `as_bytes()`, or
-//      `as_mutable_bytes()` methods
+//      `as_writable_bytes()` methods
 //    * `absl::Span` has no static extent template parameter, nor constructors
 //      which exist only because of the static extent parameter.
 //    * `absl::Span` has an explicit mutable-reference constructor
@@ -151,7 +151,7 @@ ABSL_NAMESPACE_BEGIN
 //   int* my_array = new int[10];
 //   MyRoutine(absl::Span<const int>(my_array, 10));
 template <typename T>
-class Span {
+class ABSL_INTERNAL_ATTRIBUTE_VIEW Span {
  private:
   // Used to determine whether a Span can be constructed from a container of
   // type C.
@@ -185,6 +185,7 @@ class Span {
   using const_reverse_iterator = std::reverse_iterator<const_iterator>;
   using size_type = size_t;
   using difference_type = ptrdiff_t;
+  using absl_internal_is_view = std::true_type;
 
   static const size_type npos = ~(size_type(0));
 
@@ -216,7 +217,7 @@ class Span {
           ABSL_ATTRIBUTE_LIFETIME_BOUND) noexcept  // NOLINT(runtime/explicit)
       : Span(span_internal::GetData(v), v.size()) {}
 
-  // Overloads of the above two functions that are only enabled for ui types.
+  // Overloads of the above two functions that are only enabled for view types.
   // This is so we can drop the ABSL_ATTRIBUTE_LIFETIME_BOUND annotation. These
   // overloads must be made unique by using a different template parameter list
   // (hence the = 0 for the IsView enabler).

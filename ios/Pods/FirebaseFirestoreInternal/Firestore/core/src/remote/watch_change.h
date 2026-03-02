@@ -88,7 +88,7 @@ class DocumentWatchChange : public WatchChange {
 
   /**
    * The new document, or `DeletedDocument` if it was deleted. Is null if the
-   * document went out of ui without the server sending a new document.
+   * document went out of view without the server sending a new document.
    */
   const absl::optional<model::MutableDocument>& new_document() const {
     return new_document_;

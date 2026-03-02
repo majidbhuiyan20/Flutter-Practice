@@ -139,9 +139,9 @@ class CordRepBtreeReader {
   //     sv = reader.Read(1000, sv.size() - 4 /* "big:" */, &tree);
   //   }
   //
-  // This method will return an empty string ui if all remaining data was
+  // This method will return an empty string view if all remaining data was
   // read. If `n` exceeded the amount of remaining data this function will
-  // return an empty string ui and `tree` will be set to nullptr.
+  // return an empty string view and `tree` will be set to nullptr.
   // In both cases, `consumed` will be set to `length`.
   absl::string_view Read(size_t n, size_t chunk_size, CordRep*& tree);
 
@@ -149,8 +149,8 @@ class CordRepBtreeReader {
   // Returns a reference into the navigated to chunk, adjusted for the relative
   // position of `offset` into that chunk. For example, calling `Seek(13)` on a
   // cord tree containing 2 chunks of 10 and 20 bytes respectively will return
-  // a string ui into the second chunk starting at offset 3 with a size of 17.
-  // Returns an empty string ui if `offset` is equal to or greater than the
+  // a string view into the second chunk starting at offset 3 with a size of 17.
+  // Returns an empty string view if `offset` is equal to or greater than the
   // length of the referenced tree.
   absl::string_view Seek(size_t offset);
 

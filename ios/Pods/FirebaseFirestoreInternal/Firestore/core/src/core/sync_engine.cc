@@ -159,7 +159,7 @@ ViewSnapshot SyncEngine::InitializeViewAndComputeSnapshot(
 
   HARD_ASSERT(
       view_change.snapshot().has_value(),
-      "ApplyChanges to documents for new ui should always return a snapshot");
+      "ApplyChanges to documents for new view should always return a snapshot");
   return view_change.snapshot().value();
 }
 

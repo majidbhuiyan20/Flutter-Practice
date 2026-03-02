@@ -9,20 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="feat: update folder structure of sqflight">
-      <change afterPath="$PROJECT_DIR$/lib/stripe/core/secret/stripe_key.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/stripe/core/service/stripe_service.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dart_tool/package_graph.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_graph.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/app/src/main/res/values-night/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/res/values-night/styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/stripe/view/stripe_payment_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/stripe/view/stripe_payment_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="feat: stripe payment done without backend" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -317,14 +304,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741888031466</updated>
-    </task>
-    <task id="LOCAL-00039" summary="add list in product list screen">
-      <option name="closed" value="true" />
-      <created>1755639189302</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1755639189302</updated>
     </task>
     <task id="LOCAL-00040" summary="add separatorBuilder">
       <option name="closed" value="true" />
@@ -710,7 +689,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772357333806</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="feat: stripe payment done without backend">
+      <option name="closed" value="true" />
+      <created>1772423943999</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1772423943999</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -731,7 +718,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="init get product uri" />
     <MESSAGE value="get product from api and show in ui" />
     <MESSAGE value="product image invalid argument handle" />
     <MESSAGE value="flutter code optimize" />
@@ -756,18 +742,8 @@
     <MESSAGE value="feat(api): recipe card navigate to recipe details screen" />
     <MESSAGE value="init stripe" />
     <MESSAGE value="feat: update folder structure of sqflight" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: update folder structure of sqflight" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/stripe/core/service/stripe_service.dart</url>
-          <line>22</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="feat: stripe payment done without backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: stripe payment done without backend" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

@@ -19,14 +19,13 @@
 #ifndef GRPCPP_IMPL_SERVICE_TYPE_H
 #define GRPCPP_IMPL_SERVICE_TYPE_H
 
-#include "absl/log/absl_check.h"
-
-#include <grpc/support/log.h>
 #include <grpcpp/impl/rpc_service_method.h>
 #include <grpcpp/impl/serialization_traits.h>
 #include <grpcpp/server_interface.h>
 #include <grpcpp/support/config.h>
 #include <grpcpp/support/status.h>
+
+#include "absl/log/absl_check.h"
 
 namespace grpc {
 
@@ -186,7 +185,7 @@ class Service {
         << "Cannot mark an async or generic method Streamed";
     methods_[idx]->SetHandler(streamed_method);
 
-    // From the server's point of ui, streamed unary is a special
+    // From the server's point of view, streamed unary is a special
     // case of BIDI_STREAMING that has 1 read and 1 write, in that order,
     // and split server-side streaming is BIDI_STREAMING with 1 read and
     // any number of writes, in that order.

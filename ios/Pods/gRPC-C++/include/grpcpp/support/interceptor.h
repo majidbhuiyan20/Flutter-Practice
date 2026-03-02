@@ -19,15 +19,15 @@
 #ifndef GRPCPP_SUPPORT_INTERCEPTOR_H
 #define GRPCPP_SUPPORT_INTERCEPTOR_H
 
-#include <map>
-#include <memory>
-#include <string>
-
 #include <grpc/impl/grpc_types.h>
 #include <grpcpp/impl/metadata_map.h>
 #include <grpcpp/support/byte_buffer.h>
 #include <grpcpp/support/config.h>
 #include <grpcpp/support/string_ref.h>
+
+#include <map>
+#include <memory>
+#include <string>
 
 namespace grpc {
 
@@ -117,7 +117,7 @@ class InterceptorBatchMethods {
 
   /// Send Message Methods
   /// GetSerializedSendMessage and GetSendMessage/ModifySendMessage are the
-  /// available methods to ui and modify the request payload. An interceptor
+  /// available methods to view and modify the request payload. An interceptor
   /// can access the payload in either serialized form or non-serialized form
   /// but not both at the same time.
   /// gRPC performs serialization in a lazy manner, which means
@@ -133,7 +133,7 @@ class InterceptorBatchMethods {
   /// means that the payload would be available in the serialized form only
   /// unless an interceptor replaces the payload with ModifySendMessage.
 
-  /// Returns a modifable ByteBuffer holding the serialized form of the message
+  /// Returns a modifiable ByteBuffer holding the serialized form of the message
   /// that is going to be sent. Valid for PRE_SEND_MESSAGE interceptions.
   /// A return value of nullptr indicates that this ByteBuffer is not valid.
   virtual ByteBuffer* GetSerializedSendMessage() = 0;
@@ -187,7 +187,7 @@ class InterceptorBatchMethods {
   virtual std::multimap<grpc::string_ref, grpc::string_ref>*
   GetRecvInitialMetadata() = 0;
 
-  /// Returns a modifiable ui of the received status on PRE_RECV_STATUS and
+  /// Returns a modifiable view of the received status on PRE_RECV_STATUS and
   /// POST_RECV_STATUS interceptions; nullptr if not valid.
   virtual Status* GetRecvStatus() = 0;
 

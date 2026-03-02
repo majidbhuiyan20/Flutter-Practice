@@ -1779,7 +1779,7 @@ ZEXTERN uLong ZEXPORT crc32_combine_op(uLong crc1, uLong crc2, uLong op);
                         /* various hacks, don't look :) */
 
 /* deflateInit and inflateInit are macros to allow checking the zlib version
- * and the compiler's ui of z_stream:
+ * and the compiler's view of z_stream:
  */
 ZEXTERN int ZEXPORT deflateInit_(z_streamp strm, int level,
                                  const char *version, int stream_size);

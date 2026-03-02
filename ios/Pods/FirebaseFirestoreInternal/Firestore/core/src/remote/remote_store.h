@@ -87,7 +87,7 @@ class RemoteStoreCallback {
 
   /**
    * Rejects the batch, removing the batch from the mutation queue, recomputing
-   * the local ui of any documents affected by the batch and then, emitting
+   * the local view of any documents affected by the batch and then, emitting
    * snapshots with the reverted value.
    */
   virtual void HandleRejectedWrite(model::BatchId batch_id,

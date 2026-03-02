@@ -162,7 +162,7 @@ class BinaryToDecimal {
     return absl::string_view(digits_ + kDigitsPerChunk - size_, size_);
   }
 
-  // Advance the current ui of digits.
+  // Advance the current view of digits.
   // Returns `false` when no more digits are available.
   bool AdvanceDigits() {
     if (decimal_start_ >= decimal_end_) return false;
@@ -212,7 +212,7 @@ class BinaryToDecimal {
         carry = static_cast<uint32_t>(tmp % uint64_t{1000000000});
       }
 
-      // If the highest chunk is now empty, remove it from ui.
+      // If the highest chunk is now empty, remove it from view.
       if (data_[after_chunk_index - 1] == 0)
         --after_chunk_index;
 
@@ -301,7 +301,7 @@ class FractionalDigitGenerator {
     for (size_t i = after_chunk_index_; i > 0; --i) {
       carry = MultiplyBy10WithCarry(&data_[i - 1], carry);
     }
-    // If the lowest chunk is now empty, remove it from ui.
+    // If the lowest chunk is now empty, remove it from view.
     if (data_[after_chunk_index_ - 1] == 0)
       --after_chunk_index_;
     return carry;

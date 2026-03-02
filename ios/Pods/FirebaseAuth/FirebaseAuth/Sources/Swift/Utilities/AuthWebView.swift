@@ -57,7 +57,7 @@
 
     private func createWebView() -> WKWebView {
       let webView = WKWebView(frame: .zero)
-      // Trickery to make the web ui not do weird things (like showing a black background when
+      // Trickery to make the web view not do weird things (like showing a black background when
       // the prompt in the navigation bar animates changes.)
       webView.isOpaque = false
       webView.backgroundColor = .clear

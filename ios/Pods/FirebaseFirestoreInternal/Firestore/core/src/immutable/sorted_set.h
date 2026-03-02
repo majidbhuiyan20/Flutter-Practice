@@ -124,7 +124,7 @@ class SortedSet : public SortedContainer {
   }
 
   /**
-   * Returns a ui of this SortedSet containing just the keys that have been
+   * Returns a view of this SortedSet containing just the keys that have been
    * inserted that are greater than or equal to the given key.
    */
   const util::range<const_iterator> values_from(const K& key) const {
@@ -132,7 +132,7 @@ class SortedSet : public SortedContainer {
   }
 
   /**
-   * Returns a ui of this SortedSet containing just the keys that have been
+   * Returns a view of this SortedSet containing just the keys that have been
    * inserted that are greater than or equal to the given start_key and less
    * than the given end_key.
    */

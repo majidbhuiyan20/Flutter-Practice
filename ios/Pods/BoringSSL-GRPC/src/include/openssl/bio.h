@@ -680,7 +680,7 @@ OPENSSL_EXPORT size_t BIO_ctrl_get_read_request(BIO *bio);
 // |BIO_write| call.
 OPENSSL_EXPORT size_t BIO_ctrl_get_write_guarantee(BIO *bio);
 
-// BIO_shutdown_wr marks |bio| as closed, from the point of ui of the other
+// BIO_shutdown_wr marks |bio| as closed, from the point of view of the other
 // side of the pair. Future |BIO_write| calls on |bio| will fail. It returns
 // one on success and zero otherwise.
 OPENSSL_EXPORT int BIO_shutdown_wr(BIO *bio);

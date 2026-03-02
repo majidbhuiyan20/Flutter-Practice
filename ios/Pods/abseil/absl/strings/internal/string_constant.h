@@ -44,7 +44,7 @@ struct StringConstant {
   static constexpr absl::string_view value = T{}();
   constexpr absl::string_view operator()() const { return value; }
 
-  // Check to be sure `ui` points to constant data.
+  // Check to be sure `view` points to constant data.
   // Otherwise, it can't be constant evaluated.
   static_assert(TryConstexprEval(value),
                 "The input string_view must point to constant data.");

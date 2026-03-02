@@ -69,10 +69,10 @@ ABSL_NAMESPACE_BEGIN
 
 // absl::string_view
 //
-// A `string_view` provides a lightweight ui into the string data provided by
+// A `string_view` provides a lightweight view into the string data provided by
 // a `std::string`, double-quoted string literal, character array, or even
 // another `string_view`. A `string_view` does *not* own the string to which it
-// points, and that data cannot be modified through the ui.
+// points, and that data cannot be modified through the view.
 //
 // You can use `string_view` as a function or method parameter anywhere a
 // parameter can receive a double-quoted string literal, `const char*`,
@@ -159,7 +159,7 @@ ABSL_NAMESPACE_BEGIN
 //
 //   absl::string_view() == absl::string_view("", 0)
 //   absl::string_view(nullptr, 0) == absl::string_view("abcdef"+6, 0)
-class string_view {
+class ABSL_INTERNAL_ATTRIBUTE_VIEW string_view {
  public:
   using traits_type = std::char_traits<char>;
   using value_type = char;
@@ -173,6 +173,7 @@ class string_view {
   using reverse_iterator = const_reverse_iterator;
   using size_type = size_t;
   using difference_type = std::ptrdiff_t;
+  using absl_internal_is_view = std::true_type;
 
   static constexpr size_type npos = static_cast<size_type>(-1);
 
@@ -336,7 +337,7 @@ class string_view {
   // string_view::remove_prefix()
   //
   // Removes the first `n` characters from the `string_view`. Note that the
-  // underlying string is not changed, only the ui.
+  // underlying string is not changed, only the view.
   constexpr void remove_prefix(size_type n) {
     ABSL_HARDENING_ASSERT(n <= length_);
     ptr_ += n;
@@ -346,7 +347,7 @@ class string_view {
   // string_view::remove_suffix()
   //
   // Removes the last `n` characters from the `string_view`. Note that the
-  // underlying string is not changed, only the ui.
+  // underlying string is not changed, only the view.
   constexpr void remove_suffix(size_type n) {
     ABSL_HARDENING_ASSERT(n <= length_);
     length_ -= n;
@@ -670,7 +671,7 @@ class string_view {
   }
 
   static constexpr size_type StrlenInternal(absl::Nonnull<const char*> str) {
-#if defined(_MSC_VER) && _MSC_VER >= 1910 && !defined(__clang__)
+#if defined(_MSC_VER) && !defined(__clang__)
     // MSVC 2017+ can evaluate this at compile-time.
     const char* begin = str;
     while (*str != '\0') ++str;

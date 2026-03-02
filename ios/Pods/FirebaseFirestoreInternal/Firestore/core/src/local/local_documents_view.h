@@ -46,9 +46,9 @@ class LocalWriteResult;
 class QueryContext;
 
 /**
- * A readonly ui of the local state of all documents we're tracking (i.e. we
+ * A readonly view of the local state of all documents we're tracking (i.e. we
  * have a cached version in the RemoteDocumentCache or local mutations for the
- * document). The ui is computed by applying the mutations in the
+ * document). The view is computed by applying the mutations in the
  * MutationQueue to the RemoteDocumentCache.
  */
 class LocalDocumentsView {
@@ -66,15 +66,15 @@ class LocalDocumentsView {
   virtual ~LocalDocumentsView() = default;
 
   /**
-   * Gets the local ui of the document identified by `key`.
+   * Gets the local view of the document identified by `key`.
    *
-   * @return Local ui of the document or an invalid document if we don't have
+   * @return Local view of the document or an invalid document if we don't have
    * any cached state for it.
    */
   model::Document GetDocument(const model::DocumentKey& key);
 
   /**
-   * Gets the local ui of the documents identified by `keys`.
+   * Gets the local view of the documents identified by `keys`.
    *
    * If we don't have cached state for a document in `keys`, a NoDocument
    * will be stored for that key in the resulting set.
@@ -102,7 +102,7 @@ class LocalDocumentsView {
                                            size_t count) const;
 
   /**
-   * Similar to `GetDocuments`, but creates the local ui from the given
+   * Similar to `GetDocuments`, but creates the local view from the given
    * `base_docs` without retrieving documents from the local store.
    *
    * @param base_docs The documents to apply local mutations to get the local
@@ -117,7 +117,7 @@ class LocalDocumentsView {
 
   /**
    * Gets the overlayed documents for the given document map, which will include
-   * the local ui of those documents and a `FieldMask` indicating which fields
+   * the local view of those documents and a `FieldMask` indicating which fields
    * are mutated locally, or `absl::nullopt` if overlay is a Set or Delete
    * mutation.
    *
@@ -133,7 +133,7 @@ class LocalDocumentsView {
   void RecalculateAndSaveOverlays(const model::DocumentKeySet& keys) const;
 
   /**
-   * Performs a query against the local ui of all documents.
+   * Performs a query against the local view of all documents.
    *
    * @param query The query to match documents against.
    * @param offset Read time and document key to start scanning by (exclusive).
@@ -143,7 +143,7 @@ class LocalDocumentsView {
       const core::Query& query, const model::IndexOffset& offset);
 
   /**
-   * Performs a query against the local ui of all documents.
+   * Performs a query against the local view of all documents.
    *
    * @param query The query to match documents against.
    * @param offset Read time and document key to start scanning by (exclusive).
@@ -209,7 +209,7 @@ class LocalDocumentsView {
   void PopulateOverlays(model::OverlayByDocumentKeyMap& overlays,
                         const model::DocumentKeySet& keys) const;
 
-  /* Computes the local ui for doc */
+  /* Computes the local view for doc */
   model::OverlayedDocumentMap ComputeViews(
       model::MutableDocumentMap docs,
       model::OverlayByDocumentKeyMap&& overlays,

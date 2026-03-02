@@ -37,11 +37,11 @@ namespace firebase {
 namespace firestore {
 namespace core {
 
-/** A change to a single document's state within a ui. */
+/** A change to a single document's state within a view. */
 class DocumentViewChange {
  public:
   /**
-   * The types of changes that can happen to a document with respect to a ui.
+   * The types of changes that can happen to a document with respect to a view.
    * NOTE: We sort document changes by their type, so the ordering of this enum
    * is significant.
    */
@@ -92,7 +92,7 @@ class DocumentViewChangeSet {
 };
 
 /**
- * A ui snapshot is an immutable capture of the results of a query and the
+ * A view snapshot is an immutable capture of the results of a query and the
  * changes to them.
  */
 class ViewSnapshot {
@@ -108,7 +108,7 @@ class ViewSnapshot {
                bool has_cached_results);
 
   /**
-   * Returns a ui snapshot as if all documents in the snapshot were
+   * Returns a view snapshot as if all documents in the snapshot were
    * added.
    */
   static ViewSnapshot FromInitialDocuments(Query query,
@@ -118,7 +118,7 @@ class ViewSnapshot {
                                            bool excludes_metadata_changes,
                                            bool has_cached_results);
 
-  /** The query this ui is tracking the results for. */
+  /** The query this view is tracking the results for. */
   const Query& query() const;
 
   /** The documents currently known to be results of the query. */

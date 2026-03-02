@@ -648,7 +648,7 @@ struct value_view_type<const C> {
 //    }
 //
 // Note: If you pass a temporary container to key_view or value_view, be careful
-// that the temporary container outlives the wrapper ui to avoid dangling
+// that the temporary container outlives the wrapper view to avoid dangling
 // references.
 // This is fine:  PublishAll(value_view(Make());
 // This is not:   for (const auto& v : value_view(Make())) Publish(v);
@@ -675,7 +675,7 @@ typename value_view_type<const C>::type value_view(const C& map) {
   return typename value_view_type<const C>::type(map);
 }
 
-// Abstract container ui that dereferences the pointer-like .second member
+// Abstract container view that dereferences the pointer-like .second member
 // of a container's std::pair elements, such as the elements of std::map<K,V*>
 // or of std::vector<std::pair<K,V*>>.
 //
@@ -719,7 +719,7 @@ typename deref_second_view_type<const C>::type deref_second_view(const C& map) {
   return typename deref_second_view_type<const C>::type(map);
 }
 
-// Abstract container ui that dereferences pointer elements.
+// Abstract container view that dereferences pointer elements.
 //
 // Example:
 //   vector<string*> elements;
@@ -757,7 +757,7 @@ typename deref_view_type<const C>::type deref_view(const C& c) {
   return typename deref_view_type<const C>::type(c);
 }
 
-// Abstract container ui that iterates backwards.
+// Abstract container view that iterates backwards.
 //
 // Example:
 //   vector<string> elements;

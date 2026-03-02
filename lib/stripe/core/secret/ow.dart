@@ -1,0 +1,2 @@
+String ufff = "pk_test_51SgJzGEHj0qFa8VvPDTSGUhtZOtJSpsdEwURn7HryyN5Z13LymeJ2nhhxlcEWnncUqYwJAt4fX7U6rlfphP6qqqu00ZNmys0G8";
+String lol = "sk_test_51SgJzGEHj0qFa8VvkpKXs0Dsifnt2zlXwqGhM8ZcAC8tfrcsJ98HKA2G1tVx978Tzcu2mBeRu5qtcX3hwo0HF4Ql00AsJF1Vpc";

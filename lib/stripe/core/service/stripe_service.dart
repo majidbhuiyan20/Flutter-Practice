@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
-import 'package:practice/stripe/core/secret/stripe_key.dart';
+import 'package:practice/stripe/core/secret/ow.dart';
 
 final stripePaymentProvider = Provider((ref) => StripePaymentService());
 class StripePaymentService{
@@ -38,7 +38,7 @@ class StripePaymentService{
         data: body,
         options: Options(
           headers: {
-            'Authorization': 'Bearer $secretKey',
+            'Authorization': 'Bearer $lol',
             'Content-Type': 'application/x-www-form-urlencoded'
           }
         )

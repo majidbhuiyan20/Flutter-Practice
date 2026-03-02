@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:practice/local_notification/fcm_service.dart';
 import 'package:practice/router/app_routes.dart';
 import 'firebase_options.dart';
@@ -12,6 +13,12 @@ final navigatorKey = GlobalKey<NavigatorState>();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  Stripe.publishableKey = "pk_test_51SgJzGEHj0qFa8VvPDTSGUhtZOtJSpsdEwURn7HryyN5Z13LymeJ2nhhxlcEWnncUqYwJAt4fX7U6rlfphP6qqqu00ZNmys0G8";;
+
+
+
+  await Stripe.instance.applySettings();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );

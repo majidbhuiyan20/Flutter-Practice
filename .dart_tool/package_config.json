@@ -368,6 +368,12 @@
       "languageVersion": "3.2"
     },
     {
+      "name": "mobile_scanner",
+      "rootUri": "file:///Users/betopia/.pub-cache/hosted/pub.dev/mobile_scanner-7.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.7"
+    },
+    {
       "name": "nested",
       "rootUri": "file:///Users/betopia/.pub-cache/hosted/pub.dev/nested-1.0.0",
       "packageUri": "lib/",

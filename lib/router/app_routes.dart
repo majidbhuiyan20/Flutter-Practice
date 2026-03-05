@@ -1,6 +1,7 @@
 import 'package:practice/firestore/firestore_fetch_data.dart';
 import 'package:practice/firestore/firestore_send_data.dart';
 import 'package:practice/firestore/firestore_view.dart';
+import 'package:practice/hisabi/hisabi.dart';
 import 'package:practice/home_page/home_page_screen.dart';
 import 'package:go_router/go_router.dart';
 import 'package:practice/local_storage/local_storage_home_screen.dart';
@@ -35,6 +36,7 @@ final GoRouter router = GoRouter(
     GoRoute(path: '/recipeScreen', builder: (context, state) => const DisplayRecipesScreen()),
     GoRoute(path: '/healthApp', builder: (context, state) => const StepCounterPage()),
     GoRoute(path: '/stripePay', builder: (context, state) => const StripePaymentScreen()),
+    GoRoute(path: '/hisabi', builder: (context, state) => const Hisabi()),
 
 
 

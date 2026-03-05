@@ -9,7 +9,13 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="feat: stripe payment done without backend" />
+    <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="test">
+      <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/stripe/view/stripe_payment_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/stripe/view/stripe_payment_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,7 +115,7 @@
     "cidr.known.project.marker": "true",
     "com.google.services.firebase.aqiPopupShown": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Merging main",
     "io.flutter.project.isFirstOpen": "true",
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
@@ -274,12 +280,6 @@
       <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="AppleRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" IS_LOCATION_SIMULATION_SUPPORTED="false" IS_LOCATION_SIMULATION_ALLOWED="true" APPLICATION_LANGUAGE="IDELaunchSchemeLanguageUseSystemLanguage" APPLICATION_REGION="" DEVELOPMENT_TEAM="${TEAM_ID}" MAKE_ACTIVE="TRUE" SHOULD_DEBUG_EXTENSIONS="false">
-      <embedded_app_extension_list />
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="android.flutter_local_notifications" />
       <method v="2">
@@ -304,6 +304,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741888031466</updated>
+    </task>
+    <task id="LOCAL-00038" summary="init crud app">
+      <option name="closed" value="true" />
+      <created>1755638896525</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1755638896525</updated>
+    </task>
+    <task id="LOCAL-00039" summary="add list in product list screen">
+      <option name="closed" value="true" />
+      <created>1755639189302</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1755639189302</updated>
     </task>
     <task id="LOCAL-00040" summary="add separatorBuilder">
       <option name="closed" value="true" />
@@ -681,23 +697,7 @@
       <option name="project" value="LOCAL" />
       <updated>1772355252638</updated>
     </task>
-    <task id="LOCAL-00087" summary="feat: update folder structure of sqflight">
-      <option name="closed" value="true" />
-      <created>1772357333806</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1772357333806</updated>
-    </task>
-    <task id="LOCAL-00088" summary="feat: stripe payment done without backend">
-      <option name="closed" value="true" />
-      <created>1772423943999</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1772423943999</updated>
-    </task>
-    <option name="localTasksCounter" value="89" />
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -718,6 +718,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="create custom url" />
+    <MESSAGE value="init get product uri" />
     <MESSAGE value="get product from api and show in ui" />
     <MESSAGE value="product image invalid argument handle" />
     <MESSAGE value="flutter code optimize" />
@@ -741,9 +743,7 @@
     <MESSAGE value="feat(api): Popular recipe api with card" />
     <MESSAGE value="feat(api): recipe card navigate to recipe details screen" />
     <MESSAGE value="init stripe" />
-    <MESSAGE value="feat: update folder structure of sqflight" />
-    <MESSAGE value="feat: stripe payment done without backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: stripe payment done without backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="init stripe" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

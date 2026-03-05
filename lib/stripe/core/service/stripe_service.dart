@@ -38,7 +38,7 @@ class StripePaymentService{
         data: body,
         options: Options(
           headers: {
-            'Authorization': 'Bearer $lol',
+            'Authorization': 'Bearer ',
             'Content-Type': 'application/x-www-form-urlencoded'
           }
         )

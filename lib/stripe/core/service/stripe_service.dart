@@ -37,8 +37,8 @@ class StripePaymentService{
     final response = await _dio.post('https://api.stripe.com/v1/payment_intents',
         data: body,
         options: Options(
-          headers: {//
-            'Authorization': 'Bearer ',
+          headers: {
+            'Authorization': 'Bearer $lol',
             'Content-Type': 'application/x-www-form-urlencoded'
           }
         )

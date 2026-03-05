@@ -303,11 +303,29 @@ class _ProductsListScreenState extends State<ProductsListScreen> {
                     vertical: 6,
                   ),
                   decoration: BoxDecoration(
+                    color: Colors.green.shade100,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Text(
+                    'Sell: \$${product.sellPrice.toStringAsFixed(2)}',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.green.shade900,
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 8),
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 6,
+                  ),
+                  decoration: BoxDecoration(
                     color: Colors.blue.shade100,
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Text(
-                    '\$${product.price.toStringAsFixed(2)}',
+                    'Buy: \$${product.buyPrice.toStringAsFixed(2)}',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       color: Colors.blue.shade900,

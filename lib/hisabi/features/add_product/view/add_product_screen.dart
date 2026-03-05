@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
-import 'package:intl/intl.dart';
 import 'package:practice/hisabi/features/add_product/view_model/product.dart';
 
 // ===================================
@@ -106,7 +105,8 @@ class _AddProductScreenState extends State<AddProductScreen> {
   final TextEditingController _searchIdController = TextEditingController();
   final TextEditingController _barcodeController = TextEditingController();
   final TextEditingController _productNameController = TextEditingController();
-  final TextEditingController _priceController = TextEditingController();
+  final TextEditingController _buyPriceController = TextEditingController();
+  final TextEditingController _sellPriceController = TextEditingController();
   final TextEditingController _categoryController = TextEditingController();
   final TextEditingController _quantityController = TextEditingController();
   final TextEditingController _descriptionController = TextEditingController();
@@ -132,7 +132,8 @@ class _AddProductScreenState extends State<AddProductScreen> {
     _searchIdController.dispose();
     _barcodeController.dispose();
     _productNameController.dispose();
-    _priceController.dispose();
+    _buyPriceController.dispose();
+    _sellPriceController.dispose();
     _categoryController.dispose();
     _quantityController.dispose();
     _descriptionController.dispose();
@@ -148,7 +149,8 @@ class _AddProductScreenState extends State<AddProductScreen> {
         _currentProductId = product.id;
         _barcodeController.text = product.barcode;
         _productNameController.text = product.productName;
-        _priceController.text = product.price.toString();
+        _buyPriceController.text = product.buyPrice.toString();
+        _sellPriceController.text = product.sellPrice.toString();
         _categoryController.text = product.category;
         _quantityController.text = product.quantity.toString();
         _descriptionController.text = product.description;
@@ -231,7 +233,8 @@ class _AddProductScreenState extends State<AddProductScreen> {
           _currentProductId = product.id;
           _barcodeController.text = product.barcode;
           _productNameController.text = product.productName;
-          _priceController.text = product.price.toString();
+          _buyPriceController.text = product.buyPrice.toString();
+          _sellPriceController.text = product.sellPrice.toString();
           _categoryController.text = product.category;
           _quantityController.text = product.quantity.toString();
           _descriptionController.text = product.description;
@@ -278,7 +281,8 @@ class _AddProductScreenState extends State<AddProductScreen> {
           id: _isEditMode ? _currentProductId : null,
           barcode: _barcodeController.text.trim(),
           productName: _productNameController.text.trim(),
-          price: double.parse(_priceController.text),
+          buyPrice: double.parse(_buyPriceController.text),
+          sellPrice: double.parse(_sellPriceController.text),
           category: _categoryController.text.trim(),
           quantity: int.parse(_quantityController.text),
           description: _descriptionController.text.trim(),
@@ -328,7 +332,8 @@ class _AddProductScreenState extends State<AddProductScreen> {
     _searchIdController.clear();
     _barcodeController.clear();
     _productNameController.clear();
-    _priceController.clear();
+    _buyPriceController.clear();
+    _sellPriceController.clear();
     _categoryController.clear();
     _quantityController.clear();
     _descriptionController.clear();
@@ -584,16 +589,56 @@ class _AddProductScreenState extends State<AddProductScreen> {
                     children: [
                       Expanded(
                         child: _buildTextField(
-                          controller: _priceController,
-                          label: 'Price (\$)',
-                          icon: Icons.currency_exchange,
+                          controller: _buyPriceController,
+                          label: 'Buy Price (\$)',
+                          icon: Icons.shop,
                           keyboardType: TextInputType.number,
                           validator: (value) {
                             if (value?.isEmpty ?? true) {
-                              return 'Price required';
+                              return 'Buy price required';
                             }
                             if (double.tryParse(value!) == null) {
                               return 'Invalid price';
+                            }
+                            return null;
+                          },
+                        ),
+                      ),
+                      const SizedBox(width: 12),
+                      Expanded(
+                        child: _buildTextField(
+                          controller: _sellPriceController,
+                          label: 'Sell Price (\$)',
+                          icon: Icons.sell,
+                          keyboardType: TextInputType.number,
+                          validator: (value) {
+                            if (value?.isEmpty ?? true) {
+                              return 'Sell price required';
+                            }
+                            if (double.tryParse(value!) == null) {
+                              return 'Invalid price';
+                            }
+                            return null;
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 16),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: _buildTextField(
+                          controller: _quantityController,
+                          label: 'Quantity',
+                          icon: Icons.inventory,
+                          keyboardType: TextInputType.number,
+                          validator: (value) {
+                            if (value?.isEmpty ?? true) {
+                              return 'Quantity required';
+                            }
+                            if (int.tryParse(value!) == null) {
+                              return 'Invalid qty';
                             }
                             return null;
                           },
@@ -753,39 +798,112 @@ class _AddProductScreenState extends State<AddProductScreen> {
   }
 
   Widget _buildCategoryDropdown() {
-    return DropdownButtonFormField<String>(
-      value: _categoryController.text.isEmpty ? null : _categoryController.text,
-      items: _categories
-          .map((category) => DropdownMenuItem(
-        value: category,
-        child: Text(category),
-      ))
-          .toList(),
-      onChanged: (value) {
-        if (value != null) {
-          _categoryController.text = value;
-        }
-      },
-      decoration: InputDecoration(
-        labelText: 'Category',
-        prefixIcon: const Icon(Icons.category),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
+    // Add default categories if list is empty
+    if (_categories.isEmpty) {
+      _categories = ['Electronics', 'Clothing', 'Food', 'Books', 'Toys', 'Other'];
+    }
+    
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        DropdownButtonFormField<String>(
+          value: _categories.contains(_categoryController.text) ? _categoryController.text : null,
+          items: [
+            ..._categories.map((category) => DropdownMenuItem(
+              value: category,
+              child: Text(category),
+            )),
+            const DropdownMenuItem(
+              value: '__add_new__',
+              child: Row(
+                children: [
+                  Icon(Icons.add, size: 20),
+                  SizedBox(width: 8),
+                  Text('Add New Category...', style: TextStyle(fontWeight: FontWeight.bold)),
+                ],
+              ),
+            ),
+          ],
+          onChanged: (value) {
+            if (value == '__add_new__') {
+              _showAddCategoryDialog();
+            } else if (value != null) {
+              setState(() {
+                _categoryController.text = value;
+              });
+            }
+          },
+          decoration: InputDecoration(
+            labelText: 'Category',
+            prefixIcon: const Icon(Icons.category),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+            filled: true,
+            fillColor: Colors.white,
+            contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+          ),
+          validator: (value) {
+            if (_categoryController.text.isEmpty) {
+              return 'Please select or enter category';
+            }
+            return null;
+          },
         ),
-        filled: true,
-        fillColor: Colors.white,
-        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-      ),
-      validator: (value) {
-        if (value == null || value.isEmpty) {
-          return 'Please select or enter category';
-        }
-        return null;
-      },
-      onSaved: (value) {
-        if (value != null && !_categories.contains(value)) {
-          _categories.add(value);
-        }
+        if (_categoryController.text.isNotEmpty && !_categories.contains(_categoryController.text))
+          Padding(
+            padding: const EdgeInsets.only(top: 8),
+            child: Text(
+              'New category: ${_categoryController.text}',
+              style: TextStyle(
+                fontSize: 12,
+                color: Colors.green.shade700,
+                fontStyle: FontStyle.italic,
+              ),
+            ),
+          ),
+      ],
+    );
+  }
+
+  Future<void> _showAddCategoryDialog() async {
+    final TextEditingController newCategoryController = TextEditingController();
+    
+    return showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Add New Category'),
+          content: TextField(
+            controller: newCategoryController,
+            decoration: const InputDecoration(
+              hintText: 'Enter category name',
+              border: OutlineInputBorder(),
+            ),
+            autofocus: true,
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context),
+              child: const Text('Cancel'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                if (newCategoryController.text.isNotEmpty) {
+                  setState(() {
+                    final newCategory = newCategoryController.text.trim();
+                    if (!_categories.contains(newCategory)) {
+                      _categories.add(newCategory);
+                    }
+                    _categoryController.text = newCategory;
+                  });
+                  Navigator.pop(context);
+                }
+              },
+              child: const Text('Add'),
+            ),
+          ],
+        );
       },
     );
   }

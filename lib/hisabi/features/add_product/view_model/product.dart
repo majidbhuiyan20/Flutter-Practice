@@ -8,7 +8,8 @@ class Product {
   final int? id;
   final String barcode;
   final String productName;
-  final double price;
+  final double buyPrice;
+  final double sellPrice;
   final String category;
   final int quantity;
   final String description;
@@ -19,7 +20,8 @@ class Product {
     this.id,
     required this.barcode,
     required this.productName,
-    required this.price,
+    required this.buyPrice,
+    required this.sellPrice,
     required this.category,
     required this.quantity,
     required this.description,
@@ -33,7 +35,8 @@ class Product {
       'id': id,
       'barcode': barcode,
       'productName': productName,
-      'price': price,
+      'buyPrice': buyPrice,
+      'sellPrice': sellPrice,
       'category': category,
       'quantity': quantity,
       'description': description,
@@ -48,7 +51,8 @@ class Product {
       id: map['id'] as int,
       barcode: map['barcode'] as String,
       productName: map['productName'] as String,
-      price: (map['price'] as num).toDouble(),
+      buyPrice: (map['buyPrice'] as num).toDouble(),
+      sellPrice: (map['sellPrice'] as num).toDouble(),
       category: map['category'] as String,
       quantity: map['quantity'] as int,
       description: map['description'] as String,
@@ -62,7 +66,8 @@ class Product {
     int? id,
     String? barcode,
     String? productName,
-    double? price,
+    double? buyPrice,
+    double? sellPrice,
     String? category,
     int? quantity,
     String? description,
@@ -73,7 +78,8 @@ class Product {
       id: id ?? this.id,
       barcode: barcode ?? this.barcode,
       productName: productName ?? this.productName,
-      price: price ?? this.price,
+      buyPrice: buyPrice ?? this.buyPrice,
+      sellPrice: sellPrice ?? this.sellPrice,
       category: category ?? this.category,
       quantity: quantity ?? this.quantity,
       description: description ?? this.description,
@@ -114,7 +120,7 @@ class DatabaseHelper {
 
     return openDatabase(
       path,
-      version: 1,
+      version: 3,
       onCreate: _onCreate,
       onUpgrade: _onUpgrade,
     );
@@ -127,7 +133,8 @@ class DatabaseHelper {
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         barcode TEXT UNIQUE NOT NULL,
         productName TEXT NOT NULL,
-        price REAL NOT NULL,
+        buyPrice REAL NOT NULL,
+        sellPrice REAL NOT NULL,
         category TEXT NOT NULL,
         quantity INTEGER NOT NULL,
         description TEXT NOT NULL,
@@ -144,7 +151,19 @@ class DatabaseHelper {
 
   /// Handle database upgrades
   Future<void> _onUpgrade(Database db, int oldVersion, int newVersion) async {
-    // Add migration logic here if needed
+    if (oldVersion < 3) {
+      // Drop old table and recreate with new schema
+      await db.execute('DROP TABLE IF EXISTS products');
+      await _onCreate(db, newVersion);
+    }
+  }
+
+  /// Delete database (for testing or reset)
+  Future<void> deleteDatabase() async {
+    final databasesPath = await getDatabasesPath();
+    final path = join(databasesPath, 'products.db');
+    await databaseFactory.deleteDatabase(path);
+    _database = null;
   }
 
   // ===================================

@@ -15,9 +15,6 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   Stripe.publishableKey = "pk_test_51SgJzGEHj0qFa8VvPDTSGUhtZOtJSpsdEwURn7HryyN5Z13LymeJ2nhhxlcEWnncUqYwJAt4fX7U6rlfphP6qqqu00ZNmys0G8";;
-
-
-
   await Stripe.instance.applySettings();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,

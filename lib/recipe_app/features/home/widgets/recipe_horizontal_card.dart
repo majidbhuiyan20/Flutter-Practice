@@ -5,33 +5,44 @@ import '../model/recipe_model.dart';
 class RecipeHorizontalCard extends StatelessWidget {
   final MajidRecipeRepo recipe;
 
-  const RecipeHorizontalCard({
-    super.key,
-    required this.recipe,
-  });
+  const RecipeHorizontalCard({super.key, required this.recipe});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 220,
-      margin: const EdgeInsets.only(right: 12),
+      width: 250,
+      margin: const EdgeInsets.only(right: 16, bottom: 6),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(28),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.14),
+            blurRadius: 30,
+            offset: const Offset(0, 18),
+          ),
+        ],
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(28),
         child: Stack(
           children: [
-
-            /// 🔵 Background Image
             Positioned.fill(
               child: Image.network(
                 recipe.image,
                 fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) {
+                  return Container(
+                    color: const Color(0xFFECECEC),
+                    alignment: Alignment.center,
+                    child: const Icon(
+                      Icons.restaurant_menu_rounded,
+                      size: 46,
+                      color: Color(0xFF1F8B57),
+                    ),
+                  );
+                },
               ),
             ),
-
-            /// 🔵 Gradient
             Positioned.fill(
               child: Container(
                 decoration: BoxDecoration(
@@ -39,32 +50,38 @@ class RecipeHorizontalCard extends StatelessWidget {
                     begin: Alignment.bottomCenter,
                     end: Alignment.topCenter,
                     colors: [
-                      Colors.black.withOpacity(0.7),
+                      Colors.black.withOpacity(0.86),
+                      Colors.black.withOpacity(0.32),
                       Colors.transparent,
                     ],
+                    stops: const [0.0, 0.55, 1.0],
                   ),
                 ),
               ),
             ),
-
-            /// ⭐ Rating
             Positioned(
-              top: 10,
-              left: 10,
+              top: 16,
+              left: 16,
               child: Container(
                 padding: const EdgeInsets.symmetric(
-                    horizontal: 8, vertical: 4),
+                  horizontal: 10,
+                  vertical: 6,
+                ),
                 decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.6),
+                  color: Colors.white.withOpacity(0.18),
                   borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: Colors.white.withOpacity(0.22)),
                 ),
                 child: Row(
                   children: [
-                    const Icon(Icons.star,
-                        color: Colors.amber, size: 14),
+                    const Icon(
+                      Icons.star_rounded,
+                      color: Colors.amber,
+                      size: 16,
+                    ),
                     const SizedBox(width: 4),
                     Text(
-                      recipe.rating.toString(),
+                      recipe.rating.toStringAsFixed(1),
                       style: const TextStyle(
                         color: Colors.white,
                         fontSize: 12,
@@ -75,53 +92,108 @@ class RecipeHorizontalCard extends StatelessWidget {
                 ),
               ),
             ),
-
-            /// ❤️ Favourite Icon
-            const Positioned(
-              top: 10,
-              right: 10,
-              child: Icon(Icons.favorite_border,
-                  color: Colors.white),
-            ),
-
-            /// 🔽 Bottom Info
             Positioned(
-              bottom: 12,
-              left: 12,
-              right: 12,
+              top: 16,
+              right: 16,
+              child: Container(
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: Colors.white.withOpacity(0.16),
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Colors.white.withOpacity(0.2)),
+                ),
+                child: const Icon(
+                  Icons.favorite_border_rounded,
+                  color: Colors.white,
+                  size: 18,
+                ),
+              ),
+            ),
+            Positioned(
+              bottom: 18,
+              left: 18,
+              right: 18,
               child: Column(
-                crossAxisAlignment:
-                CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 10,
+                      vertical: 6,
+                    ),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF1F8B57).withOpacity(0.9),
+                      borderRadius: BorderRadius.circular(18),
+                    ),
+                    child: Text(
+                      recipe.cuisine,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 11,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 12),
                   Text(
                     recipe.name,
-                    maxLines: 1,
+                    maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     style: const TextStyle(
                       color: Colors.white,
-                      fontSize: 16,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
+                      height: 1.2,
                     ),
                   ),
-                  const SizedBox(height: 4),
+                  const SizedBox(height: 10),
                   Row(
                     children: [
-                      const Icon(Icons.access_time,
-                          color: Colors.white70,
-                          size: 14),
+                      const Icon(
+                        Icons.access_time_filled_rounded,
+                        color: Colors.white70,
+                        size: 15,
+                      ),
                       const SizedBox(width: 4),
                       Text(
-                        "${recipe.prepTimeMinutes} min",
+                        '${recipe.prepTimeMinutes + recipe.cookTimeMinutes} min',
                         style: const TextStyle(
-                            color: Colors.white70,
-                            fontSize: 12),
+                          color: Colors.white70,
+                          fontSize: 12,
+                        ),
                       ),
-                      const SizedBox(width: 10),
+                      const SizedBox(width: 12),
+                      const Icon(
+                        Icons.local_fire_department_rounded,
+                        color: Colors.white70,
+                        size: 15,
+                      ),
+                      const SizedBox(width: 4),
                       Text(
-                        recipe.difficulty,
+                        '${recipe.caloriesPerServing} kcal',
                         style: const TextStyle(
-                            color: Colors.white70,
-                            fontSize: 12),
+                          color: Colors.white70,
+                          fontSize: 12,
+                        ),
+                      ),
+                      const Spacer(),
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 10,
+                          vertical: 6,
+                        ),
+                        decoration: BoxDecoration(
+                          color: Colors.white.withOpacity(0.14),
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: Text(
+                          recipe.difficulty,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 11,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
                       ),
                     ],
                   ),

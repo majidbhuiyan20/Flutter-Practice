@@ -10,11 +10,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="611cfa8e-7305-49b2-b3da-0bb6125e2ec2" name="Changes" comment="test">
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_graph.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_graph.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/version" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.flutter-plugins-dependencies" beforeDir="false" afterPath="$PROJECT_DIR$/.flutter-plugins-dependencies" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/stripe/view/stripe_payment_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/stripe/view/stripe_payment_screen.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/kotlin/com/example/practice/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/kotlin/com/example/practice/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/recipe_app/features/common/widgets/custom_app_bar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/recipe_app/features/common/widgets/custom_app_bar.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/recipe_app/features/common/widgets/custom_search_bar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/recipe_app/features/common/widgets/custom_search_bar.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/recipe_app/features/home/view/recipe_details_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/view/recipe_details_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/recipe_app/features/home/view/recipe_home_screen.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/view/recipe_home_screen.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/recipe_app/features/home/widgets/recipe_header_image.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/widgets/recipe_header_image.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/recipe_app/features/home/widgets/recipe_horizontal_card.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/widgets/recipe_horizontal_card.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/recipe_app/features/home/widgets/recipe_horizontal_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/widgets/recipe_horizontal_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/recipe_app/features/home/widgets/top_chef_horizontal_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/recipe_app/features/home/widgets/top_chef_horizontal_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/practice.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +121,7 @@
     "Flutter.main.dart.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
@@ -115,11 +129,11 @@
     "cidr.known.project.marker": "true",
     "com.google.services.firebase.aqiPopupShown": "true",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "Merging main",
+    "git-widget-placeholder": "main",
     "io.flutter.project.isFirstOpen": "true",
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/betopia/Documents/GitHub/Flutter-Practice",
+    "last_opened_file_path": "/Users/daymon/Documents/MajidMac/Task/FlutterDev/Flutter-Practice",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
